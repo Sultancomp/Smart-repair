@@ -1,0 +1,2724 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sultan.store</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .w3-sidebar a {
+        font-family: "Roboto", sans-serif;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .w3-wide {
+        font-family: "tahoma";
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="w3-content w3-gray" style="max-width: 1000px auto; ">
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top"
+      style="z-index: 3; width: 250px;"
+      id="mySidebar"
+    >
+      <div class="w3-container w3-display-container w3-gray">
+        <i
+          onclick="w3_close()"
+          class="fa fa-remove w3-hide-large w3-button w3-display-topright"
+        ></i>
+        <h3
+          class="w3-container w3-black w3-text-white w3-hover-red w3-animate-zoom"
+          style="animation-duration: 2s;"
+        >
+          <span>Sultan Repair</span>
+        </h3>
+      </div>
+      <div
+        class="w3-padding-64 w3-large w3-text-grey"
+        style="font-weight: bold;"
+      >
+        <a
+          onclick="myAccFunc()"
+          href="javascript:void(0)"
+          class="w3-button w3-block w3-white w3-left-align"
+          id="myBtn">
+          Service Solution <i class="fa fa-caret-down"></i>
+        </a>
+        <div
+          id="demoAcc"
+          class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button w3-light-grey">
+            <i class="fa fa-caret-right w3-margin-right"></i> introduction
+          </a>
+          <a href="#" class="w3-bar-item w3-button">component </a>
+          <a href="#" class="w3-bar-item w3-button">Electronik basic</a>
+          <a href="#ts" class="w3-bar-item w3-button">Troubleshooting</a>
+        </div>
+        <a href="#" class="w3-bar-item w3-button">S O C</a>
+        <a href="#" class="w3-bar-item w3-button"> Operating system</a>
+        <a href="#" class="w3-bar-item w3-button"> Android</a>
+        <a href="#" class="w3-bar-item w3-button">Program</a>
+        
+      </div>
+      <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+     
+    </nav>
+   
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-bar w3-top w3-hide-large w3-container w3-light-gray w3-hover-red w3-xlarge"
+    >
+      <div class="w3-bar-item w3-margin-10 w3-black" style="position: relative;">
+        <b>Smart-tech</b>
+      </div>
+      <a
+        href="javascript:void(0)"
+        class="w3-bar-item w3-button w3-padding-24 w3-right"
+        onclick="w3_open()"
+        ><i class="fa fa-bars"></i
+      ></a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer;"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 250px;">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px;"></div>
+
+      <!-- Top header -->
+      <header class="w3-container w3-indigo w3-hover-red w3-xlarge">
+        <p class="w3-left w3-animate-bottom" style="animation-duration: 2s;">
+          Technical engineer
+        </p>
+        <p class="w3-right">
+          <i class="fa fa-shopping-cart w3-margin-right"></i>
+          <i class="fa fa-search"></i>
+        </p>
+      </header>
+
+      <!-- Image header -->
+      <div class="w3-display-container">
+        <div class="w3-content" style="max-width: 800px;">
+          <img class="mySlides" src="img/Soc.jpg" style="width:100%">
+          <img class="mySlides" src="img/intel 11th (1).jpg" style="width:100%">
+          <img class="mySlides" src="img/mediatek_dimensity_9000_2.jpg" style="width:100%">
+          <img class="mySlides" src="img/tech.png" style="width:100%">
+          <img class="mySlides" src="img/qfl.png" style="width:100%">
+        </div>
+        
+        <div class="w3-center">
+          <div class="w3-section">
+            <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+            <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+          </div>
+          <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+          <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+          <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+          <button class="w3-button demo" onclick="currentDiv(4)">4</button> 
+          <button class="w3-button demo" onclick="currentDiv(5)">5</button> 
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-red", "");
+          }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " w3-red";
+        }
+        </script>
+      
+        <p class="d-sm-inline-block ">
+          <h3
+          class="w3-large w3-text-white w3-animate-left w3-hover-text-deep-blue"
+          style="animation-duration: 4s; font-weight: bold;">
+         SmartPhone
+        </h3>
+        </p>
+      </div>
+
+      <!-- Product grid -->
+      <section>
+        <div class="card-group">
+          <div class="card bg-primary">
+            <div class="card-body text-center w3-text-white">
+              <h5>Qualcomm</h5>
+              <img
+                src="img/sultancomp.jpg"
+                alt=" contoh web jasa"
+                style="width: 80%;"
+              />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">flash</button>
+                <button class="w3-button w3-red m-4">arsitektur</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-black">
+            <div class="card-body text-center w3-text-white">
+              <h5>Mediatek</h5>
+              <img src="img/smart.jpg" alt="Avatar" style="width: 80%;" />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">flash</button>
+                <button class="w3-button w3-red m-4">Arsitektur</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-primary">
+            <div class="card-body text-center w3-text-white">
+              <h5>iphone IOS</h5>
+              <img src="img/web.jpg" alt="Avatar" style="width: 80%;" />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">Restore</button>
+                <button class="w3-button w3-red m-4">arsitektur</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-dark">
+            <div class="card-body text-center w3-text-white">
+              <h5>Exynos</h5>
+              <img
+                src="img/10 Stages of Mobile App.jpg"
+                alt="Avatar"
+                style="width: 80%;"
+              />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">flash</button>
+                <button class="w3-button w3-red m-4">arsitektur</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="d-sm-inline-block ">
+          <h3
+          class="w3-large w3-text-white w3-animate-left w3-hover-text-deep-blue"
+          style="animation-duration: 4s; font-weight: bold;">
+         Komputer
+        </h3>
+        </p>
+        <div class="card-group">
+          <div class="card bg-primary">
+            <div class="card-body text-center w3-text-white">
+              <h5>Intel</h5>
+              <img
+                src="img/sultancomp.jpg"
+                alt=" contoh web jasa"
+                style="width: 80%;"
+              />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">BIOS & Driver</button>
+                <button class="w3-button w3-red m-4">arsitektur</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-black">
+            <div class="card-body text-center w3-text-white">
+              <h5>AMD</h5>
+              <img src="img/smart.jpg" alt="Avatar" style="width: 80%;" />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">BIOS & Driver</button>
+                <button class="w3-button w3-red m-4">arsitektur</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-primary">
+            <div class="card-body text-center w3-text-white">
+              <h5>Mac OS</h5>
+              <img src="img/web.jpg" alt="Avatar" style="width: 80%;" />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">SMC & NVRAM</button>
+                <button class="w3-button w3-red m-4">arsitektur</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-dark">
+            <div class="card-body text-center w3-text-white">
+              <h5>MOBO</h5>
+              <img
+                src="img/10 Stages of Mobile App.jpg"
+                alt="Avatar"
+                style="width: 80%;"
+              />
+              <div class="w3-section">
+                <button class="w3-button w3-green m-4">BIOS & Driver</button>
+                <button class="w3-button w3-red m-4">arsitektur</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+                    
+              <div class="container ">
+                <h3>Operating system</h3>
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                       Fungsi OS
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <br><strong>fungsi pokok OS</strong> yaitu:
+                        <br>1. Mengontrol akses perangkat keras. Sistem operasi memanajemen interakasi antara aplikasi dan perangkat keras.
+                        <br>2. Untuk mengakses dan berkomunikasi dengan perangkat keras, sistem operasi perlu menginstal sebuah perangkat lunak <strong>driver </strong> untuk tiap komponen perangkat keras agar 
+                          bisa teridentifikasi dan berkomunikasi antar devices serta dijalankan user pada sebuah operating system
+                        <br>3. Manajemen file dan folder. Sistem operasi mengatur dan membuat susunan file yang tersimpan di dalam hard disk dan media penyimpanan lain.
+                        <br>4. Menyediakan user interface. Sistem operasi akan menyediakan tampilan antarmuka pengguna, baik dalam bentuk baris perintah perintah (Command Line Interface - CLI) maupun dalam bentuk grafis (Graphical User Interface - GUI).
+                        <br>5. Manajemen aplikasi. Sistem operasi meletakan suatu aplikasi dan memuatnya ke dalam memori (RAM) komputer. Sistem operasi menjamin setiap aplikasi mendapatkan sumber daya yang cukup.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                       Struktur Android
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       <img src="img/android.jpg" style="max-width: 650px;"> <br>
+                       <br> <code>5 struktur Android </code>
+                       <br>1. Linux kernel
+                       <br>2. Library
+                       <br>3. Android runtime
+                       <br>4. Application framework
+                       <br>5. Application Layer / UI <br>
+                       
+                       <br><strong>Kernel </strong>adalah suatu perangkat lunak yang menjadi bagian utama dari sebuah sistem operasi. Tugasnya melayani bermacam program aplikasi untuk mengakses perangkat keras komputer secara aman.
+
+                       Karena akses terhadap perangkat keras terbatas, sedangkan ada lebih dari satu program yang harus dilayani dalam waktu yang bersamaan, maka kernel juga bertugas untuk mengatur kapan dan 
+                       berapa lama suatu program dapat menggunakan satu bagian perangkat keras tersebut. Hal tersebut dinamakan sebagai multiplexing.
+                       
+                       Akses kepada perangkat keras secara langsung merupakan masalah yang kompleks, oleh karena itu kernel biasanya mengimplementasikan sekumpulan abstraksi hardware.
+                       Abstraksi-abstraksi tersebut merupakan sebuah cara untuk menyembunyikan kompleksitas, dan memungkinkan akses kepada perangkat keras menjadi mudah dan seragam. Sehingga 
+                       abstraksi pada akhirnya memudahkan pekerjaan programer.
+                       
+                       Untuk menjalankan sebuah komputer kita tidak harus menggunakan kernel sistem operasi. Sebuah program dapat saja langsung di- load dan dijalankan diatas mesin 'telanjang' 
+                       komputer, yaitu bilamana pembuat program ingin melakukan pekerjaannya tanpa bantuan abstraksi perangkat keras atau bantuan sistem operasi. Teknik ini digunakan oleh 
+                       komputer generasi awal, sehingga bila kita ingin berpindah dari satu program ke program lain, kita harus mereset dan meload kembali program-program tersebut. <br>
+                       
+                       <br>Ada 4 kategori kernel:
+                       
+                       <br>1. <code>Monolithic kernel</code> Kernel yang menyediakan abstraksi perangkat keras yang kaya dan tangguh.
+                       
+                       <br>2. <code>Microkernel</code> Kernel yang menyediakan hanya sekumpulan kecil abstraksi perangkat keras sederhana, dan menggunakan aplikasi-aplikasi yang disebut sebagai server untuk menyediakan fungsi-fungsi lainnya.
+                       Mikrokernel merupakan modul inti yang meyediakan beragam mekanisme yang dibutuhkan untuk mengembangkan sebuah sistem operasi, seperti halnya manajemen pengalamatan ruang tingkat rendah, manajemen thread, dan komunikasi
+                       antar proses. Dalam implementasinya mikrokernel merupakan satu-satunya perangkat lunak yang berjalan dengan tingkat kewenangan tertinggi (umumnya disebut sebagai modus supervisor atau modus kernel) dari serangkaian level kewenangan yang tersedia pada perangkat kerasnya. Layanan yang disediakan oleh sebuah sistem operasi beberapa diantaranya adalah device driver, protokol jaringan, sistem berkas, dan kode antarmuka pengguna yang berada dalam ruang pengguna.
+
+                       <br>3. <code>Hybrid</code> (modifikasi dari microkernel). Kernel yang mirip microkernel, tetapi ia juga memasukkan beberapa kode tambahan di kernel agar ia menjadi lebih cepat.
+                       Kernel hibrida merupakan arsitektur kernel yang menggabungkan aspek-aspek yang terdapat pada mikrokernel dan kernel monolitik dalam pengembangan perangkat lunak sistem operasi. Pengkategorian kernel hibrida dipandang kontroversial karena karakteristiknya yang sangat mirip dengan karakteristik kernel monolitik sehingga beberapa kalangan mencibir pengkategorian kernel hibrida hanya sebatas diferensiasi untuk tujuan pemasaran. Umumnya pengkategorian yang lebih diterima adalah kernel monolitik dan mikrokernel.
+
+                       Gagasan di belakang kernel hibrida adalah membuat suatu struktur kernel yang serupa seperti mikrokernel, namun diimplementasikan sebagai kernel monolitik. Berbeda dengan mikrokernel, semua (atau setidaknya hampir semua) layanan sistem terdapat pada ruang kernel dan bukan pada ruang pengguna. Seperti halnya pada kernel monolitik, tidak ada beban penurunan unjuk kerja seperti pada mikrokernel atas mekanisme penyampaian pesan, dan mekanisme proses lainnya, juga memiliki pemahaman yang sama seperti kernel monolitik, tidak ada keuntungan apapun atas penyediaan layanan pada ruang pengguna.
+                       
+                       
+                       <br>4. <code>Exokernel</code> Kernel yang tidak menyediakan sama sekali abstraksi hardware, tapi ia menyediakan sekumpulan pustaka yang menyediakan fungsi-fungsi akses ke perangkat keras secara langsung atau hampir-hampir langsung. 
+                       Exokernel adalah pendekatan kernel sistem operasi yang tidak umum. Exokernel sendiri merupakan sebuah struktur sistem operasi yang disusun secara vertikal.
+                       Tujuan exokernel adalah memaksa abstraksi yang dilakukan developer sesedikit mungkin. Exokernel biasanya sangat kecil, karena fungsionalitas yang dimilikinya terbatas pada proteksi dan penggandaan sumber daya.
+                       Exokernel memungkinkan akses terhadap hardware secara langsung pada tingkat yang rendah.Tugas kernel hanya memastikan bahwa sumber daya yang ingin digunakan benar-benar sedang berada dalam keadaan kosong atau belum digunakan oleh yang lainnya.
+                       
+                       <br>Kelebihan Exokernel:
+                       
+                       Memiliki fungsi perlindungan dan pembagian resource untuk hardware.
+                       Bisa dimasukkan library sistem oparasi lebih dari satu sehingga bisa menjalankan program-program untuk sistem operasi secara bersamaan.<br>
+                       
+                       <br>Dari keempat kategori kernel yang disebutkan diatas, kernel Linux termasuk kategori monolithic kernel. Kernel Linux berbeda dengan sistem Linux. Kernel Linux merupakan sebuah perangkat lunak orisinil yang dibuat oleh komunitas Linux,
+                        sedangkan sistem Linux, yang dikenal saat ini, mengandung banyak komponen yang dibuat sendiri atau dipinjam dari proyek pengembangan lain. <br>
+
+                        <br><strong>Fungsi kernel</strong><br>
+                        <br><code>Pengurusan proses</code>
+                        <br>Tugas utama sebuah sistem pengoperasian kernel ialah membenarkan aplikasi yang lain agar bisa berjalan dan mampu menyokong mereka dengan ciri-ciri tambahan, seperti pengabstrakan perkakasan, untuk menjalan proses, kernel mesti memuat turun failnya kepada ingatan, menyediakan stack untuk program dan pergi ke lokasi yang diberikan di dalam program, ini memulakan perjalanan sesebuah program, cara ini dipanggil scheduling. Dalam sistem berbilang kerja, kernel secara asasnya akan memberikan setiap program sedikit masa dan menukarkan dari proses ke proses dengan cepat dengan itu ia akan muncul kepada pengguna jika proses ini dijalankan secara terus menerus. Kernel mesti juga menyediakan proses ini untuk berkomunikasi, ini dikenali sebagai inter-process communication. Ini kemungkinan ada multipemprosesan yang menyokong kernel tersebut.
+                        <br><code>Pengurusan Ingatan</code>
+                        <br>Kernel mempunyai akses penuh dalam ingatan sistem dan menyediakan cara-cara untuk membenarkan userland program untuk mengakses memori ini dengan selamat. Cara pertama untuk mengurus ingatan ialah virtual addressing, biasanya arkib dengan muka surat atau segmentation. Virtual addressing membenarkan kernel untuk memberikan alamat fizikal yang muncul sebagai alamat yang lain yaitu virtual address, ini membenarkan setiap program mempercayai ia hanya satu program (sebahagian daripada kernel) yang berjalan, dan ini mengelakkan aplikasi daripada berlanggar antara satu sama lain.
+                        <br><code>Pengurusan Peranti</code>
+                        <br>Dalam arahan untuk melakukan sesuatu tugas, kernel perlu untuk mengakses berbagai peranti yang bersambungan di dalam komputer, sebagai contoh, dalam arahan untuk memaparkan pengguna apa-apa saja, pemacu monitor perlu untuk muncul, peranti ini boleh dikawal melalui pemacu, di mana ia mesti dibuat oleh pembangun dan/atau disediakan oleh pengilang sesuatu peranti tersebut.
+                        <br><code>Sistem Panggilan</code>
+                        <br>Dalam arahan untuk menyediakan kerja yang berguna, program userland mesti mempunyai akses kepada semua perkhidmatan yang disediakan oleh kernel. Ini dilaksanakan secara berbeda-bdza oleh kernel yang berlainan, tetapi mesti disediakan oleh C library, dimana ia menukarkan kelemahan kesemua sistem panggilan.
+                        <br><code>Shell</code>
+                        <br>Shell adalah aplikasi yang menjadi alat untuk menghubungkan antara pangguna  dengan sistem operasi, shell akan membaca apa saja yang dimasukkan oleh pengguna dan memahaminya sebagai arahan untuk menjalankan aplikasi lain, memanipulasi file, dan memberikan output. Shell juga biasa dikenal sebagai command line interface.
+                        <br>Shell merupakan perangkat lunak yang menyediakan antarmuka bagi pengguna sistem operasi yang menyediakan akses ke layanan kernel.
+                          Shell sistem operasi pada umumnya mempunyai 2 kategori. yaitu command Line dan graphical. Command Line shells menyediakan Command Line Interface (CLI) ke sistem operasi,
+                          sedangkan graphical shells seperti Windows Shells, menyediakan Graphical User Interface (GUI). Tujuan utama dari shell adalah untuk memulai program lain dengan melihat isi directories.
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                       
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreec" aria-expanded="false" aria-controls="flush-collapseThreec">
+                      
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreed" aria-expanded="false" aria-controls="flush-collapseThreed">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreee" aria-expanded="false" aria-controls="flush-collapseThreee">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreee" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreef" aria-expanded="false" aria-controls="flush-collapseThreef">
+                       
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreef" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeg" aria-expanded="false" aria-controls="flush-collapseThreeg">
+                     
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreeg" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeh" aria-expanded="false" aria-controls="flush-collapseThreeh">
+                     
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreeh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreei" aria-expanded="false" aria-controls="flush-collapseThreei">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreei" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+                       
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreej" aria-expanded="false" aria-controls="flush-collapseThreej">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreej" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </section>
+          <!--hp-->
+            <section class="flex-container d-md-flex">
+              <div class="container ">
+                <h3>Hp repair</h3>
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                        tabel arus Hp
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <strong>Power state range</strong> : <br>
+
+                        <br>1. 0 - 20Ma 		= IC power sudah bekerja
+                        <br>2. 20 - 50Ma		= IC CPU sudah berkerja
+                        <br>3. 50 - 90Ma		  = EMMC bekerja
+                        <br>4. 100 - 150Ma		= Booting (tegangan kerja tahap I)
+                        <br>5. 150 - 250Ma		= Start Up Program
+                        <br>6. 250 - 600Ma		= Search signal (Ic RF bekerja)	
+                        
+                        <code>Tegangan Utama pada smartphone</code>
+                        
+                        <br>1.	1,1V core Prosesor
+                        <br>2.	1,8V Logic I/O
+                        <br>3.	2,8  Logic I/O
+                        <br>4.	3,3 Emmc & LPDDR
+                        <br>5.	Vbat  3,8 5V
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2" aria-expanded="false" aria-controls="flush-collapseTwo2">
+                        Analisa  berdasarkan konsumsi Arus
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+
+                        <br>1.Short before On = Arus naik tinggi tegangan drop sebelum ditekan ON dimana IC power bekerja ( short rangkaian Vbat)
+                        Cek komponen Voltage phase 1 tegangan yang hadir sebelum skelar ditekan ON
+                        
+                        <br>2. Short after On = Arus naik tegangan drop setelah switch ON IC Power (PMU) telah bekerja
+                        Cek tegangan yang mendapat tegangan kerja dari IC Power Rangkaian CPU,EMMC, AUDIO, WIFI, IC RF DLL
+                        
+                        <br>3. No current(Unresponable) = Tidak ada arus  Rangkaian power Vbat tidak bekerja atau IC Power rusak atau putus jalur
+                        CEK Rangkaian voltage phase 1 baterai (Vbat), IC CHARGING, VPH PWR, VBAT SYS, IC POWER/PMU, POWER ON
+                        
+                        <br>4. Ampere gantung kecil = Arus 10 MA CPU tidak bekerja
+                        CEK Syarat Kerja CPU Qualqom 9008, Mediatek MTK USB PORT
+                        <br>1. TEGANGAN KERJA
+                        <br>2. TEGANGAN PERINTAH (ENABLE)
+                        <br>3. CLOCK
+                        <br>4. RESET
+                        
+                        <br>5. Arus gantung sedang = 60 - 120MA EMMC/UFS bermasalah
+                        CEK EMMC/UFS dan Rangkaiannya
+                        
+                        <br>6. Arus jatuh/kembali ke 0 meski sudah Power UP >60Ma = Ic power RUSAK
+                        
+                        <br>7.Arus Normal = Hp hidup problem Interface display, backlight, charging dan software
+                        
+                        <br>CEK INTERFACE & JALUR = DISPLAY, BACKLIGHT, CHARGING
+                         
+                        <br>1AMPERE	= 1000MA
+                        <br> 0,9A		= 900MA		
+                        <br>0,5A		= 500MA
+                        <br>0,02A		= 20MA
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree3">
+                        Analisa  indikator kerusakan 
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+
+                        <br>Putus Jalur
+                        Saat On/off ditekan, jarum ampere tidak menunjukkan reaksi apapun. Kemungkinan terjadi kerusakan pada jalur on/off atau dalam konektor battery.
+                        Penanganan :
+                        Balik kabel kasatmata serta negatif dalam konektor battery, jika terjadi short mengungkapkan konektor battery terhubung dengan baik. Kemungkinan kerusakan dalam jalaur switch on/off nya, lakukan pengecekan jalur on/off memakai multitester. Lakukan jumper pada jalur yang putus atau ganti switch on/off nya.
+                        Apabila kabel kasatmata serta negatif dalam konektor battery dibalik nir terjadi short, kemungkinan kerusakan terjadi dalam jalur konektor battery. Lakukan pengecekan setiap komponen yang terhubung dengan jalur konektor battery.
+                        
+                        <br>a. Short 20mA
+                        On/off belum ditekan, jarum ampere bergerak dikisaran 20ma kemudian kembali ke angka 0. Diperkirakan ponsel mengalami short pada jalur vbatt.
+                        Penanganan :
+                        Lakukan pemeriksaan kapasitor vbatt dalam setiap IC (PA, Power, Audio, Bluetooth/wifi, Charging, CPU, Flash). Bila terjadi short dalam kapasitor (kedua kutubnya ngeground), silahkan angkat dan ganti kapasitor
+                        
+                        <br>b. Short >400mA sebelum tekan on/off
+                        On/off belum ditekan, jarum ampere menyampaikan angka > 400mA. Diperkirakan terjadi short pada IC PA, IC Power, IC bluetooth, IC Charging, IC Regulator.
+                        Penanganan :
+                        Lakukan pencarian komponen yg panas, dan lakukan investigasi dalam setiap kapasitor vbatt nya. Jika kapasitor vbatt bagus maka kemungkinan IC tadi yang rusak.
+                        
+                        <br>c. Short >400mA setelah tekan on/off
+                        Setelah On/Off ditekan, jarum ampere >400mA. Biasanya IC Power panas, namun belum tentu IC power yang rusak, bisa jadi kerusakan pada IC PA, IC CPU, IC Flash, IC regulator serta IC yang terhubung dengan jalur VIO lain                                                                                                                                                                                                          nya.
+                        Penanganan :
+                        Lakukan pengecekan dalam capasitor di jalur VIO yang dicurigai short dengan menggunakan AVOmeter mode buzzer. Hubungkan probe hitam ke ground dan lakukan pengecekan pada kedua kutub capasitor menggunakan probe merah, jika kedua kutub tadi berbunyi maka di jalur IC tadi mengalami short.
+                        Kemudian cari komponen yang panas menggunakan melaksanakan suntik tegangan sebesar 1.8V (tegangan VIO maks 1.8V). Atur tegangan dalam power supply sebesar 1.8V, hubungkan kabel hitam power supply dalam ground PCBA sedangkan kabel merah dalam kapasitor jalur VIO yg short. Kemudian cari komponen yang panas dan lakukan penggantian.
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree4" aria-expanded="false" aria-controls="flush-collapseThree4">
+                        Prinsip utama Analisa  
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body"> 
+                       
+
+                        <br>A.	Cek input Vbus ( dioda mode ) normal atau short ?
+                        <br>B.	Cek Arus PSU
+                        <br>C.	Identifikasi fisik komponen dan PCB atau mainboard 
+                        <br>D.	Pahami Karakteristik dan cara kerja komponen serta cara kerja IC dan rangkaian
+                        <br>E.	Identifikasi gejala dan indikasi jenis kerusakan serta system proteksinya <br>
+                        
+                        
+                        <strong><code>Analisa lanjutan kerusakan Smartphone</code></strong>
+                        
+                        <br>1. Cek Arus  PSU		=  tekan power untuk identifikasi mode On
+                        <br>2. cek fastboot		=  hubungkan Hp ke Pc jika terkoneksi (respon) berarti Cpu bekerja
+                        <br>3. Cek rangkain Konektor, rangkaian Vbus & flexible2, Vbatt
+                        <br>4. Test point dan tracking jalur serta lokalisir sumber kerusakan
+                        <br>5. cek syarat kerja CPU :
+                        <br>a. tegangan kerja V1		= 1,8 V
+                        <br>b. tegangan kerja V3 		= 2,8V (output IC power ke RF)
+                        <br>c. control                      		= 1,8V (output CPU ke PMU)
+                        <br>d. RESET		           	= 1,8V
+                        <br>e. Vcore		    		= 1,5V
+                        <br>f. RF clock 		          	 	 = 26 Mhz 
+                        <br>6.	Pelajari berbagai alternatif penyelesaiannya 
+                        
+                        <code>SYARAT menjadi TEKNISI MANDIRI</code>
+                        <br>1. Bisa melakukan pengukuran MTD
+                        <br>2. menguasai skematik
+                        <br>3. mampu melakukan menganalisa
+                        <br>4. ketrampilan Skill
+                        <br>5. terus belajar dan pantang menyerah
+                                                
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree5" aria-expanded="false" aria-controls="flush-collapseThree5">
+                        Teknik Pengukuran
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+
+                        <br>1	  Pasif 	= Pengukuran hambatan dalam tanpa tegangan dengan diode mode atau impendansi menggunakan Buzzer mode
+                        
+                        <br>2.  Aktif		= Pengukuran  menggunakan Tegangan AC atau DC
+                         
+                        <br>3.  Seri 		= meletakkan Probe hitam dan merah langsung ke titik ukur baik komponen maupun jalur
+                        
+                        <br>4.  Paralel	= letakkan probe hitam ke ground & probe merah ketitik ukur untuk Avometer digital dan sebaliknya untuk multitester analog
+                        
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree6" aria-expanded="false" aria-controls="flush-collapseThree6">
+                        Jenis-jenis short
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+
+                        <br>1.konslet sebelum  IC power bekerja terjadi saat kita menghubungkan ponsel dengan power supply langsung menunjukkan pergerakan Arus tertentu dan berhenti pada posisi tertentu tanpa kita tekan saklar On/off.
+                        
+                          Komponen ponsel yang mengalami konslet pada kasus seperti ini biasanya berada pada komponen yang mendapatkan tegangan kerja langsung dari baterai. Gejala yang timbul akibat konslet ini ialah ponsel Panas hingga MATOT 
+                        
+                          <br>2. konslet setelah IC power bekerja
+                         terjadi takkala kita menghubungkan ponsel dengan power supply kemudian menekan saklar ON/OFF. Indicator Ampere Arus menunjukkan pergerakan Arus tertentu dan berhenti diposisi tertentu yang tidak Normal ( konsumsi Arus naik tinggi melebihi nilai konsumsi yang dibutuhkan secara wajar). Biasanya terdapat short pada komponen yang mendapatkan tegangan kerja dari IC Power.
+                           Gejala yang timbul akibat konslet ini ponsel panas saat ditekan On/off.
+                        
+                           <br>3. konslet pada saat transmit/calling
+                         terjadi disaat pengguna melakukan panggilan indicator Arus PSU melampaui konsumsi normal +- 3,7V s.d 4,5V
+                         Gejala Ic panas dan boros baterai saat melakukan panggilan telepon.
+                        
+                         <br>4. konslet WIFI, GPS, Bluetooth Apk dll
+                        Short ini terjadi saat Wifi/GPS/BLUETOOTH DIAKTIFKAN
+                        
+                        <br>5. KONSLET ARUS STANDBY 
+                        ialah konslet yang terjadi dimana ponsel pada keadaan dia(standby) komsumsi arus 0. Cirinya indicator arus PSU menunjukkan pergerakan arus tertentu padahal konsumsi arus standby adalah O ampere. Komponen yang short pada kasus ini biasanya yang mendapatkan tegangan kerja dari IC power. Gejala ponsel panas saat standby
+                        
+                        
+                        <br>Short sircuit adalah short yang terdapat pada jalur Rangkaian sebuah PCB atau mainboard.
+                        Perbedan short sirkuit (jalur) dan short komponen
+                        
+                        <br>1.	Bila terdapat selisih nilai Ampere yang signifikan pada saat pengujian konsleting  PSU dengan  nilai ampere short pada  Vbus/VBat atau area voltage injection (titik penyuntikan tegangan Maka ini merupakan short komponen
+                        
+                        <br>2.	Jika hanya terdapat sedikit selisih nilai short pada ampere PSU dengan nilai Ampere yang short pada penyutikan pada Logic board maka ini merupakan short Sircuit
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree7" aria-expanded="false" aria-controls="flush-collapseThree7">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                     
+                      </div>
+                    </div>
+                  </div>
+                 
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree8" aria-expanded="false" aria-controls="flush-collapseThree8">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                    
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree9" aria-expanded="false" aria-controls="flush-collapseThree9">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree9" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="container ">
+                <h3>Software</h3>
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
+                       EDL, fasboot, Usb debuging
+                      </button>
+                    </h2>
+                    <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       <strong>EDL singkatan dari Emergency Download</strong>. 
+                       <br>adalah Mode Khusus untuk memberikan pengguna tingkat akses yang lebih besar terhadap perangkat Xiaomi Kalian. 
+                       Kegunaan EDL diiantaranya Anda dapat membuka Bootloader secara tidak resmi, Flash Stock Firmware, Unbrick perangkat Anda dari Bootloop dll.
+                       Saat EDL mode aktif maka, Prosesor Snapdragon berada dalam mode download image. EDL mode dapat menjadi alternatif 
+                       selain Fastboot untuk melakukan flashing ROM di Hp Xiaomi kalian.
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTw" aria-expanded="false" aria-controls="flush-collapseTw">
+                       ADB (Android Debug Bridge)
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTw" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body"> 
+                        <code>adalah alat command line serbaguna yang memungkinkan Anda berkomunikasi dengan perangkat. 
+                          Perintah adb memfasilitasi berbagai tindakan perangkat, seperti menginstal dan men-debug aplikasi. 
+                          adb menyediakan akses ke shell Unix yang dapat Anda gunakan untuk menjalankan berbagai perintah di perangkat.</code>
+                          <br>Ini adalah program klien-server yang meliputi tiga komponen: <br>
+
+                          <br>1. Klien, yang mengirimkan perintah. Klien berjalan pada mesin pengembangan. Anda dapat memanggil klien dari terminal command line dengan mengeluarkan perintah adb.
+                          <br>2. Daemon (adbd), yang menjalankan perintah di perangkat. Daemon berjalan sebagai proses latar belakang di setiap perangkat.
+                          <br>3. Server, yang mengelola komunikasi antara klien dan daemon. Server berjalan sebagai proses latar belakang pada mesin pengembangan Anda. <br>
+                          <br>Daftar Perintah Global atau Global Command Line ADB <br>
+                          <code>adb -a</code>
+                                Berfungsi mencari perangkat pada semua jaringan yang terdaftar tidak hanya pada jaringan lokal atau localhost.
+                          <code>adb -d</code>
+                                Berfungsi mengarahkan perintah adb keperangkat yang terpasang secara langsung ke satu usb perangkat.
+                                Error atau kesalahan terjadi jika ada lebih dari satu perangkat terpasang menggunakan usb.
+                          <code>adb -e</code>
+                                Berfungsi mengarahkan perintah adb keperangkat yang terpasang secara langsung ke proses emulator yang sedang berjalan.
+                                Error atau kesalahan terjadi jika ada lebih dari satu proses emulator yang sedang berjalan.
+                          <code>adb -H</code>
+                                Berfungsi untuk memberi informasi tentang ADB server host. 'localhost'
+                                  contoh:
+                                  <br>$ adb -H localhost
+                          <code>adb -P port</code>
+                                Berfungsi untuk memberi informasi tentang ADB server port. '5037'
+                                  contoh:
+                                <br>$ adb -P 5037
+                          <code>adb -L</code>
+                                Berfungsi untuk memberi informasi ADB server socket.
+                                  contoh:
+                                  <br>$ adb -L tcp:localhost:5037
+                          <code>adb -s</code>
+                                Berfungsi mengarahkan perintah adb keperangkat yang terpasang secara langsung ke proses emulator yang sedang berjalan dengan menambahkan nomer seri yang sudah terdaftar.
+                                  contoh:
+                               <br> $ adb -s emulator-5678 <br>
+                              <strong>Daftar Perintah Umum atau General Command Line ADB</strong>
+                            <br><code>adb devices</code>
+                            Berfungsi untuk mencetak atau memberi tahu kita tentang informasi dan daftar android yang sudah ditemukan oleh adb. opsi -l dapat membantu kita untuk mengetahui lebih detail tentang perangkat yang sudah terdaftar
+                            contoh:
+                            <br>$ adb devices
+                            <br>$ adb devices -l
+                            <br>adb help
+                            Berfungsi untuk memberi tahu kita tentang sebuah informasi tentang daftar perintah dan keterangan perintah.
+                            <code>adb version</code>
+                            Berfungsi untuk memberi informasi tentang versi adb yang sedang kita pakai.
+                            <code>adb run-as nama_file</code>
+                            Berfungsi untuk menjalan aplikasi dengan memakai level akses sama dengan aplikasi yang sedang dijalankan tanpa memerlukan akses root. Perintah ini dapat membantu anda jika perangkat atau emulator belum ter-rooting dan status aplikasi harus bisa didebug.
+                            <strong>Daftar Perintah Jaringan atau Networking Command Line ADB</strong>
+                            <code>adb connect</code>
+                              Berfungsi untuk menyambungkan perangkat melalui TCP/IP. port '5555' sebagai nilai tetap jika nilai port tidak terset.
+                            contoh:
+                            <br>$ adb connect localhost::5555 $ adb connect localhost
+                            <code>adb disconnect host::port</code>
+                            Berfungsi untuk memutus menyambungkan perangkat melalui TCP/IP. port '5555' sebagai nilai tetap jika nilai port tidak terset. Jika kita tidak menambahkan parameter pilihan host::port maka semua sambungan akan terputus.
+                            contoh:
+                            <code>$ adb disconnect localhost::5555</code>
+                            (memutus sambungan localhost::5555)
+                            <code>$ adb disconnect</code>
+                            (memutus semua sambungan)
+                            <code>adb forward --list</code>
+                            Berfungsi untuk memberikan informasi tentang semua sambungan socket yang ter-forward.
+                            <code>adb kill-server</code>
+                            <br>Berfungsi untuk menghentikan proses adb server yang sedang berjalan.
+                            <strong>Daftar Perintah Pengiriman File atau File Transfer Command Line ADB</strong>
+                            <code>adb push</code>
+                            Berfungsi untuk mengirimkan duplikasi file atau folder dari lokasi lokal(asal) kelokasi perangkat atau emulator target.
+                            contoh:
+                            adb push <dari_lokasi_lokal> <ke_lokasi_tujuan>
+                            $ adb push file.txt /sdcard/file.txt
+                            <code>adb pull</code>
+                            Berfungsi untuk mengirimkan duplikasi file atau folder dari lokasi perangkat atau emulator target ke lokal folder. jika menggunakan -a akan mempertahankan cetakan waktu dan mode file
+                            contoh:
+                            adb pull <dari_lokasi_target> <ke_lokasi_lokal>
+                            $ adb pull /sdcard/file.txt file.txt
+                            adb pull -a <dari_lokasi_target> <ke_lokasi_lokal>
+                            $ adb pull -a /sdcard/file.txt file.txt
+                            Daftar Perintah Aplikasi atau Aplication Command Line ADB
+                            adb install
+                            Berfungsi untuk mengirimkan aplikasi dan langsung memasang aplikasi tersebut pada target atau emulator
+                            contoh:
+                            adb install <target_aplikasi.apk>
+                            $ adb install D:/folder/aplikasi.apk
+                            Ada beberapa pilihan untuk perintah adb install. Antara lain:
+                            -r : mengganti aplikasi lama.
+                            adb install -r <target_aplikasi_baru.apk>
+                            adb install -r D:/folder/aplikasi_baru.apk
+                            -s : memasang aplikasi pada sdcard.
+                            adb install -s <target_aplikasi.apk>
+                            adb install -s D:/folder/aplikasi.apk
+                            -g : memberikan semua izin runtime.
+                            adb install -g <target_aplikasi.apk>
+                            adb install -g D:/folder/aplikasi.apk
+                            -p : memasang sebagian aplikasi.
+                            adb install -p <target__bagian_aplikasi.apk>
+                            adb install -p D:/folder/bagian_aplikasi.apk
+                            -d : memberikan izin untuk downgrade atau menurunkan versi aplikasi.
+                            adb install -d <target_aplikasi_lama.apk>
+                            adb install -d D:/folder/aplikasi_versi_lama.apk
+                            -t : memberikan izin test aplikasi.
+                            adb install -t <target_aplikasi_test.apk>
+                            adb install -t D:/folder/aplikasi_versi_test.apk
+                            <code>adb unistall</code>
+                            Berfungsi untuk menghapus atau mencopot aplikasi pada target atau emulator.
+                            '-k' untuk menjaga data dan cache tidak ikut terhapus contoh:
+                            $ adb unistall <target_aplikasi.apk>
+                            $ adb unistall com.aplikasi.app
+                            $ adb unistall -k com.aplikasi.app
+                            adb kill
+                            Berfungsi untuk mematikan proses aplikasi yang sedang berjalan.
+                            adb kill nama_aplikasi contoh:
+                            $ adb kill com.nama_aplikasi.app
+                            <code>adb kill-all</code>
+                            Berfungsi untuk mematikan semua proses aplikasi yang sedang berjalan.
+                            contoh:
+                            <code>$ adb kill-all</code>
+                            adb force-stop
+                            Berfungsi untuk menghentikan proses aplikasi yang sedang berjalan.
+                            contoh:
+                            <code>$ adb force-stop com.nama_aplikasi.app</code>
+                            <strong>adb kill-all</strong>
+                            Berfungsi untuk mematikan semua proses aplikasi yang sedang berjalan.
+                            contoh:
+                            <code>$ adb kill-all</code>
+                            Daftar Beberapa Perintah Command Line ADB
+                            <code>adb reboot</code>
+                            Berfungsi untuk merestart target atau emulator.
+                            <code>$ adb reboot</code>
+                            Ada beberapa pilihan untuk perintah adb reboot. Antara lain:
+                            <code>$ adb reboot recovery</code>
+                            Berfungsi untuk merestart Perangkat kedalam mode Recovery.
+                            <code>$ adb reboot bootloader</code>
+                            Berfungsi untuk merestart Perangkat kedalam mode Bootloader.
+                            <code>$ adb reboot fastboot</code>
+                            Berfungsi untuk merestart Perangkat kedalam mode Fastboot.
+                            <code>adb root</code>
+                            Berfungsi untuk merestart adbd dengan izin root atau administrator.
+                            <br>$ adb root    
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreec" aria-expanded="false" aria-controls="flush-collapsehreec">
+                      firmware & ROM
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        firmware kumpulan kode Pemerograman yg dirancang menjadi Operating system (Os) 
+                        sedangkan ROM ialah bagian dari Part system pada firmware <br>
+                        <strong>ROM Types :</strong> 
+
+                        <br>ALPHA >> Tag yang di buat untuk memberitahu bahwa Custom ROM ini baru saja dibuat pertama kali dengan Log Initial Release, sehingga belum bisa di gunakan secara maksimal, karena masih akan ada banyak sekali Bugs di dalam Custom ROM tersebut.
+                        
+                        <br>BETA >> Tag ini merupakan sebuah Tags kelanjutan dari Alpha, jika Custom ROM yang di buat sudah minim Bugs dan sudah bisa di gunakan dalam Ratio 70-80%, maka Custom ROM tersebut sudah bisa di Klasifikasikan sebagai BETA version, tetapi masih ada sedikit Bugs dan belum bisa berjalan secara 100%.
+                        
+                        <br>STABLE >> Tag ini berikan kepada Custom ROM yang sudah bisa di gunakan dengan Layak, artinya sudah hampir tidak ada Bugs dan bisa di gunakan secara Maksimal. <br>
+                        
+                        <strong>ROM developer</strong>
+                        <br>1. Official  :  Stock ROM
+                        <br>2. unofficial:  Costum ROM
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreed" aria-expanded="false" aria-controls="flush-collapsehreed">
+                        Flashing
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreee" aria-expanded="false" aria-controls="flush-collapsehreee">
+                        Rooting
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreee" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                        Root (android) atau jailbreak (Ios) adalah sebuah proses customisasi Os menggunakan file library exploit 
+                        yang ditanam pada system Os melalui folder binary yg bekerja membuka akses izin untuk merubah Value maupun konfigurasi ekosistem Os
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreef" aria-expanded="false" aria-controls="flush-collapsehreef">
+                        TWRP
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreef" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        TWRP (Team Win Recovery Project) merupakan tools yang berfungsi untuk melakukan Custom Recovery pada smartphone Android yang  memiliki lisensi terbuka.
+                        <strong>instalasi TWRP bisa dengan 2 cara :</strong>  <br>
+                        <br><code>1. fastboot via Pc</code> <br>
+                        <strong>Tools download</strong>
+                        <br>a. fastboot driver
+                        <br>b. downlowd Android SDK Platform tools
+                        <br>c. TWRP img
+                        <br>d. file root exploit magisk/superSu
+                        <br>e. kabel Usb
+                        <br>e. laptop atau pc <br>
+                         
+                        <code>intallasi</code>
+                        <br>1. UBL untuk costum recovery
+                        <br>2. costum recovery TWRP/orangeFox
+                        <br>3. move file TWRP to folder fastboot driver 
+                            disk C: Program file x86/min Adb and fastboot
+                        <br>4. rename file menjadi  twrp. img
+                        <br>5. masuk fastboot mode
+                        <br>6. hub hp ke Pc
+                        <br>7. cmd via win here
+                                <br>a. buka Folder atau Drive tempat Terget Direktori CMD
+                                        disk C: Program file x86/min Adb and fastboot
+                        
+                                <br>b. Setelahnya tekan dan tahan tombol SHIFT pada Keyboard di barengan dengan Klik Kanan pada Mouse.
+                        
+                                <br>c. Silahkan gunakan Command Prompt Standard atau   PowerShell,keduanya mempunyai fungsi yang sama saja. 
+                        
+                                <br>d. Jika sudah, maka hasilnya akan terlihat seperti ini, yaitu otomatis langsung terbuka ke Spesifik Folder atau Drive yang sudah kalian targetkan sebelumnya.
+                                <br>e. enter => Done
+                        
+                                <br><code>2. Rooting via flashify tool</code>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreeg" aria-expanded="false" aria-controls="flush-collapsehreeg">
+                              Costum ROM
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreeg" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <br>Download Custom ROM yang akan kalian gunakan, letakan Custom ROM tersebut pada Internal Storage Smartphone Android yang kalian miliki di tempat yang mudah untuk di temukan.
+
+                        <br>Setelahnya, masuk ke dalam Mode TWRP.
+                        
+                        <br>Pilih Opsi Install.
+                      
+                        <br>Cari Custom ROM yang sudah kalian pindahkan Memory Internal dan Konfirmasi Installasi.
+                        
+                        <br>Tunggu hingga Proses selesai.
+                        
+                        <br>Setelahnya, agar bisa berjalan dengan Smooth / Lancar, pilih Opsi Wipe pada TWRP, langkah ini akan melakukan Full Wipe pada System Custom ROM yang telah di Install, agar bisa berjalan tanpa adanya gangguan dari jejak Stock ROM yang kalian gunakan sebelumnya.
+                        
+                        <br>Cari Custom ROM yang sudah kalian pindahkan Memory Internal dan Konfirmasi Installasi.
+                        
+                        <br>Tunggu hingga Proses selesai.
+                        Setelahnya silahkan lakukan Reboot to System dengan memilih Opsi Reboot pada Menu TWRP.
+                        
+                        <br>Booting pertama akan lama, bisa sampai 20 Menit lebih
+      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreeh" aria-expanded="false" aria-controls="flush-collapsehreeh">
+                     
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreeh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreei" aria-expanded="false" aria-controls="flush-collapsehreei">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreei" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          <!--hp-->
+            
+          <!--laptop-->
+            <section class="flex-container d-md-flex">
+              <div class="container ">
+                <h3>laptop repair</h3>
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                        TABEL ARUS laptop
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+                        <br>1. Arus naik bersamaan dengan tegangan sebelum tegangan adaptor 19V atau ampere naik drastis sementara voltase turun(drop) sebelum diswicht ON. Konslet pada area rangkaian separator dan outputnya.
+                        Perbaikan : cabut R out lalu inject(suntik) tegangan cari komponen yang panas
+                        <br>2. Arus naik tinggi/menyentak sesaat saat tegangan adaptor 19V/20V
+                        Konslet pada rangkaian 3V/5V atau outputnya.
+                        Perbaikan : Cabut kumparan pada masing-masing regulator 3V/5V lalu beri tegangan yang sesuai kemudian cari komponen yang panas atau hangus 
+                        <br>3. Arus menyentak naik drastic > 400MA saat di switch ON. Konslet pada area Regulator IC* BESAR seperti EC, SB, NB, VGA, RAM.
+                        Perbaikan : cabut kumparan pada tiap Regulator beri tegangan yang sesuai lalu cari komponen yang panas.
+                        <br>4. Arus naik pertama kali < 200MA. Ada rangkaian regulator yang tidak bekerja.
+                        Perbaikan : setelah di ON ukur semua kumparan pada tiap rangkaian Regulator
+                        <br>5. Arus naik pertama kali +- 300MA lalu naik lagi +- 500-600MA.
+                        Perbaikan : Cek RAM & Prosesor
+                        <br>6.amper kecil/Arus naik pertama kali +- 300MA lalu naik lagi +- 700MA lalu jatuh ke Nol.
+                        Perbaikan : CEK NEC TOKIN & Rehot NB 
+                        
+                        <br>7. Arus naik +- 1A lalu Stagnan. 
+                        Perbaikan :Cek/flash bios, cek Rangkaian LVDS & Panaskan VGA
+                        <br>8. ada garis kecil disudut layar (  blank hitam/black screen)
+                        Perbaikan : Cek RAM dan Rangkaian RAM bila normal coba Flash bios
+                        <br>9. Hang logo atau sesudah windows & Operating System (OS) not found. 
+                        Perbaikan :
+                        <br>a.  CEK RAM & HDD
+                        <br>b. cabut satu persatu Keyboard/baterai/Wifi/DVD/speaker/camera dll
+                        <br>10. Arus +- 100MA cek IC bios dan flashing
+                        <br>11. Ampare PSU tidak respon cek jack adaptor dan fleksibel jack serta test point distribusi 19V.
+                        <br>12. distribusi tegangan normal tapi tidak bisa di On.
+                         Perbaikan : Cek tegangan 3V dikaki swicht ON atau fleksibel rangkaian ON
+                         <br>13. Arus PSU normal tapi laptop terkadang mau hidup terkadang MATOT.
+                        Perbaikan : cek mosfet dan elco
+                        <br>14. adapun laptop baru Single CHIP (SOC)  > +350 -500MA sudah dapat start UP booting secara sempurna sampai ke Menu desktop
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2" aria-expanded="false" aria-controls="flush-collapseTwo2">
+                        Prinsip  Analisa dan Test point 
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+
+                        <br>A.	Cek input Vbus atau jack adaptor/magsafe ( dioda mode ) normal atau short ?
+                        <br>B.	Cek Arus
+                        <br>C.	Identifikasi fisik komponen dan PCB atau mainboard 
+                        <br>D.	Pahami Karakteristik dan cara kerja komponen serta cara kerja IC dan rangkaian
+                        <br>E.	Identifikasi gejala dan indikasi jenis kerusakan serta system proteksinya
+                        <br>F.	Test point dan tracking jalur serta lokalisir sumber kerusakan
+                        <br>G.	Pelajari berbagai alternatif penyelesaiannya
+                        
+                        <code>point atau Pengukuran baik pasif (hambatan dalam/impedansi) maupun aktif (tegangan kerja dan perintah) merupakan 
+                          tahapan Analisa setelah melakukan identifikasi fisik, gejala dan indikasi kerusakan untuk menentukan sumber kerusakan 
+                          berasal dari suatu jalur Normal atau terputus atau berasal dari komponen atau IC regulatornya Caranya :</code>
+                          
+                        <br>a. gunakan MTD skala Ohm Ω atau buzzer max 2k ohm Probe Merah pada ground dan Probe Hitam pada tujuan titik pengukuran.
+                        <br>b. jika MTD menunjukkan angka 		= umumnya OK
+                        <br>c. jika MTD menunjukkan angka 000 	= terhubung ground/beep buzzer
+                        <br>d. jika MTD menunjukkan angka OL/I	= Putus atau not connected
+                        <br>e. nilai test point pada satu Blok rangkaian  relatif sama 
+                        <br>f.  bila nilai test point Normal  namun system tetap belum bekerja maka lihat skema atau bandingkan dengan MOBO lainnya serta lakukan pengukuran Aktif dan Analisa system proteksinya
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree3">
+                        Syarat kerja sebuah reugulator
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+
+                        <br>A. tegangan kerja
+                        <br>B. tegangan perintah (enable/trigger)
+                        <br>c. No protection
+                        <br>Regulator ada 2 jenis yaitu LDO dan SMPS <br>
+
+                        <code>SAP ( Standar Analisis Prosedur)</code>
+                        <br>1.	main power
+                        <br>2.	separator ( power selector )
+                        <br>3.	RTC, Signal, clock
+                        <br>4.	Power UP timing S5-S0
+                        <br>5.	Switch ON dan boot Up
+                        <br>6.	Bios 
+                        <br>7.	Interfaces = RAM, HDD, LCD, KEYBOARD, LCD/MONITOR, FLEXIBLE DLL
+                        <br>8.	LVDS , GFX dan GPU
+                        <br>9.	OS dan DRIVER
+                        <br>10.	IC failured = datasheet
+                        <br>11.	CHIPSET dan SOC
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThri" aria-expanded="false" aria-controls="flush-collapseThri">
+                        Rangkaian ON 
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThri" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+                        <br>Rangkaian On ialah rangkaian yang akan pertama kali bekerja saat dilakukan switch On dengan  konsumsi arus pertama kali naik +- 200ma. Syarat kerja Rangkaian ON :
+                        Aktif sebelum On <br>
+                        <br>1. VDD								=  3,3V/5V always
+                        <br>2. RTC	& Clock
+                        <br>3.  Syarat kerja EC = AC IN  &  SB = S5_ON terpenuhi	= 3V always/VCC
+                        <br>4. Bios Normal						=  3 V di kaki 3,5,7 IC Bios
+                        <br>5. Power ON SW 1/Sys_ON	  =  +- 3V
+                        <br>Aktif setelah ON
+                        <br>4. Resume Reset						=  3,3V
+                        <br>5. Power button _Out			=  3,3V
+                        <br>6. Sleep_3,4,5 						=  3,3V
+                        <br>7.  VR_ON, Main_ON, SYS_ON,SUSP				=  3,3V
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree4" aria-expanded="false" aria-controls="flush-collapseThree4">
+                        Regulator 3V & 5V always
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      
+                        <br>Rangkaian tegangan alw (Tegangan standby) 3V & 5V ialah suatu Rangkaian power yang mendapatkan tegangan Utama (main power) meskipun laptop dalam keadaan off. V alw merupakan jalur utama yang mendapatkan tegangan utama 19V/20V atau sesuai dengan  yang didesign vendornya setelah melewati Rout separator.
+                         Cirinya lampu indicator hidup serta terdapat nilai arus (pengecekan PSU) berkisar 5-10ma. Kombinasi design regulator Always diantaranya terdiri dari (3V &  5V) atau  3V , 5V atau 3V+ IC charger , 5V . Apabila hilang tegangan utama 3V dan 5V ini maka laptop akan MATI TOTAL (MATOT).
+                        
+                        <br>Tegangan utama (Always / AL) adalah tegangan yang wajib hadir (wajib ada) pada saat disambungkan ke charger yang telah dialiri listrik (terpasang sempurna).
+                        <br>(1). Tegangan utama terdiri dari tegangan : 12V,15V,18,5V dan biasanya 19V & 20V
+                        <br>(2). 5 Volt = 5Alw/ 5AL/ 5 VPCU
+                        <br>(3). 3.30 Volt = 3 Alw/ 3AL/ 3 VPCU
+                        <br>Syarat Kerja :	
+                          <ul>
+                              <li>a. Output separator => V in / B+ / DC Batt out</li>
+                              <li>b. IC Swichting power supply</li>
+                              <li>c. Dua pasang mosfet</li>
+                              <li>d. Dua elco</li>
+                              <li>e. Dua kumparan besar</li>
+                              <li>f. Enable (perintah kerja)</li>
+                          </ul>
+                          jika 3V & 5V yang hilang padahal main power Out Separatormengalir ganti elco/lilitannya	
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree51" aria-expanded="false" aria-controls="flush-collapseThree51">
+                        BIOS
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree51" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        BIOS (Basic Input Output System ) merupakan sebuah program atau perangkat lunak antarmuka tingkat rendah yang berfungsi mengendalikan atau mengontrol perangkat keras yang terpasang pada komputer.BIOS disimpan atau ditanamkan di dalam ROM (read only memory).
+
+                        BIOS menyediakan antarmuka komunikasi tingkat rendah, dan dapat mengendalikan banyak jenis perangkat keras (seperti keyboard). Karena kedekatannya dengan perangkat keras, BIOS umumnya dibuat dengan menggunakan bahasa rakitan (assembly) yang digunakan oleh mesin yang bersangkutan. BIOS pertama kali muncul dalam sistem operasi CP/M. BIOS merupakan bagian dari CP/M yang dimuat pada saat proses booting dimulai Beberapa mesin yang menjalankan CP/M memiliki boot loader sederhana dalam ROM). Kebanyakan versi DOS memiliki sebuah berkas yang disebut “IBMBIO.COM” (IBM PC-DOS) atau “IO.SYS” (MS-DOS) yang berfungsi sama seperti halnya CP/M disk BIOS
+                        
+                        
+                        BIOS juga sering disebut sebagai ROM BIOS karena pada awalnya BIOS disimpan dalam chip memori hanya baca (ROM) dalam motherboard. Sehingga BIOS dapat dieksekusi pada waktu komputer dinyalakan. BIOS dalam komputer PC modern disimpan dalam chip ROM yang dapat ditulisi ulang secara elektrik atau Flash ROM. Saat ini Flash BIOS lebih populer dibandingkan dengan ROM BIOS.
+                        
+                        Meskipun BIOS disimpan dalam memori hanya baca, konfigurasi BIOS tidak disimpan dalam ROM melainkan sebuah chip terpisah yang disebut se-bagai Real-time clock (RTC). RTC ini berupa sebuah Non-Volatile Random Ac-cess Memory (NVRAM). NVRAM juga sering disebut sebagai Complimentary Metal-Oxide Random Access Memory (CMOS RAM), Karena menggunakan metode pembuatan CMOS, NVRAM membutuhkan daya yang sangat kecil agar dapat bekerja. Meskipun disebut non-volatile, NVRAM sebenarnya meru-pakan sebuah chip yang volatile, sehingga data yang tersimpan di dalamnya dapat terhapus dengan mudah. NVRAM "dihidupi" oleh sebuah baterai (mirip baterai kalkulator atau jam) dengan bahan Litium dengan seri CR-2032. Se-buah baterai Litium CR-2032 dapat menghidupi NVRAM selama tiga hingga lima tahun. Jika daya dalam baterai habis, atau daya yang disuplainya terputus (akibat dicabut dari slotnya), maka semua konfigurasi akan dikembalikan ke kondisi standar, sesuai ketika BIOS tersebut diprogram oleh pabrikan. BIOS umumnya memberikan laporan CMOS Checksum Error atau NVRAM Check-sum Error.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree61" aria-expanded="false" aria-controls="flush-collapseThree61">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree61" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree71" aria-expanded="false" aria-controls="flush-collapseThree71">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree71" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                     
+                      </div>
+                    </div>
+                  </div>
+                 
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree81" aria-expanded="false" aria-controls="flush-collapseThree81">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree81" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                    
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehree1" aria-expanded="false" aria-controls="flush-collapsehree1">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehree1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="container ">
+                <h3> Windows, mac & Linux</h3>
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                       
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                       
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreec" aria-expanded="false" aria-controls="flush-collapseThreec">
+                      
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreed" aria-expanded="false" aria-controls="flush-collapseThreed">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreee" aria-expanded="false" aria-controls="flush-collapseThreee">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreee" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+                      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreef" aria-expanded="false" aria-controls="flush-collapseThreef">
+                       
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreef" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+      
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeg" aria-expanded="false" aria-controls="flush-collapseThreeg">
+                     
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreeg" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                       
+      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeh" aria-expanded="false" aria-controls="flush-collapseThreeh">
+                     
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreeh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreei" aria-expanded="false" aria-controls="flush-collapseThreei">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreei" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+                       
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreej" aria-expanded="false" aria-controls="flush-collapseThreej">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThreej" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          <!--laptop-->
+      <!--dasar-->
+      <section class="flex-container d-md-flex">
+        <div class="container ">
+          <h3>komponen</h3>
+          <div class="accordion accordion-flush " id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                  Resistor
+                </button>
+              </h2>
+              <div id="flush-collapseOne1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>1.	RESISTOR (R) = merupakan komponen elektronika pasif  yang dapat menghambat current(arus) pada sebuah rangkaian
+                  Fungsi : pembagi tegangan, pembatas arus, Penurun tegangan, proteksi dll. <br>
+                  Satuan & simbol : OHM Ω 
+ 
+                  <br>Jenis Resistor berdasarkan fungsi	:  fixed , variabel, NTC(suhu), LDR(cahaya), DLL
+                  <br>Cara penulisan & membaca nilai Resistor : Nilai 04.7 = 4,7k Ω = 4700 Ω = 4k7 Ω
+                  <br>Teknik Pengukuran & analisa : jika nilai naik/turun secara drastis = RUSAK
+                  <br>Indikasi kerusakan serta dampaknya : hangus, putus, terjadi perubahan nilai hambatan (melar/menyusut)
+                  <br>Rumus menaik dan menurunkan tegangan ( Devider )
+                  <code>Vout = Vin x ( R2 / R1+R2) kunci menaikkan tegangan ialah menaikkan nilai R2 yang terhubung ke GND</code>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2" aria-expanded="false" aria-controls="flush-collapseTwo2">
+                 Kapasitor
+                </button>
+              </h2>
+              <div id="flush-collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>2.	KAPASITOR/KONDENSATOR (C) = Komponen pasif yang dapat menyimpan muatan listrik sementara
+                  <br>Fungsi : Penyaring (filter) dan penghubung (coupling)
+                    <br>Satuan dan Simbol : farad (F)
+                    <br>1 farad = 1.000.000 µF (Mikro farad)
+                    <br>1µF	= 1000 nF (nano farad)
+                    <br>1µF	= 1.000.000 pF (pico farad)
+                    <br>1nF	= 1000 pF (pico farad)
+
+                    <br>Jenis-jenis kapasitor	: keramik (non polar), tantalum(bipolar), elco(bipolar)
+                      <br>Indikasi kerusakan : short, kering & gelembung pada elco 
+                      <br>Dampaknya : hang, black screen, matot
+
+                    <code>pengukuran & Analisa :</code>
+                    <br>A.	jika angka naik terus lalu menunjukkan I/OL	 = OK
+                    <br>B.	jika angka naik terus lalu menunjukkan angka	 = BOCOR
+                    <br>C.	Jika MTD tidak bereaksi 				 = Rusak
+                    <br>D.	kapasitor normal tidak boleh terhubung/bunyi mode buzzer serta nilai faradnya sesuai dengan nilai pabrikasi
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree3">
+                induktor
+                </button>
+              </h2>
+              <div id="flush-collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>3.	LILITAN/KUMPARAN/COIL/INDUKTOR (L) =  komponen pasif yang terdiri susunan lilitan kawat yang membentuk kumparan
+                  <br>Fungsi : Menyimpan arus listrik  dalam medan magnet, filter frekuensi tertentu, transformator
+                  Satuan & simbol : henry (H)
+	 
+                  <br>Teknik Pengukuran & analisa : pengukuran dengan skala ohm Ω nilai hambatannya HARUS NOL/mendekati 0
+                    Indikasi kerusakan serta dampaknya : ciri-ciri Coil (Induktor) Rusak  terdapat Nilai hambatan, laptop panas  dan Putus jalur. 
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree4" aria-expanded="false" aria-controls="flush-collapseThree4">
+                  Dioda
+              </h2>
+              <div id="flush-collapseThree4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>4.	DIODA (D) = Komponen elektronika Aktif yang terbuat dari bahan semikonduktor umumnya mempunyai 2 elektroda(terminal) yaitu ANODA(+) dan KATODA (-). Prinsip kerjanya mengalirkan arus dari sisi tipe P (anoda) menuju ke sisi tipe N (katoda) namun tidak dapat mengalirkan arus kearah sebaliknya.
+
+                  <br>Fungsi : penyearah arus listrik AC ke DC satu arah tapi menghambat kearah sebaliknya, diode Zener pengaman rangkaian serta penstabil tegangan.
+
+                  <br>Jenis	: rectifayer, Zener, schothky dll
+
+                      <br>Teknik Pengukuran & analisa : skala Ohm x1k atau x100 AVO ANALOG
+                    <br>Indikasi kerusakan serta dampaknya :
+
+                    <br>1.	Bila bolak balik ada selisih angka = OK
+                    <br>2.	Bila bolak balik angka sama	  = Bocor/short	
+                    <br>3.	Bila MTD tidak bereaksi	        	 = PUTUS
+                    <br>Cara Mengukur Dioda dengan menggunakan Multimeter Digital
+                        (Fungsi Ohm / Ohmmeter)
+
+                    <br>a. Aturkan Posisi Saklar pada Posisi OHM (Ω)
+                    <br>b. Hubungkan Probe Hitam pada Terminal Katoda (tanda gelang)
+                    <br>c. Hubungkan Probe Merah pada Terminal Anoda.
+                    <br>d. Baca hasil pengukuran di Display Multimeter
+                    <br>e. Display harus menunjukan nilai tertentu (Misalnya 0.64MOhm)
+                    <br>f. Balikan Probe Hitam ke Terminal Anoda dan Probe Merah ke Katoda
+                    <br>g. Baca hasil pengukuran TIDAK boleh ada nilai
+                    <br>h. diode memiliki tegangan kerja Forward Voltage (VF) > 0,7V
+                    <br>i. Nilai hambatan dalam NORMAL pada pengkuran diode mode 300-500 Ohm
+
+                    <br>Jika terdapat Nilai tertentu pada kaki katoda(-) saat kaki Anoda (+) dialiri tegangan  maka Dioda tersebut NORMAL namun saat katoda dialiri tegangan juga terdapat tegangan maka dioda tersebut Rusak karena Dioda normal bolak balik Probe hanya akan terdapat satu Nilai tertentu  saja 
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree5" aria-expanded="false" aria-controls="flush-collapseThree5">
+                    Fusi
+                </button>
+              </h2>
+              <div id="flush-collapseThree5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>SEKRING / FUSE (F) = Fius  berfungsi sebagai pemutus arus jika terjasi over voltase atau terjadi bad power pada jaringan atau rangkain serta rangkaian serta apabila terjadi hubungan arus pendek (short circuit) Didalam sebuah peralatan listrik (Elektronika). 
+
+                  <br>fungsi : pengaman atau pelindung Rangkaian (proteksi)
+                  <br>Teknik Pengukuran & analisa :
+                  <br>1. Aturlah posisi pada Saklar Multimeter di posisi Ohm (Ω)
+                  <br>2. Kemudian Hubungkan Probe Multimeter pada tiap-tiap Terminal Fuse / Sekering contohnya seperti pada gambar dbawah ini. Fuse atau
+                  <br>3. Sekering tersebut tidak mempunyai polaritas, jadi posisi Probe Merah serta Probe Hitam tidak akan dipermasalahkan.
+                  <br>4. Pastikan nilai yang ditunjukan pada Display Multimeter ialah “0” Ohm. Kondisi itu menandakan Fuse tersebut dalam kondisi baik (Short).
+                  <br>5. Apabial Display Multimeter itu menunjukan “Tak Terhingga”, maka Fuse dinyatakan sudah rusak/putus atau terbakar.
+                  Indikasi kerusakan serta dampaknya : Putus jalur, No display hingga matot
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree6" aria-expanded="false" aria-controls="flush-collapseThree6">
+                  Mosfet/FET (Q) 
+                </button>
+              </h2>
+              <div id="flush-collapseThree6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                
+                <code>Mosfet merupakan komponen aktif yang berfumgsi sebagai saklar otomatis, penstabil tegangan 
+                  juga untuk menaikkan tegangan atau menurunkan tegangan.</code>
+                 <br>FET memiliki tiga kaki juga yaitu :
+                 <br>GATE (G)	 =  Basis adalah kaki input pemicu (trigger)
+                 <br>DRAIN (D) 	 =  Colektor adalah kaki output mengalirnya tegangan
+                 <br>SOURCE (S)	 = Emitor adalah kaki input sumber masuknya tegangan Namun dalam pengaplikasiannya sumber tegangan terkadang masuk dari drain kaki 8 bukan dari source kaki 1
+                 <br>Jenis	Mosfet :
+                 <code>1.	 NPN (Fet aktif HIGH < Panah masuk) pada asalnya Fet terbuka/terputus mosfet akan menjadi terhubung = 
+                  aktif saat Gate mendapat tegangan (trigger) cirinya biasa berdampingan dengan Upper dan lower serta berseri/kode genap.</code>
+                 <br>Gate   (+)	= trigger
+                 <br>Drain  (+)	= input V
+                 <br>Source (-)	= output V
+                 
+                 <code></code>2.	 PNP (Fet  aktif LOW > Panah keluar) pada asalnya tersambung dan aktif 
+                 Ketika tidak terdapat tegangan dikaki 4 ( Gate ) cirinya menyendiri dan berseri/kode Ganjil.</code> 
+                 <br>Gate	(-)	=  trigger
+                 <br>Drain	(-)	= output V
+                 <br>Source (+)	= input V
+                   
+                 <br>Pengukuran  menggunakan avometer Analog x 100 <br>
+                 <code>Karakter FET N chanel NORMAL</code>
+                 <br>1.	Patokan kaki Drain Probe Hitam
+                 <br>2.	Bila probe hitam digate probe merah diSource maka tidak boleh bergerak (Diam)
+                 <br>3.	Bila probe hitam dipindah ke drain probe merah tetap disource harus bergerak
+                 <br>4.	Bila probe hitam tetap didrain probe merah Pindah ke gate harus diam
+                 <br>5.	Kemudian probe merah dikembalikan ke source probe hitam tetap didrain maka Fet akan diam (PROTEKSI)
+                 <br>6.	 Cara buka Proteksi Fet probe merah disource probe hitam digate seperti point 2 maka saat probe hitam dikembalikan ke Drain jarum akan bergerak dan FET Aktif (Normal Kembali)
+                 <code>Karakter FET P chanel NORMAL</code>
+                 <br>1.	Patokan kaki Drain Probe Merah
+                 <br>2.	Bila probe merah digate probe hitam diSource maka tidak boleh bergerak (Diam)
+                 <br>3.	Bila probe merah dipindah ke drain probe hitam tetap disource harus bergerak
+                 <br>4.	Bila probe merah tetap didrain probe hitam Pindah ke gate harus diam
+                 <br>5.	Selanjutnya  probe Hitam dikembalikan ke source probe merah tetap didrain maka Fet akan diam (PROTEKSI)
+                 <br>6.	 Cara menghilangkan Proteksi Fet probe hitam disource probe merah digate seperti point 2 kemudian probe merah dikembalikan ke Drain jalur akan terhubung dan FET Aktif (Normal Kembali)
+                 
+                 <br>Pengukuran & analisa menggunakan Avometer digital selector diode mode/buzzer
+                 <br>a.	Jika bolak-balik ada selisih angka = OK
+                 <br>b.	Jika bolak-balik menunjukkan angka/sama  = BOCOR
+                 <br>c.	Jika bolak balik MTD tidak bereaksi = PUTUS
+                 <br>d.	Cara mengidentifikasi mosfet N chanel dan P chanel melalui penyuntikan tegangan di gate kaki 4 dengan MTD (probe merah digate dan hitam di kaki 1) selanjutnya lakukan pengukuran dikaki 1 dan 8 bila terhubung berarti N chanel karena asalnya sakelar Tipe N chanel terbuka dan menjadi tertutup  saat gate dialiri tegangan sedangkan P chanel sebaliknya. 
+                 
+                 <br>e.	Prinsip kerja mosfet TERHUBUNG = AKTIF Nilai binary 1 = hidup  &  0 = mati 
+                 Mosfet PNP 
+                 <br>1.	Cara ON letakkan probe merah di gate 
+                 <br>2.	Cara OFF menggunakan probe hitam ke gate
+                  Mosfet NPN 
+                  <br>1.	Cara On letakkan probe hitam di gate
+                 <br>2.	Cara off letakkan probe merah digate
+                 
+                 <br>a.	Nilai gate mosfet PNP harus lebih kecil dari input tegangan sumber, sedangkan NPN sebaliknya nilai gate harus lebih besar -+24V untuk mosfet rangkaian separator dan always
+                 Indikasi kerusakan serta dampaknya : 
+                 <br>3.	Proteksi sehingga memutus distribusi tegangan bahkan menyebabkan mati total
+                 <br>4.	Memberikan sinyal enable kepada IC , BJT, FET, microcontroller EC/SIO dan SOC Perintah Proteksi menonaktikan Sircuit dan booting
+                 <br>5.	Mosfet rusak dan konsleting
+                 
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree7" aria-expanded="false" aria-controls="flush-collapseThree7">
+                  Transistor
+                </button>
+              </h2>
+              <div id="flush-collapseThree7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>TRANSISTOR ( BJT )
+                  <br>Fungsi : Sebagai  Sirkuit pemutus dan penyambung arus (SAKLAR/kran listrik), Modul sinyal serta Penguat arus
+                  <br>Satuan & simbol : 
+                  
+                  <br>Jenis	: N chanel (NPN) & P chanel PNP
+                  <br>6.	Transistor NPN akan mentrigger saat tegangan kaki Basis lebih besar dari nilai tegangan dikaki emitor jika sebagai saklar  >0,6V dan amplifayer  <0,6V
+                  <br>BASIS 	(+)	= enable
+                  <br>Colektor  (+)	= input tegangan
+                  <br>Emitor  (-)	= output V ( symbol panah > dikaki E )
+                  
+                  <br>7.	Transistor PNP  akan mentrigger saat tegangan kaki basis 0V lebih rendah dari emitor
+                  <br>Basis	(-)	= enable 
+                  <br>Colektor (-)	= output
+                  <br>Emitor  	(+)	= input V ( Symbol panah < dikaki E )
+                  
+                  <code>Cara Mengukur Transistor</code>
+                  <br>Pengukuran menggunakan Avometer Analog
+                  Ohm Ω mode skala x100 – x1k Ω
+                  NPN Patokan mencari kaki basis Probe Hitam serta kaki emitor dan colektor harus bergerak NORMAL
+                  PNP Patokan mencari kaki basis Probe Merah serta kaki emitor dan colektor harus bergerak NORMAL
+                  Karakteristik transistor Normal 
+                  kaki Emitor dan Colektor memiliki nilai impendansi dimana Resistansi kaki emitor lebih besar dari pada colektor
+                  
+                  
+                  <br> Pengukuran menggunakan Multimeter Digital
+                  <code>Teknik Pengukuran Transistor NPN </code>
+                  Pastikan posisi saklar multimeter digital pada posisi dioda.
+                  Hubungkan terminal/probe merah pada terminal basis transistor (B) dan terminal/probe hitam pada kaki emitor transistor (E). Bila display pada multimeter menampilkan nilai voltage 1 atau selain 0 maka transistor dalam kondisi bagus.
+                  Kemudian pindahkan terminal/probe hitam pada kaki kolektor transistor (C). Bila display multimeter menampilkan nila voltage tertentu maka transistor dalam kondisi baik dan layak digunakan dalam sebuah rangkaian.<br>
+                  <code>Teknik Pengukuran Transistor PNP</code> 
+                  <br>A. Atur posisi saklar multimeter digital pada posisi Dioda
+                  <br>B. Hubungkan terminal/probe hitam pada kaki basis transistor (B) dan terminal/probe merah pada kaki emitor   . Bila display pada multimeter menampilkan angka 1 atau selain 0 atau voltage tertentu, maka transistor tersebut dalam kondisi baik.
+                  <br>C. Pindahkan terminal/probe merah ke kaki kolektor (C), bila display multimeter menampilkan nilai voltage 1 atau selain 0 berarti transistor baik dan layak digunakan.
+                   Analisa : Bila display multimeter digital menampilkan nilai voltage 0 atau 000 atau OL maka terdapat kesalahan pada cara pengukuran atau ada kerusakan pada kaki-kaki transistor sehingga transistor tersebut tidak disarankan untuk digunakan
+                </div>
+              </div>
+            </div>
+           
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree8">
+                  CRYSTAL
+                </button>
+              </h2>
+              <div id="flush-collapseThree8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>X-TAL (X/Y) = komponen elektronika penghasil clock (mengubah data analog menjadi data digital) juga sebagai pembangkit frekuensi tinggi.
+ 
+                 <br>Fungsi :  menghasilkan Frekuensi RTC 32,768 KHz/detik
+                  <br>Satuan & simbol :  X, Y
+                  <br>Teknik Pengukuran & analisa : menggunaqkan frekuensi Counter/Oschiloscop
+                  <br>Indikasi kerusakan serta dampaknya : Matot.
+                </div>
+              </div>
+            </div>
+          
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree9" aria-expanded="false" aria-controls="flush-collapseThree9">
+                  NEC TOKIN
+                </button>
+              </h2>
+              <div id="flush-collapseThree9" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>NEC TOKIN = Gabungan beberapa kapasitor yang terintegrasi OE907, OE128
+                  <br>Fungsi :  kapasitor decoupling
+                  <br>Satuan & simbol : 
+                  <br>Bentuk :
+                  <br>Jenis	:
+                  <br>Teknik Pengukuran & analisa :
+                  <br>Indikasi kerusakan serta dampaknya :
+                  <br>1.	BLUE SCREEN saat STAR UP (Booting)
+                  <br>2.	Sering HANG saat lama waktu pemakaian tertentu
+                  <br>3.	Gambar  pecah saat pemakaian durasi tertentu
+                  <br>4.	Random restart sendiri
+                  <br>5.	NO Display sampai matot
+                  <br>6.	Ampere Drop
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container ">
+          <h3>elektronik</h3>
+          <div class="accordion accordion-flush " id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOn1" aria-expanded="false" aria-controls="flush-collapseOn1">
+                 Pengantar elektronika
+                </button>
+              </h2>
+              <div id="flush-collapseOn1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>PENGANTAR Rangkaian Elektronika
+                  <br>A. Watt merupakan daya yang dibutuhkan oleh suatu perangkat  elektronik. 
+                  <br>B. Volt merupakan standar tegangan yang dimiliki oleh satuan arus listrik.
+                  <br>Jenis-jenis tegangan : 1. Tegangan  kerja, 2. Tegangan perintah, 3. Tegangan Control/logic/Data,  4. Clock
+                  <br>C. Ampere adalah satuan besar arus listrik yang mengalir dari kutub positif ke kutub negatif
+                  listrik  berasal dari bahasa inggris yaitu electric yang mempunyai arti energi. Secara umum menurut KKBI listrik diartikan sebagai suatu daya ataupun energi yang muncul dikarenakan terjadinya gesekan ataupun melalui sebab proses fisika.
+                  <br>Warna kabel PLN
+                  <br>1.	Coklat/Hitam  (N)		=  Pase atau line (+)
+                  <br>2.	Hijau kuning  (G)		= Ground atau arde
+                  <br>3.	Biru  (L)			= Netral ( - )
+                  <br>Arsitektur Rangkaian Elektronik
+                  <br>1.	AC to AC = Generator, modul PLN, dll
+                  <br>2.	AC to DC = Psu atau power suplay
+                  <br>3.	DC t0 AC = inventer
+                  <br>4.	DC  to DC = modul buck konventer ( LDO/stepdown) , Boost konventer atau step up dll
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTw1" aria-expanded="false" aria-controls="flush-collapseTw1">
+                  Dasar Rangkaian elektronik
+                </button>
+              </h2>
+              <div id="flush-collapseTw1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <br>Rangkaian listrik  merupakan susunan komponen elektronika pasif dan aktif yang didesain atau dirancang sesuai kebutuhan yang terdiri dari rangkaian seri dan paralel.
+                  <br>II.	Rangkaian seri
+                   Rangkaian seri adalah komponen disusun secara berurut, disebut juga rangkaian berderet.
+                  Rangkaian seri tidak memiliki percabangan. Dengan kata lain, rangkaian seri adalah rangkaian yang arus listriknya mengalir hanya pada satu jalur.
+                  Rangkaian seri terbentuk jika arus listrik dihubungkan secara berurut atau berderet. Kutub negatif komponen pertama dengan kutub positif komponen kedua, kutub negatif komponen kedua dengan kutub positif komponen ketiga, kemudian diteruskan ke kutub positif komponen pertama.
+                  Pada rangkaian seri, kuat arus listrik yang mengalir melalui beberapa hambatan listrik adalah sama besar. Jumlah kuat arus pada rangkaian seri tidak dipengaruhi oleh nilai hambatan. Jika terdapat beberapa hambatan berbeda yang dilalui, dalam hambatan mengalir arus yang besarnya sama.
+                  berbeda dengan arus, tegangan di antara kaki-kaki hambatan yang disusun secara seri memiliki nilai yang berbeda-beda, bergantung pada nilai hambatan tersebut. Contoh Resistor yang dipasang secara Seri  = Tegangan akan naik namun Arus tetap
+                  <br>1. Ciri-Ciri Rangkaian Seri
+                  Komponennya disusun secara berurutan atau berderet
+                  Arus listrik mengalir tanpa melalui cabang
+                  Arus listrik yang mengalir di berbagai titik dalam rangkaian besarnya sama
+                  Tegangan listrik disetiap hambatan nilainya berbeda-beda 
+                  <br>2. Kelebihan dan Kekurangan Rangkaian  Seri
+                  Rangkaian seri memiliki beberapa kelebihan dan kekurangan, antara lain sebagai berikut:
+                  <br>2.1. Kelebihan/Keuntungan Rangkaian Seri
+                  Dari sisi penerapan, rangkaian seri memiliki kelebihan atau keutungan, yaitu: 
+                  Kuat arus listrik yang mengalir pada tiap bagian besarnya sama.
+                  Cara pembuatannya mudah karena bentuknya sederhana.
+                  Rangkaian seri tidak membutuhkan terlalu banyak komponen karena pemasangannya secara sejajar.
+                  Rangkaian seri membutuhkan kabel yang lebih sedikit sehingga lebih murah.
+                  Oleh karena itu, rangkaian seri pada lampu tepat digunakan pada ruangan atau area yang yang berukuran besar seperti misalnya gedung perkantoran, gedung sekolah atau kampus, hotel dan juga bangunan besar lainnya karena penerapannya yang sangat murah dan praktis.
+                  
+                  <br>2.2. Kekurangan/Kerugian Rangkaian Seri
+                  Namun, disamping memiliki kelebihan, rangkaian seri juga memiliki beberapa kekurangan atau kerugian, yaitu:
+                  Rangkaian seri jika salah satu alat listrik dilepas atau rusak maka arus listrik akan terputus.
+                  Rangkaian seri memerlukan daya listrik lebih banyak sehingga boros listrik, akibatnya baterai cepat habis.
+                  Rangkaian seri yang digunakan pada lampu akan menghasilkan nyala lampu yang agak redup dan tidak stabil, semakin banyak lampu makin redup.
+                  <br>2. Rangkaian paralel
+                  Rangkaian paralel merupakan rangkaian komponen elektronika yang disusun secara berjajar atau bercabang. 
+                  Rangkaian paralel terbentuk bila semua masukan komponen berasal dari sumber yang sama.
+                  Konfigurasi ini membuat rangkaian paralel memiliki lebih dari satu jalur arus atau membentuk percabangan di antara kutub-kutub sumber arus listrik.
+                  Setiap bagian dari percabangan itu disebut rangkaian percabangan. Arus listrik akan terbagi-bagi begitu memasuki titik percabangan. 
+                  Setelah keluar melalui kutub negatif sumber arus listrik dan melalui rangkaian percabangan, arus listrik akan menyatu kembali sebelum menuju kutub positif sumber arus listrik kembali. 
+                  Itulah sebabnya mengapa sehingga rangkaian paralel disebut sebagai rangkaian listrik yang berfungsi untuk membagi arus.
+                  Contoh Resistor yang dipasang secara paralel = tegangan tetap namun Arus akan naik
+                  
+                  
+                  <br>1. Ciri-Ciri Rangkaian Paralel
+                  Ciri-ciri khusus rangkaian paralel, antara lain sebagai berikut:
+                  Memiliki percabangan
+                  Hambatan total lebih kecil
+                  Tegangan listrik pada setiap komponen sama besar
+                  Arus listrik yang mengalir pada setiap komponen besarnya tidak sama 
+                  <br>2. Kelebihan dan Kekurangan Rangkaian Paralel
+                  Rangkaian paralel memiliki beberapa kelebihan dan kekurangan, antara lain sebagai berikut:
+                  <br>2.1. Kelebihan/Keuntungan Rangkaian Paralel
+                  Hambatan kecil sehingga nyala lampu lebih terang.
+                  Masing-masing komponen dapat bekerja secara bebas tanpa dipengaruhi komponen lain.
+                  Rangkaian paralel bila salah satu lampu atau alat listrik dilepas/rusak/padam, maka lampu/alat listrik yang lain tidak ikut mati atau tetap menyala/berfungsi.
+                  <br>2.2. Kelemahan/Kekurangan/Kerugian Rangkaian Paralel
+                  Biaya lebih mahal karena memerlukan banyak kabel
+                  Kurang efisien dalam menghantarkan arus listrik
+                  Rangkaian lebih rumit karena terdiri dari banyak percabangan
+                  Apa perbedaan Rangkaian listrik seri dan paralel ?
+                  
+                  <br>1. Perbedaan rangkaian listrik seri dan paralel, antara lain sebagai berikut:
+                  <br>2. Rangkaian seri disusun berurutan, sedangkan rangkaian paralel disusun sejajar.
+                  <br>3. Arus listrik rangkaian seri besarnya sama, sedangkan arus listrik rangkaian paralel besarnya tidak sama.
+                  <br>4. Tegangan rangkaian seri besarnya tidak sama, sedangkan tegangan rangkaian paralel besarnya sama.
+                  <br>5. Hambatan total rangkaian seri besar, sedangkan hambatan total rangkaian paralel kecil.
+                  <br>6. Rangkaian seri tidak memiliki cabang, sedangkan rangkaian paralel memiliki cabang.
+                  <br>7. Rangkaian seri membutuhkan tegangan besar namun konsumsi arus kecil sedangkan paralel membutuhkan tegangan kecil namun konsumsi arus besar 
+                  
+                  <br>III. Rangkaian Listrik Terbuka
+                   
+                  <br>Rangkaian listrik terbuka adalah rangkaian yang memiliki ujung pangkal. Rangkaian ini terjadi jika salah satu ujung kabel dilepas dari kutub baterai. Pada rangkaian seperti ini tidak terdapat arus listrik, sehingga mengakibatkan alat listrik yang terpasang pada rangkaian tidak berfungsi/padam.
+                  <br>IV. Rangkaian Listrik Tertutup
+                   
+                  <br>Rangkaian listrik tertutup adalah rangkaian yang tidak memiliki ujung dan pangkal. Dikatakan rangkaian tertutup, jika kutub positif dan kutub negatif berhubungan sehingga muncul aliran listrik.
+                  Dikatakan rangkaian terbuka, jika kutub positif dan kutub negatif tidak berhubungan sehingga tidak ada aliran listrik.
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThrec" aria-expanded="false" aria-controls="flush-collapseThrec">
+                  Istilah-istilah umum services laptop dan HP
+                </button>
+              </h2>
+              <div id="flush-collapseThrec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                 
+                  <br>1. Sirkuit/Rangkaian -> Kumpulan beberapa komponen elektronika (kapasitor, resistor, transistor, dioda, lilitan, fuse, dll) yang saling terintegrasi.
+                  <br>2. Motherboard/Mobo/Mainboard -> Papan/wadah yang berisi kumpulan sirkuit-sirkuit pada laptop, yang saling terintegrasi.
+                  <br>3. Schematic/Skematik/Skema -> Peta sirkuit motherboard yang digambarkan pada bidang datar. Berisi informasi tentang hubungan antar komponen elektronika satu dengan lainnya, baik dari hubungan voltase, arus, dan data.
+                  <br>4. Boardview File Boardview -> File yang berisi peta komponen elektronika laptop yang letaknya persis, sesuai dengan kenyataan pada motherboard. Beberapa ekstensi yang digunakan adalah asc, brd, fz, bdv, bv, cst, bv2, dll. Software Boardview -> Software yang digunakan untuk membuka file boardview. Tiap ekstensi file mempunyai software masing-masing.
+                  <br>5. Datasheet -> Jabaran informasi tentang sebuah IC yang dibukukan secara digital. Dari datasheet seorang teknisi dapat mengetahui fungsi setiap pin pada IC, sehingga dapat mengetahui rangkaian/sirkuit yang mendukung IC tersebut.
+                  <br>6. Power Rail -> Distribusi tegangan yang terjadi pada motherboard.
+                  <br>7. Power Sequence -> Alur/Urutan keluarnya sebuah sinyal (berupa tegangan/frekuensi) dari awal laptop mendapat sumber tegangan (adaptor/baterai), laptop ditekan tombol on, sampai laptop menampilkan gambar.
+                  <br>8. Blok Diagram -> Peta hubungan antar komponen elektronika yang berukuran besar, secara garis besar, yang terdapat pada skematik.
+                  <br>9. Floating Voltage (Tegangan Mengambang) -> Tegangan sisa yang seharusnya nol, pada sebuah rangkaian.
+                  <br>10. Power Drain -> Memencet tombol power dengan durasi antara 15 ~ 30 detik, dengan maksud untuk menghilangkan Floating Voltage pada motherboard.
+                  <br>11. Beban -> Hardware/Periferal, sirkuit, dan komponen elektronika yang menggunakan tegangan dari rangkaian regulator, sebagai syarat bekerja dirinya.
+                  <br>12. Impedansi -> Hambatan pada sirkuit.
+                  <br>13. Resistansi -> Hambatan pada sebuah komponen elektronika.
+                  <br>14. Analitis -> Tehnik/Gaya menservis laptop dengan mengedepankan analisa menggunakan skematik, boardview, dan datasheet terlebih dahulu sampai maksimal, kemudian melakukan eksekusi.
+                  <br>15. Master Power/Tegangan Master/VIN/Bat+/Bat_sys -> Tegangan output dari separator/power selector/rangkaian charging.
+                  <br>16. Separator/Power Selector/Rangkaian Charging -> Sebuah sirkuit pada skematik yang berfungsi untuk memilah sumber daya laptop antara charger dan baterai, yang dijadikan sebagai master power/tegangan master, yang nantinya digunakan sebagai input untuk regulator lain.
+                  <br>16. Rangkaian Regulator/DC-DC/Rangkaian SMPS/Rangkaian SPS/Disebut sesuai dengan output tegangan (Rangkaian 3 & 5v, Rangkaian 15v, Rangkaian RAM/1.5v, dll) -> Sirkuit yang menurunkan master power/tegangan master menjadi tegangan lebih rendah dan diberikan kepada beban. Beberapa output tegangan rangkaian ini antara lain= 15v, 5v, 3v, 1.8v, 1.5v, 0.75v, vcore, vgfx, dll.
+                  <br>17. Volt Always (Alw) / Tegangan Stanby Tegangan yang selalu hadir ketika motherboard mendapat sumber daya dari adaptor maupun baterai.
+                  <br>18. Volt Suspend (VS)/Tegangan tunda -> Tegangan yang hadir setelah menekan tombol on/swicth.
+                  <br>19. Transformasi Tegangan -> Perubahan nama tegangan setelah melewati sebuah komponen/rangkaian, namun masih dalam satu besaran tegangan. Contoh: 3vs_s5, 3v_prime_on, 3v, dll..
+                  <br>20. Fase S5, fase S4, fase S3, fase S0 -> Tahapan perubahan tegangan dari sumber -> proses -> beban. Tahapan tegangan antar satu motherboard dengan lainnya tidak selalu sama, bahkan lebih banyak perbedaannya, pada setiap fase. Penggolongan fase tersebut secara singkat sbb: S5 = Tegangan always, rangkaian on, sebagian tegangan tunda. v. S4/S3 = Tegangan yang memproses tegangan pada fase S5 menjadi tegangan siap pakai oleh beban (S0). S0 = Tegangan yang siap dipakai oleh beban.
+                  <br>21. Mati Total -> Kerusakan laptop yang disebabkan oleh satu atau beberapa tegangan always tidak keluar.
+                  <br>22. No Switch -> Kerusakan laptop yang terjadi ketika tidak ada respon arus ketika tombol on ditekan, namun semua tegangan always keluar.
+                  <br>23. Konslet Tegangan utama -> Kerusakan laptop yang terjadi ketika laptop diberi sumber tegangan, arus langsung melejit tinggi.
+                  <br>24. No Display -> Kerusakan laptop yang terjadi ketika laptop ditekan tombol on, arus naik tinggi/normal, namun tidak muncul tampilan apapun pada layar.
+                  <br>25. No Charging -> Kerusakan laptop ketika laptop tidak dapat mencharge baterai.
+                  <br>26. Power Drop -> Kerusakan laptop yang terjadi ketika ditekan tombol on, arus naik namun langsung jatuh/hilang.
+                  <br>27. Power Fail -> Kerusakan yang disebabkan oleh gagal beroperasinya sebuah regulator tegangan.
+                  <br>Byte - Suatu unit penyimpanan memori yang setara dengan 8 bit.
+                  <br>MB - Suatu unit penyimpanan memori yang setara dengan 1.048.576 byte.
+                  <br>Mbps - Megabita per detik, memiliki kecepatan transmisi sebesar 1.000.000 bit per detik.
+                  <br>MHz - Megahertz (MHz) adalah suatu unit frekuensi yang setara dengan 1.000.000 siklus per detik.
+                  <br>GB - Gigabita (GB) merupakan suatu unit penyimpan memori yang setara dengan 1.024 megabyte (atau 1.073.741.824 byte).
+                  <br>GHz - Gigahertz (GHz) merupakan suatu unit frekuensi yang setara dengan 1.000.000.000 siklus per detik. Cache - Area penyimpanan sementara untuk data yang sering diakses. 
+                        
+                  <br>Power good tegangamn akhir yuang keluar pada sebuah IC yang mengkonfirmasi bahwasanya Rangkaian IC bekerja dengan baik
+                  PLTRST# merupakan Signal yang dikeluarkan SB untuk mengaktifkan berbagai Rangkaian berupa tegangan perintah.
+                  Jenis-jenis nilai tegangan yang terdapat pada laptop
+                  <br>1.	19V/20V
+                  <br>2.	15V
+                  <br>3.	5V
+                  <br>4.	3V-3,3V
+                  <br>5.	1,2V,1,35V-1,5V = RAM
+                  <br>6.	0,75V
+                  <br>7.	1V
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThred" aria-expanded="false" aria-controls="flush-collapseThred">
+                  Protection system
+                </button>
+              </h2>
+              <div id="flush-collapseThred" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><br><strong>Protection system </strong> Merupakan mekanisme elektronik yang dirancang secara otomatis sebagai diteksi awal 
+                  untuk melindungi  mainboard atau PCB dan logic board dari berbagai
+                  faktor yang dapat merusak perangkat elektronik atau motherboard. <br>
+                  
+                  <br>a. PFC  	  = Power factor corection
+                  <br>b. OVP    	= over voltage protection
+                  <br>c. OLP    	= over load protection
+                  <br>d. OCP 	    = over current protection
+                  <br> e. OTP      = over temperature protection
+                  <br>f. SCP		  =  SHORT PROTECTION
+                  <br>g. SNUBER 	= PROTEKSI DENGAN DIODA ZENER & ELCO
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThre" aria-expanded="false" aria-controls="flush-collapseThre">
+                  Arsitektur motherboard laptop
+                </button>
+              </h2>
+              <div id="flush-collapseThre" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                 
+                  <br>Komputer pada dasar terbentuk dari piranti lunak (software) serta piranti keras (hardware). Anatomi inti yang menjadi komponen Utama Hardware pada sebuah mainboard laptop dan PC terdiri dari PROSESOR(CPU), GFX(GPU), NORTHBRIDGE & SOUTHBRIDGE (CHIPSET), EMBEDDED CONTROLER, BIOS  dan berbagai IC regulator.
+                  Adapun RAM, storage ( HDD, SSD), keyboard, LCD, WIFI, LAN, AUDIO, Camera, Bluetooth dll merupakan komponen penunjang dan pelengkap (interfaces) dari sebuah PC atau laptop .
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThref" aria-expanded="false" aria-controls="flush-collapseThref">
+                  Rangkaian Separator  & main Power
+                </button>
+              </h2>
+              <div id="flush-collapseThref" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  
+
+                  <br>Merupakan power selector yang mengatur pendistribusian arus tegangan melalui adaptor atau batterai termasuk pengisian batterai secara otomatis. Rangkaian separator.
+                  terletak diantara konektor charger dan konektor baterai
+                   
+                  <br>Garis panah warna biru adalah jalur tegangan yang sudah ada ketika laptop dalam keadaan mati. jadi dalam kondisi laptop belum diONkan, jika kita ukur pada ic ic di jalur biru tersebut maka disana sudah terdapat tegangan sesuai kebutuhan ic yang dilewatinya.
+                  <br>Garis panah warna hitam adalah jalur tegangan yang akan ada setelah laptop diONkan. Jadi sebelum saklar atau tombol ON ditekan atau sebelum komputer dihidupkan maka tidak akan ada tegangan yang terukur disana.
+                  Penjelasan:
+                  <br>Sumber tegangan laptop adalah baterai dan adaptor. Sumber tegangan tersebut masuk melintasi Rangkaian Separator umumnya sebesar 19 volt, masing-masing bertemu sebuah MOSFET lalu keluar dengan nama tegangan V IN sebesar 19 volt. Sebelum laptop dihidupkan, tegangan ini sudah ada.
+                  Dari VIN tegangan sebesar 19 volt masuk ke ic regulator CPU, 1.05VS, 1.8VS, 1.5V, 5V/3.3V.
+                  Dari ic regulator 5V/3.3V keluar tegangan sebesar 3 volt dengan nama VREG3 masuk ke resistor dan keluar dengan nama VDD3LID lalu masuk ke FET dan keluar dengan nama VDD3STBY masuk lagi ke sebuah FET dan keluar dengan nama VDD3 masuk ke ic bios, ic ec, dan sebuah dioda lalu keluar melalui resistor masuk ke ic sb dengan nama ICHRTCRST. 
+                  Baterai cmos juga mengeluarkan tegangan meskipun laptop dalam keadaan mati, dari baterai cmos masuk ke dioda seperti pada penjelasan ketiga. Namun baterai cmos ini tidak terus menerus menyalurkan tegangannya ke ic sb melainkan hanya jika baterai laptop tidak terpasang. Tujuannya adalah untuk menjaga kestabilan real time clock.
+                  Tombol ON atau tombol power, sebelum ditekan maka kondisi yang terjadi adalah seperti yang sudah saya terangkan di atas. Ketika tombol on ditekan maka ic ec akan memberikan sinyal low kepada ic sb dengan nama KBCRSMRST dan KBCPWRBTN. Setelah ic sb menerima sinyal tersebut maka ic sb memberikan sinyal balik kepada ic ec dengan nama SUSC dan SUSB. Selain sinyal untuk ic ec, sinyal SUSB dan SUSC juga digunakan untuk mentriger FET dan ic regulator.
+                  Setelah tobol power ditekan dan ic ec dan ic sb sudah berkomunikasi dengan baik maka ic ec akan mengeluarkan sinyal lagi yang bernama DDON yang digunakan untuk mengaktifkan ic regulator 5v/3.3v dan VCOREON untuk mengaktifkan ic regulator cpu.
+                  Setelah semua ic regulator menerima sinyak aktif maka ic tersebut segera mendistribusikan tegangan kepada semua ic yang disuplainya dan laptop sudah hidup dengan sempurna
+                
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreg" aria-expanded="false" aria-controls="flush-collapseThreg">
+                  	Power sequence & power stage
+                </button>
+              </h2>
+              <div id="flush-collapseThreg" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                 
+ 
+                  <br>Power stage Phase ( tahapan) kerja rangkaian ON 
+                  <br>1.	S5 = Main power & standby 19V/20V dan tegangan always 3V/5V (MATOT)
+                  <br>2.	S3 = Vsuspend  Phase 1  3VS, 5VS (EC/IO ,SB), 1,35 - 1,5VS (RAM), 0,75VS ( terminal memori CPU), 1,8VS (GFX), 1.05VS (VGA) (Nyala sebentar MATI/Restart/ Indicator led kedip-kedip)
+                  <br>3.	S0 = Vsupend Phase 2  1,15 VCC core, 0.9 VCC GFX, 1,1 GPU core (NO DISPLAY, Blue screen)
+                  
+                  <br>Perubahan nama atau istilah tegangan:
+                  Ada beberapa tegangan yang berubah nama dari V menjadi VS dan sebagainya. Hal ini terjadi pada setiap laptop namun ada beberapa laptop dengan perubahan nama yang berbeda dan jalur yang berbeda pula. Tetapi secara garis besar sistem ini boleh dikatakan sama. tegangan 3.3V dari ic regulator 5V/3.3V. Tegangan 3.3V keluar dari ic regulator dengan nama 3.3V dan masuk ke FET, ketika FETmendapat sinyal aktif dari SUSB maka 3.3V tadi keluar dan berubah nama menjadi 3.3VS lalu masuk ke ic yang membutuhkan tegangan tersebut.
+                  Dengan mengenal sistem pendistribusian tegangan pada laptop ini maka kita dapat dengan mudah menganalisa kerusakan hardware pada laptop
+                  NOTES :
+                  Perlu diketahui bahwa ketika laptop kita dalam kondisi mati, sebetulnya baterai tetap mengeluarkan tegangan dan mengirimnya ke setiap ic yang membutuhkan, lihat jalur atau garis panah warna biru, di jalur tersebut tetap ada tegangan walaupun laptop dalam keadaan mati.
+                  Jika Laptop anda tidak akan digunakan dalam jangka waktu lama misalnya lebih dari 1bulan, maka sebaiknya baterai dilepas saja, terlebih jika kondisi baterai laptop anda tidak bagus.  Karena dikhawatirkan tegangan baterai habis dan benar benar kosong, maka akan sulit dicas.
+                  Tegangan Vcore ndak hadir ada 7 kemungkinan.....
+                  <br>A. Cek tegangan 19 yg masuk ke mosfet dan ic Vcore
+                  <br>B. Cek pasangan mosfet N chanel, jangan-jangan rusak
+                  <br>C. Cek kaki nomer 4 dari mosfet terbut, keluar ndak tegangan triger drIC V core, KALO NDAKKELUAR 60% memang Ic nya yg rusak
+                  <br>D. Atau mungkin sinyal enable dari EC ndak keluar (berarti EC nya)
+                  <br>E. Cek lililitan panas ndak, jangan-jangan putus
+                  <br>F. Atau capasitor daerah Prosesor ada yang short,bocor
+                  <br>G. bisa juga bebannya konslet dari PROSESSORNYA sendiri
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreh" aria-expanded="false" aria-controls="flush-collapseThreh">
+                  LOGIC GATE 
+                </button>
+              </h2>
+              <div id="flush-collapseThreh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  
+                  <br>Logic Gate adalah dasar pembentuk Sistem Elektronika Digital yang berfungsi untuk mengubah satu atau beberapa Input (masukan) menjadi sebuah sinyal Output (Keluaran) Logis. Gerbang Logika beroperasi berdasarkan sistem bilangan biner yaitu bilangan yang hanya memiliki 2 kode simbol yakni 0 dan 1 dengan menggunakan Teori Aljabar Boolean.
+                  Aljabar Boolean atau dalam bahasa Inggris disebut dengan Boolean Algebra adalah matematika yang digunakan untuk menganalisis dan menyederhanakan Gerbang Logika pada Rangkaian-rangkaian Digital Elektronika. Boolean pada dasarnya merupakan Tipe data yang hanya terdiri dari dua nilai yaitu “True” dan “False” atau “Tinggi” dan “Rendah” yang biasanya dilambangkan dengan angka “1” dan “0” pada Gerbang Logika ataupun bahasa pemrograman komputer. Aljabar Boolean ini pertama kali diperkenalkan oleh seorang Matematikawan yang berasal dari Inggris pada tahun 1854. Nama Boolean sendiri diambil dari nama penemunya yaitu George Boole.
+                  Unit Aritmatika Logika ( Arithemetic – Logical Unit Atu ALU )ALU unit yang bertugas untuk melakukan operasi aritmetika dan operasi logika berdasar instruksi yang ditentukan. ALU sering di sebut mesin bahasa karena bagian ini ALU terdiri dari dua bagian, yaitu unit arithmetika dan unit logika boolean yang masing-masing memiliki spesifikasi tugas tersendiri. Tugas utama dari ALU adalah melakukan semua perhitungan aritmatika (matematika) yang terjadi sesuai dengan instruksi program. ALU melakukan semua operasi aritmatika dengan dasar penjumlahan sehingga sirkuit elektronik yang digunakan disebut adder.Tugas lain dari ALU adalah melakukan keputusan dari suatu operasi logika sesuai dengan instruksi program. Operasi logika meliputi perbandingan dua operand dengan menggunakan operator logika tertentu, yaitu sama dengan (=), tidak sama dengan (¹ ), kurang dari (<), kurang atau sama dengan (£ ), lebih besar dari (>), dan lebih besar atau sama dengan (³ ).
+                  ALU sendiri memiliki berbagai komponen elektronika didalamnya, yaitu berupa sekumpulan transistor yang dikenal dengan nama logic gate.
+                  Logic gate  berfungsi untuk melaksanakan operasi aritmatika dan operasi logika. Contoh operasi aritmatika adalah operasi penjumlahan dan pengurangan, sedangkan contoh operasi logika adalah logika AND dan OR. ALU sering di sebut mesin bahasa karena bagian ini ALU terdiri dari dua bagian, yaitu unit arithmetika dan unit logika boolean yang masing-masing memiliki spesifikasi tugas tersendiri.bentuk fisiknya contohnya IC
+                  Tabel yang berisikan kombinasi-kombinasi Variabel Input (Masukan) yang menghasilkan Output (Keluaran) Logis disebut dengan “Tabel Kebenaran” atau “Truth Table”.
+                  Input dan Output pada Gerbang Logika hanya memiliki 2 level. Kedua Level tersebut pada umumnya dapat dilambangkan dengan :
+                  HIGH (tinggi) dan LOW (rendah)
+                  TRUE (benar) dan FALSE (salah)
+                  ON (Hidup) dan OFF (Mati)
+                  1 dan 0
+                  Contoh Penerapannya ke dalam Rangkaian Elektronika yang memakai Transistor TTL (Transistor-transistor Logic),  maka 0V dalam Rangkaian akan diasumsikan sebagai “LOW” atau “0” sedangkan 5V akan diasumsikan sebagai “HIGH” atau “1”.
+                  Berikut ini adalah Penjelasan singkat mengenai 7 jenis Gerbang Logika Dasar beserta Simbol dan Tabel Kebenarannya.
+                  <br>1.	AND Gate
+                  Gerbang AND memerlukan 2 atau lebih Masukan (Input) untuk menghasilkan hanya 1 Keluaran (Output). Gerbang AND akan menghasilkan Keluaran (Output) Logika 1 jika semua masukan (Input) bernilai Logika 1 dan akan menghasilkan Keluaran (Output) Logika 0 jika salah satu dari masukan (Input) bernilai Logika 0. Simbol yang menandakan Operasi Gerbang Logika AND adalah tanda titik (“.”) atau tidak memakai tanda sama sekali. Contohnya : Z = X.Y atau Z = X.Y 
+                  Hukum Komutatif menyatakan bahwa penukaran urutan variabel atau sinyal Input tidak akan berpengaruh terhadap Output Rangkaian Logika. Contoh :
+                  Perkalian (Gerbang Logika AND)
+                  X.Y = Y.X
+                  Penjumlahan (Gerbang Logika OR)
+                  X+Y = Y+X
+                  Catatan : Pada penjumlahan dan perkalian, kita dapat menukarkan posisi variabel atau dalam hal ini adalah sinyal Input, hasilnya akan tetap sama atau tidak akan mengubah keluarannya. Hukum Komutatif pada Aljabar Boolean
+                  Simbol dan Tabel Kebenaran Gerbang AND (AND Gate)Simbol Gerbang Logika AND dan Tabel Kebenaran Gerbang AND
+                   
+                     
+                  <br>Hukum Asosiatif menyatakan bahwa urutan operasi logika tidak akan berpengaruh terhadap Output Rangkaian Logika. Contoh : Perkalian (Gerbang Logika AND) W . (X . Y) = (W . X) . Y
+                  
+                  <br>Hukum Distributif menyatakan bahwa variabel-variabel atau sinyal Input dapat disebarkan tempatnya atau diubah urutan sinyalnya, perubahan tersebut tidak akan mempengaruhi Output Keluarannya.
+                  
+                  <br>2. Gerbang OR (OR Gate)
+                  Gerbang OR memerlukan 2 atau lebih Masukan (Input) untuk menghasilkan hanya 1 Keluaran (Output). Gerbang OR akan menghasilkan Keluaran (Output) 1 jika salah satu dari Masukan (Input) bernilai Logika 1 dan jika ingin menghasilkan Keluaran (Output) Logika 0, maka semua Masukan (Input) harus bernilai Logika 0.
+                  Simbol yang menandakan Operasi Logika OR adalah tanda Plus (“+”). Contohnya : Z = X + Y.
+                  Simbol dan Tabel Kebenaran Gerbang OR (OR Gate)Simbol Gerbang Logika OR dan Tabel Kebenaran Gerbang OR
+                   
+                  <br>3. Gerbang NOT (NOT Gate)
+                  Gerbang NOT hanya memerlukan sebuah Masukan (Input) untuk menghasilkan hanya 1 Keluaran (Output). Gerbang NOT disebut juga dengan Inverter (Pembalik) karena menghasilkan Keluaran (Output) yang berlawanan (kebalikan) dengan Masukan atau Inputnya. Berarti jika kita ingin mendapatkan Keluaran (Output) dengan nilai Logika 0 maka Input atau Masukannya harus bernilai Logika 1. Gerbang NOT biasanya dilambangkan dengan simbol minus (“-“) di atas Variabel Inputnya.
+                  Simbol dan Tabel Kebenaran Gerbang NOT (NOT Gate)  Simbol Gerbang Logika NOT dan Tabel Kebenaran Gerbang NOT
+                  Hukum Inversi menggunakan Operasi Logika NOT. Hukum Inversi ini menyatakan jika terjadi Inversi ganda (kebalikan2 kali) maka hasilnya akan kembali ke nilai aslinya.  
+                  Jadi, jika suatu Input (masukan) diinversi (dibalik) maka hasilnya akan berlawanan. Namun jika diinversi sekali lagi, hasilnya akan kembali ke semula. 
+                  
+                  <br>4. 	Gerbang NAND (NAND Gate)
+                  Arti NAND adalah NOT AND atau BUKAN AND, Gerbang NAND merupakan kombinasi dari Gerbang AND dan Gerbang NOT yang menghasilkan kebalikan dari Keluaran (Output) Gerbang AND. Gerbang NAND akan menghasilkan Keluaran Logika 0 apabila semua Masukan (Input) pada Logika 1 dan jika terdapat sebuah Input yang bernilai Logika 0 maka akan menghasilkan Keluaran (Output) Logika 1.
+                  Simbol dan Tabel Kebenaran Gerbang NAND (NAND Gate) Simbol Gerbang NAND dan Tabel Kebenaran Gerbang NAND
+                   
+                  
+                  <br>5. 	Gerbang NOR (NOR Gate)
+                  Arti NOR adalah NOT OR atau BUKAN OR, Gerbang NOR merupakan kombinasi dari Gerbang OR dan Gerbang NOT yang menghasilkan kebalikan dari Keluaran (Output) Gerbang OR. Gerbang NOR akan menghasilkan Keluaran Logika 0 jika salah satu dari Masukan (Input) bernilai Logika 1 dan jika ingin mendapatkan Keluaran Logika 1, maka semua Masukan (Input) harus bernilai Logika 0.
+                  Simbol dan Tabel Kebenaran Gerbang NOR (NOR Gate) Simbol Gerbang Logika NOR dan Tabel Kebenaran Gerbang NOR
+                   
+                  
+                  <br>6. 	Gerbang X-OR (X-OR Gate)
+                  X-OR adalah singkatan dari Exclusive OR yang terdiri dari 2 Masukan (Input) dan 1 Keluaran (Output) Logika. Gerbang X-OR akan menghasilkan Keluaran (Output) Logika 1 jika semua Masukan-masukannya (Input) mempunyai nilai Logika yang berbeda. Jika nilai Logika Inputnya sama, maka akan memberikan hasil Keluaran Logika 0.
+                  Simbol dan Tabel Kebenaran Gerbang X-OR (X-OR Gate) Simbol Gerbang Logika X-OR dan Tabel Kebenaran Gerbang X-OR
+                   
+                  <br>7. 	Gerbang X-NOR (X-NOR Gate)
+                  Seperti Gerbang X-OR,  Gerban X-NOR juga terdiri dari 2 Masukan (Input) dan 1 Keluaran (Output). X-NOR adalah singkatan dari Exclusive NOR dan merupakan kombinasi dari Gerbang X-OR dan Gerbang NOT. Gerbang X-NOR akan menghasilkan Keluaran (Output) Logika 1 jika semua Masukan atau Inputnya bernilai Logika yang sama dan akan menghasilkan Keluaran (Output) Logika 0 jika semua Masukan atau Inputnya bernilai Logika yang berbeda. Hal ini merupakan kebalikan dari Gerbang X-OR (Exclusive OR).
+                  Simbol dan Tabel Kebenaran Gerbang X-NOR (X-NOR Gate) Simbol Gerbang Logika X-NOR dan Tabel Kebenaran Gerbang X-NOR
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTri" aria-expanded="false" aria-controls="flush-collapseTri">
+                  TDP (Thermal Design Power)
+                </button>
+              </h2>
+              <div id="flush-collapseTri" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                
+                  adalah parameter yang menentukan jumlah maksimum panas yang dapat dibuang dari prosesor. TDP biasanya diukur dalam watt dan dikategorikan menjadi daya rendah, daya sedang, dan daya tinggi.
+                  Kita juga dapat melihat TDP sebagai indikator seberapa banyak panas yang dirancang untuk ditangani oleh CPU atau GPU.
+                  Jika TDP lebih tinggi, CPU atau GPU dapat membuang lebih banyak panas; dengan demikian, itu lebih baik.
+                  TDP juga digunakan untuk mengukur berapa banyak udara yang dibutuhkan sistem pendingin perangkat untuk mendinginkan perangkat tersebut
+                  Akan membantu jika Anda memiliki daya yang lebih tinggi untuk mesin berperforma tinggi, dan Anda ingin meminimalkan daya untuk perangkat
+                  berperforma rendah agar tidak membuang energi dan menghemat uang untuk tagihan listrik Anda.
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--dasar-->
+      <!--trouble-->
+      <section class="flex-container d-sm-flex" id="ts">
+        <div class="container ">
+          <h3>Troubleshooting</h3>
+          <div class="accordion accordion-flush " id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsea" aria-expanded="false" aria-controls="flush-collapsea">
+                  lemot 
+                </button>
+              </h2>
+              <div id="flush-collapsea" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Hal-hal yang bisa menyebabkan Smartphone dan laptop menjadi berat,
+                  lambat, hang atau freezer bahkan mati total. <br>
+          
+              <br>1. full cache
+              <br>2. Rooting & jailbrick
+              <br>3. Kesalahan konfigurasi atau Human error
+              <br>4. RAM/ROM low-Healthy
+              <br>5. EMMC/HDD/SSD crash
+              <br>6. Storage Urgent/bad sector
+              <br>7. Malware & spyware attack
+              <br>8. hacking atau penyadapan
+            
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseb" aria-expanded="false" aria-controls="flush-collapseb">
+                  Crash system
+                </button>
+              </h2>
+              <div id="flush-collapseb" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Terdapat banyak indikasi atau Ciri-ciri kerusakan sistem operasi (OS) 
+                  pada mobile yang sering kita temukan seperti;<br>
+                      
+                      <br>1.beberapa fitur utama tidak berfungsi atau berjalan dengan Normal
+                      <br>2.fitur interface seperti speaker, kamera, video, bluetooth dll bermasalah
+                      <br>3.Aplikasi unsupported
+                      <br>4.Force close (Aplikasi atau google play terhenti)
+                      <br>5.hang/stuck logo 
+                      <br>6.bootloop/restart
+                      <br>7.blank dan blue screen
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsec" aria-expanded="false" aria-controls="flush-collapsec">
+                  Bootloop dan stuck logo
+                </button>
+              </h2>
+              <div id="flush-collapsec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">      
+                  Penyebab smartphone dan tablet Softbrick seperti restart terus menerus
+                      Hang logo, stuck recovery mode, Edl mode, fastboot dll <br>
+                 
+                         <br>1. Bug firmware
+                         <br>2. update failured
+                         <br>3. flashing failured
+                         <br>4. unsupported
+                         <br>5. Rooting & jailbrick
+                         <br>6. kerusakan interfaces (tombol, flexible, battery dll)
+                         <br>7. Sd card damaged
+                         <br>8. Overheating
+                         <br>9. RAM/ROM damage
+                         <br>10. UFS/Nand/M.2/Nvme damaged
+                         <br>11. CPU / SOC problems Shortin           
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsed" aria-expanded="false" aria-controls="flush-collapsed">
+                  Install Bios Window Mac
+                </button>
+              </h2>
+              <div id="flush-collapsed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  adalah tahapan perbaikan Operating system (OS) maupun firmware BIOS pada komputer yang mengalami
+                  freezer, crash, corrupt, terinfeksi malware, virus serta kesalahan penggunaan user.  
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsee" aria-expanded="false" aria-controls="flush-collapsee">
+                  Black, White, Bluescreen
+                </button>
+              </h2>
+              <div id="flush-collapsee" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Beberapa indikator kerusakan pada layar monitor atau display BWSoD =
+                  Blue / black/ white Screen of Death<br>  
+             
+                 <br> 40-60% disebabkan oleh driver/APK/firmware pihak ketiga (Unsupported)
+                 <br> 25-40% disebabkan hardware interfaces dan kerusakan motherboard
+                 <br> 5-10%  disebabkan oleh  BUG dari kode Microsoft versi beta,
+                         update dan atau pengembangan perangkat lunak 
+                 <br> 10-25% Costumisasi dan kesalahan konfigurasi User
+                 <br> 10-20% Corrupt BIOS firmware & malware
+                 <br> 15%-35% Overheating mainboard dan interfaces (perangkat keras) <br>   
+                 
+        
+                 <br>a. kesalahan konfigurasi Bios/OS/APK, costumize user dan Overclocking
+                 <br>b. instalasi aplikasi yang tidak diizinkan atau tidak kompatibel
+                 brUpdate Os/Driver failured
+                 <br>c. DATA_BUS_ERROR ; Kondisi ini terjadi ketika RAM penuh atau erorr
+                 <br>d. PAGE_FAULT_IN_NONPAGED_AREA ; Kondisi ini bisa terjadi ketika ada kerusakan pada hardware, 
+                     utamanya pada Memory (RAM), VGA, dan memory pada processor (L2 cache)
+                 <br>e. INACCESSIBLE_BOOT_DEVICE ; masalah boot ini bisa terjadi ketika posisi jumper pada harddisk yang salah, 
+                     bisa pengaruh Driver IDE controller yang salah, BUG dan Virus Boot sector
+                 <br>f. Driver corrupt ; driver mengalami kerusakan yang tidak terduga. Apabila menemukan kondisi seperti ini,
+                     akan muncul “IRQL_NOT_LESS_OR_EQUAL” dengan kode “0X0000000A” atau pesan “VIDEO_DRIVER_INIT_FAILURE”.
+                     Kondisi yang menjadi penyebab blue screen pada laptop Windows 10 ini, pengaruh sistem operasi
+                     tidak dapat mendeteksi atau membaca perangkat baru dengan baik. 
+                     Ini karena driver yang secara manual atau otomatis diinstall mengalami kerusakan (crash)
+                 <br>g. VGA card demaged/Driver unsuported
+                 <br>h. UNEXPECTED_KERNEL_MODE_TRAP (0X0000007F) ; Overheating, Procesor/Bios corrupt
+                 <br>i. NTFS_FILE_SYSTEM atau FAT_FILE_SYSTEM (0X00000024) atau (0X00000023)
+                         terjadi kerusakan di partisi atau file sistemnya. Kondisi demikian, terjadi pada file bukan pada Harddisk. 
+                         cara mengatasinya adalah coba periksa apakah kabel SATA/IDE hardisk telah terpasang dengan benar dan cek partisi dengan chkdsk.
+                 <br>j. Status Sistem Process Terminated
+                         Penyebab blue screen pada laptop Windows 10 adalah pengaruh status terminated pada sistem. 
+                         Error ini disebabkan adanya masalah pada winlogon.exe atau pada client server runtime subsystems (CRSS). 
+                         Kode yang ditampilkan 0Xc000021A
+                 <br>Gagalnya Driver Dengan Power Manajement
+                  Penyebab blue screen pada laptop Windows 10 adalah terjadi kegagalan pada driver dengan power manajemen. Power Management System (PMS) adalah Sistem Monitoring dan
+                   Metering Kelistrikan Jarak Jauh yang dipantau secara real time (terus menerus) dan simultan (bersamaan).
+                  Saat power ini tidak cocok dengan driver atau service yang berjalan, inilah penyebab blue screen pada laptop Windows 10. 
+                  Kode yang menjadi tanda penyebab blue screen pada laptop Windows 10 ini, 0X0000009F. 
+                  Risikonya akan semakin tinggi terjadi pada laptop yang melakukan hibernasi 
+                </div>
+              </div>
+            </div>
+
+           
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsef" aria-expanded="false" aria-controls="flush-collapsef">
+                  Hapus Pola sandi FRP
+                </button>
+              </h2>
+              <div id="flush-collapsef" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Unlock tools & bypass Privasi dan keamanan adalah sesuatu yang Wajib dijaga serta dilindungi
+                  secara tepat dan bertanggung jawab maka ; <br>
+              
+                     <br>1. kami hanya melayani Smartphone dan laptop 
+                         legal yang dimiliki secara sah yang bukan
+                         merupakan hasil tindak kejahatan
+                     <br>2. konsumen Wajib membawa dus/box/resi
+                         sebagai bukti kepemilikan Sah
+                     <br>3. konsumen bersedia melakukan dokumentasi 
+                         KTP/SIM, Foto diri dan produk yang akan di unlock
+                     <br>4. Kami tidak akan membantu dan atau memfasilitasi segala 
+                         bentuk kecurangan serta tindakan ilegal apapun
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseg" aria-expanded="false" aria-controls="flush-collapseg">
+                  Data recovery
+                </button>
+              </h2>
+              <div id="flush-collapseg" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+              
+                  sebuah layanan dalam Membantu mengembalikan data, file,
+                  serta berbagai media yang hilang atau terhapus pada ruang 
+                  penyimpanan (storage) anda seperti flashdisk, Hardisk, SSD, M.2, Nvme dll
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseh" aria-expanded="false" aria-controls="flush-collapseh">
+                  Wifi & Signal
+                </button>
+              </h2>
+              <div id="flush-collapseh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+        
+                  <br>Kerusakan yang terjadi pada konektivitas jaringan sangat beragam dan kompleks
+                       meliputi software dan hardware, provider, Peraturan dan perizinan yang
+                       berlaku yang dinaungi Kemenperin dan beacukai hingga
+                       peretasan dan sabotase pada smartphone atau komputer dan laptop<br>
+                       Laptop dan komputer desktop
+      
+                          <br>a. license OS
+                          <br>b. Driver suport
+                          <br>c. Konfigurasi WLAN
+                          <br>d. Crash OS
+                          <br>e. Wifi card
+                          <br>f. SouthBridge damage
+                  
+                  <br> iphone & Smartphone<br>
+                          <br>a. Bug firmware
+                          <br>b. Update failured
+                          <br>c. Ic Wifi controler
+                          <br>d. Baseband blok sircuit
+                          <br>e. Signal = Imei, IC WTR, IC RF, IC PA
+                          <br>f. iphone = imei, IC tristar, IC Trinitas, icloud
+                          <br>g. Protection services = Brand, Operator, jamming or hacking
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsei" aria-expanded="false" aria-controls="flush-collapsei">
+                  Malware
+                </button>
+              </h2>
+              <div id="flush-collapsei" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+        
+                  Keep your privacy (data) from  fraud & thief.<br>
+                  Macam-macam jenis atau model serangan Phising & Malware<br>
+          
+                  <br>a. Scaming atau penawaran yang mencurigakan
+                  <br>b. Email, pesan, link phising 
+                  <br>c. Virus
+                  <br>d. adware
+                  <br>e. Spyware
+                  <br>f. Malicious
+                  <br>g. Worm keygen
+                  <br>h. Ransomeware
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsej" aria-expanded="false" aria-controls="flush-collapsej">
+                  Overheating
+                </button>
+              </h2>
+              <div id="flush-collapsej" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                
+                  <br>Permasalahan seputar  Overheating 
+                      menjadi sumber utama kerusakan yang sering terjadi 
+                      pada berbagai perangkat elektronik seperti ;<br>
+                  
+                      <br>a. Penggunaan berlebih
+                      <br>b. Overload data (cache)
+                      <br>c. battery damaged
+                      <br>d. Virus/malware
+                      <br>e. hacking (penyadapan)
+                      <br>f. Fan (air sirculation)
+                      <br>g. Thermal paste & thermal pad
+                      <br>h. Shorting
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsek" aria-expanded="false" aria-controls="flush-collapsek">
+                  kamera Bluetooth keyboard
+                </button>
+              </h2>
+              <div id="flush-collapsek" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                
+                  <br>1. crash system & Bug firmware
+                  <br>2. Driver corrupt
+                  <br>3. Rooting/Costumize 
+                  <br>4. Update failured/missing update 
+                  <br>5. Full Storage 
+                  <br>6. Malware & hacking 
+                  <br>7. Overheating 
+                  <br>8. Bad conected 
+                  <br>9. interfaces damaged
+                  <br>10. Block sircuit damaged 
+                  <br>11. SIO trouble 
+                  <br>12. IC & SOC damage
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsel" aria-expanded="false" aria-controls="flush-collapsel">
+                  Battery isues
+                </button>
+              </h2>
+              <div id="flush-collapsel" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+           
+                  <br>Permasalahan seputar Battery 
+                      akan berdampak pada kestabilan mesin atau motherboard
+                      yang akan menimbulkan banyak permasalahan berikutnya<br>
+              
+                      <br>1. battery kembung
+                      <br>2. battery boros
+                      <br>3. battery tidak mengisi
+                      <br>4. Suhu Battery high/low 
+                      <br>5. restart dan stuck logo (freezer)
+                      <br>6. Overheating
+                      <br>7. sering mati mendadak
+                      <br>8. Mati total
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsem" aria-expanded="false" aria-controls="flush-collapsemm">
+                  Not Charging 
+                </button>
+              </h2>
+              <div id="flush-collapsem" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+               
+                      <br>Terdapat banyak faktor penyebab permasalahan pada Pengisian daya
+                          yang dapat menghambat berbagai aktivitas diantaranya; <br>
+                      <br>1. Adaptor / kabel damaged
+                      <br>2. UI board/Dc in
+                      <br>3. Main flexible
+                      <br>4. Battery damaged 
+                      <br>5. Vbatt sircuit
+                      <br>6. IC PMI damaged
+                      <br>7. Sircuit Protection 
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsen" aria-expanded="false" aria-controls="flush-collapsen">
+                  Sound Isues
+                </button>
+              </h2>
+              <div id="flush-collapsen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                 
+                      <br>Berbagai Faktor Penyebab yang dapat merusak 
+                      interface audio, speaker dan buzzer smartphone dan laptop maupun macbook<br>
+                      <br> Debu atau air
+                      <br> Driver atau firmware
+                      <br> Crash atau Bug Os
+                      <br> Buzzer
+                      <br> Speaker
+                      <br> Update/restore OS/APK
+                      <br> Ui board
+                      <br> Ic Audio
+                      <br> Ic Pmi/Pmu
+                      <br> S O C
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseo" aria-expanded="false" aria-controls="flush-collapseo">
+                  Touchscreen Problem
+                </button>
+              </h2>
+              <div id="flush-collapseo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+        
+            <br>Beberapa Penyebab yang dapat membuat layar pada perangkat Mobile menjadi
+                tidak berfungsi atau bergerak sendiri <br>
+            
+            <br>Crash system
+            <br>Touchscreen damaged
+            <br>Touchpad problem
+            <br>Keyboard error/damaged
+            <br>battery & adaptor damaged
+            <br>battery & adaptor KW
+            <br>Water/oil damage
+            <br>SOC sircuit
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsep" aria-expanded="false" aria-controls="flush-collapsep">
+                  LCD & Not display
+                </button>
+              </h2>
+              <div id="flush-collapsep" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                                        
+                <br>Kerusakan pada tampilan layar Desktop, laptop maupun gadget (Display Problems)
+                  disebabkan oleh berbagai faktor diantaranya ;<br>
+                <br>VGA/HDMI
+                <br>RAM & ROM
+                <br>HDD/SSD/Nvme
+                <br>Lcd demaged
+                <br>Backlight LCD
+                <br>Flexible & socket
+                <br>LVDS sircuit
+                <br>VGA/GPU
+                <br>SoC PCH
+                <br>Crash OS & Bios
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseq" aria-expanded="false" aria-controls="flush-collapseq">
+                  Waterdamage konsleting
+                </button>
+              </h2>
+              <div id="flush-collapseq" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                 
+                      <br>Langkah penanganan pada perangkat elektronik, smartphone 
+                      laptop dan komputer AIO yang terkena cairan<br>
+                       <code>Water damage treatment.</code>
+                      
+                      <br>1. Disassembly interfaces
+                      <br>2. Water removing
+                      <br>3. Corrosion cleaning
+                      <br>4. Heating PCB / mainboard / logic board
+                      <br>5. Impendansi tracking
+                      <br>6. Tool tester <br>
+                 
+                        <code>konsleting types</code>
+                  
+                      <br>short sircuit
+                      <br>short component
+                      <br>short Ic
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapser" aria-expanded="false" aria-controls="flush-collapser">
+                  Hardbrick Mati total
+                </button>
+              </h2>
+              <div id="flush-collapser" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                        <br>Beberapa faktor yang menyebabkan laptop, Desktop komputer, macbook 
+                         Gagal booting dan Mati total diantaranya;<Br>    
+                 
+                        <br>1. Adaptor/PSU
+                        <br>2. DC jack / Magsafe in
+                        <br>3. Separator sircuit
+                        <br>4. IC Regulator PMI/ PMU/ TRISTAR/ TRINITY
+                        <br>5. Battery damage
+                        <br>6. 3V/5V alw, enable dan clock
+                        <br>7. Not swicth
+                        <br>8. Storage & OS damaged (device not found)
+                        <br>9. Protection sircuits
+                        <br>10. IC EC/SIO controler damaged
+                        <br>11. IC BiOS damage
+                        <br>12. firmware BiOS & SIO corrupt
+                        <br>13. SOC PCH damaged
+                        <br>14. GPU damage
+                        <br>15. konsleting
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
+                  
+                </button>
+              </h2>
+              <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+               
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
+                  
+                </button>
+              </h2>
+              <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+               
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
+                  
+                </button>
+              </h2>
+              <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+               
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--trouble-->
+      <!-- Footer -->
+      <footer
+        class="w3-padding-50 w3-light-grey w3-small w3-center"
+        id="footer"
+      >
+        <div class="w3-row-padding w3-animate-zoom w3-hover-border-sand">
+         <h4>Web repair engineer</h4>
+         
+        </div>
+      </footer>
+
+      <div class="w3-black w3-center w3-padding-24">
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          title="W3.CSS"
+          target="_blank"
+          class="w3-hover-opacity"
+        >
+          W3.s</a
+        >
+      </div>
+      <!-- End page content -->
+    </div>
+
+    <!-- Newsletter Modal -->
+    <div id="newsletter" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom" style="padding: 32px;">
+        <div class="w3-container w3-white w3-center">
+          <i
+            onclick="document.getElementById('newsletter').style.display='none'"
+            class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"
+          ></i>
+          <h2 class="w3-wide">NEWSLETTER</h2>
+          <p>
+            Join our mailing untuk mendapat update produk dan penawaran spesial
+          </p>
+          <p>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              placeholder="Enter e-mail"
+            />
+          </p>
+          <button
+            type="button"
+            class="w3-button w3-padding-large w3-red w3-margin-bottom"
+            onclick="document.getElementById('newsletter').style.display='none'"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Accordion
+      function myAccFunc() {
+        var x = document.getElementById("demoAcc");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // Click on the "Jeans" link on page load to open the accordion for demo purposes
+      document.getElementById("myBtn").click();
+
+      // Open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
