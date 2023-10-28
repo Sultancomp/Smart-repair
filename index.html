@@ -542,7 +542,7 @@
                         <br>5. 150 - 250Ma		= Start Up Program
                         <br>6. 250 - 600Ma		= Search signal (Ic RF bekerja)	
                         
-                        <code>Tegangan Utama pada smartphone</code>
+                        <br><code>Tegangan Utama pada smartphone</code>
                         
                         <br>1.	1,1V core Prosesor
                         <br>2.	1,8V Logic I/O
@@ -780,6 +780,52 @@
                 <div class="accordion accordion-flush " id="accordionFlushExample">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehreeh" aria-expanded="false" aria-controls="flush-collapsehreeh">
+                         Recovery Mode
+                      </button>
+                    </h2>
+                    <div id="flush-collapsehreeh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <br><code>Recovery mode merupakan tool bawaan untuk user melakukan hard/factory reset maupun wipe data dan caches</code><br>
+                        
+                        <br>1. ASUS: Power + Volume Up
+                        <br>2. Samsung: Power + Home + Volume Up
+                        <br>3. OPPO: Power + Volume Down
+                        <br>4. VIVO: Power + Volume Down
+                        <br>5. SONY: Power + Volume Up
+                        <br>6. Huawei: Power + Volume Up
+                        <br>7. Xiaomi: Power + Volume Down
+                        <br>8. Realme: Power + Volume Down
+                        <br>9. Nokia: Power + Volume Up
+                        <br>10. Lenovo: Power + Volume Up
+                        <br>11. Smartfren: Power + Volume Up
+                        <br>12. LG: Power + Home + Volume Up
+                        <br>13. HTC: Power + Volume Down
+                        <br>14. OnePlus: Power + Volume Down
+                        <br>15. ADVAN: Power + Volume Down
+                        <br>16. infinx : power + Volume up <br> Lepaskan tombol Daya jika INFINIX logo muncul lalu Lepaskan Volume Naik saat gambar XOS "no command" muncul.
+                        
+                        <br><code>manfaat Recovery mode di Android menggunakan Pc dan laptop</code>
+                         <br>a. melakukan reset pabrik: Jika perangkat Anda tidak berfungsi dengan benar, atau jika Anda ingin menghapus semua data di perangkat Anda, Anda dapat melakukan reset pabrik menggunakan mode pemulihan.
+                         <br>b. menginstal ROM khusus: Jika Anda ingin menginstal ROM khusus pada perangkat Android Anda, Anda harus masuk ke mode pemulihan untuk mem-flash ROM.
+                         <br>c. menghapus partisi cache: Jika perangkat Anda berjalan lambat atau jika Anda mengalami aplikasi mogok, Anda dapat menghapus partisi cache menggunakan mode pemulihan.
+                        <br><strong>Untuk masuk ke recovery mode di perangkat Android menggunakan PC langkah-langkah di bawah ini:</strong>
+
+                        <br>Langkah 1: Hubungkan perangkat Android Anda (seperti ponsel cerdas dan tablet) ke PC menggunakan kabel USB.
+                        
+                        <br>Langkah 2: Instal ADB di PC Anda dan aktifkan USB debugging di perangkat Anda.
+                        
+                        <br>Langkah 3: Buka jendela command prompt di folder ADB.
+                        
+                        <br>Langkah 4: Ketik perintah berikut di jendela command prompt dan tekan Enter:
+                        <br><code>adb reboot recovery</code>
+                        <br>Langkah 5: Perangkat Android Anda sekarang akan reboot ke mode pemulihan.
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
                        EDL, fasboot, Usb debuging
                       </button>
@@ -790,7 +836,25 @@
                        <br>adalah Mode Khusus untuk memberikan pengguna tingkat akses yang lebih besar terhadap perangkat Xiaomi Kalian. 
                        Kegunaan EDL diiantaranya Anda dapat membuka Bootloader secara tidak resmi, Flash Stock Firmware, Unbrick perangkat Anda dari Bootloop dll.
                        Saat EDL mode aktif maka, Prosesor Snapdragon berada dalam mode download image. EDL mode dapat menjadi alternatif 
-                       selain Fastboot untuk melakukan flashing ROM di Hp Xiaomi kalian.
+                       selain Fastboot untuk melakukan flashing ROM di Hp Xiaomi kalian. <br>
+                       <br><strong>USB debugging </strong>
+                       adalah fitur yang ditujukan untuk para pengembang Android, baik itu pengembang sistem atau pun aplikasi. <br>
+                       Android menyediakan fitur ini agar perangkat Android bisa berkomunikasi dengan Android SDK (Software Developer Kit)
+                       melalui koneksi USB. Dengan fitur ini, Android dapat menerima perintah, file, atau yang lain dari PC dan memungkinkan PC untuk menarik informasi penting seperti log files dari perangkat Android. <br>
+                       <br>Karena fitur ini tersedia pada opsi pengembang, maka langkah pertama yang harus Anda lakukan adalah mengaktifkan Developer Options. Untuk beberapa jenis handphone Android mungkin memiliki
+                       langkah yang sedikit berbeda, namun secara garis besar berikut beberapa langkah utama yang bisa Anda ikuti. <br>
+
+                       <br>1. Buka menu setting atau pengaturan pada perangkat Android Anda.
+                       Di dalam menu setting silakan masuk ke menu “About phone”
+                       <br>2. Temukan menu “Software version”, “Versi Software”, atau “Software information”. Jika sudah, Anda dapat masuk ke menu tersebut.
+                       <br>3. Selanjutnya, cari menu “Build Number”. Untuk bisa masuk ke menu ini, Anda harus mengklik menu tersebut sebanyak 7 kali.
+                       <br>4. Setelah opsi pengembang aktif di perangkat Android Anda, berikut ini langkah-langkah untuk mengaktifkan fitur ini.
+                       
+                       <br><code>Cara mengaktifkan USB Debugging</code>
+                       <br>1. Masuk ke menu setting atau pengaturan.
+                       <br>2. Cari menu opsi pengembang atau developer options.
+                       <br>3. Scroll ke bawah dan aktifkan opsi USB debugging.
+                       <br>4. Jika ada notifikasi “Allow development settings ?” silakan pilih “OK”.
                         
                       </div>
                     </div>
@@ -1004,7 +1068,7 @@
                     </h2>
                     <div id="flush-collapsehreef" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                        TWRP (Team Win Recovery Project) merupakan tools yang berfungsi untuk melakukan Custom Recovery pada smartphone Android yang  memiliki lisensi terbuka.
+                       <br> TWRP (Team Win Recovery Project) merupakan tools customize recovery mode yang memiliki berbagai fitur dan fungsi dari pada Recovery mode bawaan yang disediakan pada smartphone Android .
                         <strong>instalasi TWRP bisa dengan 2 cara :</strong>  <br>
                         <br><code>1. fastboot via Pc</code> <br>
                         <strong>Tools download</strong>
