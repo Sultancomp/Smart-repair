@@ -1573,12 +1573,107 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree61" aria-expanded="false" aria-controls="flush-collapseThree61">
-                        
+                        Power sequence 
                       </button>
                     </h2>
                     <div id="flush-collapseThree61" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                      
+                        <br><strong>Proses booting (power sequence) dari S5 (Off State) hingga S0 (Working State) pada komputer dan laptop </strong><br>
+
+                              <br>1. S0 (Working State): Ini adalah keadaan saat laptop Anda sepenuhnya aktif dan berfungsi normal. Ini adalah saat laptop berjalan dan pengguna dapat berinteraksi dengannya.
+                              
+                              <br>2. S1 (Standby State): Pada tahap ini, laptop memasuki mode siaga yang sangat hemat daya. Beberapa komponen non-esensial mungkin dimatikan untuk menghemat daya, tetapi laptop masih dalam keadaan siap untuk diaktifkan dengan cepat.
+                              
+                              <br>3. S2 (Intermediate Standby): Ini adalah mode siaga lebih dalam dibandingkan dengan S1, di mana laptop menahan lebih banyak komponen yang membutuhkan daya. Dalam mode ini, laptop memerlukan waktu lebih lama untuk menghidupkan kembali dari mode siaga.
+                              
+                              <br>4. S3 (Suspend to RAM): S3 adalah modus Hibernate di mana data yang ada di RAM disimpan ke dalam file hibernasi di hard drive dan laptop sepenuhnya dimatikan. Ketika Anda menghidupkan laptop dari S3, data di-RAM dipulihkan dari file hibernasi,
+                               memungkinkan Anda melanjutkan dari tempat yang Anda tinggalkan.
+                              
+                              <br>5. S4 (Hibernation State): Di S4, laptop mematikan hampir semua komponen dan menyimpan semua data yang ada di RAM ke file hibernasi. Laptop benar-benar mati dan tidak membutuhkan daya untuk mempertahankan keadaannya.
+                               Saat Anda menyalakan laptop dari S4, ini memerlukan waktu lebih lama daripada dari S3, karena itu adalah boot dari keadaan mati.<br>
+                                  
+                              
+                              <br>6. S5 (Off State): adalah keadaan ketika laptop sepenuhnya dimatikan dan tidak ada aliran daya ke komponen apa pun. Laptop dalam S5 dianggap sebagai "mati" dan perlu dinyalakan dari awal saat tombol daya ditekan.
+                                        <br> S5 (Off State):
+                              
+                                        Pada tahap ini, komputer atau laptop dalam keadaan mati total. Semua komponen mati, dan tidak ada daya yang mengalir ke motherboard.
+                                        Menyalakan Perangkat (Power On):
+                                        
+                              <br>Power sequence ini penting untuk mengelola daya laptop dengan efisien, memungkinkan untuk menjaga keseimbangan antara kinerja dan hemat daya sesuai kebutuhan pengguna.
+                              
+
+                              <br><strong>Tahapan Power Sequence dari S5 sampai S0 pada Laptop dan Komputer:</strong><br>
+
+                              <br><code>1. S5 (Off State):</code>
+                              
+                              <br>Pada tahap ini, laptop atau komputer dalam keadaan mati total, dan tidak ada daya yang mengalir ke komponen apa pun. Semua komponen mati,
+                               termasuk CPU, RAM, perangkat penyimpanan, dan perangkat keras lainnya. <br>
+
+                              <br><code>2. Menekan Tombol Daya (Boot):</code>
+                              
+                              <br>Pengguna menekan tombol daya pada laptop atau komputer untuk menghidupkannya.
+                              <br>Pengguna menekan tombol daya atau melakukan tindakan lain yang mengaktifkan komputer atau laptop.
+                              Ini mengarah pada penyediaan daya ke motherboard  yang di regulasi Power selector ( separator) menjadi tegangan kerja dan tegangan perintah untuk inisialisasi sistem. <br>
+
+                              <br><code>3. Firmware BIOS/UEFI Inisialisasi:</code>
+                              
+                              <br>Firmware BIOS (pada komputer lama) atau UEFI (pada komputer modern) pertama-tama diinisialisasi. Ini adalah perangkat lunak yang bertanggung jawab untuk mengatur perangkat keras dan proses booting.
+                              BIOS/UEFI melakukan POST (Power-On Self-Test), yang melibatkan pengujian awal komponen seperti RAM, CPU, dan perangkat penyimpanan untuk memastikan semuanya berfungsi dengan baik.
+                              Informasi tentang konfigurasi hardware disimpan dalam CMOS atau NVRAM. <br>
+                              <br> Inisialisasi BIOS/UEFI  
+                              BIOS (pada komputer lama) atau UEFI (pada komputer modern) pertama-tama diinisialisasi.
+                              Firmware BIOS/UEFI melakukan Power-On Self-Test (POST) untuk menguji komponen utama seperti CPU, RAM, kartu grafis, dan perangkat penyimpanan. 
+                              Hasil POST ditampilkan di layar (jika ada) atau melalui indikator lampu LED pada motherboard. <br>
+                             
+
+
+                              <br><code>4. Memuat Firmware Bootloader:</code>
+                              
+                              <br>Setelah POST selesai, BIOS/UEFI akan mencari firmware bootloader yang akan memuat sistem operasi.
+                              Bootloader biasanya ada di sektor awal hard drive atau SSD. <br>
+                              
+                              BIOS/UEFI mengidentifikasi perangkat keras yang terpasang pada motherboard, termasuk hard drive/SSD, CD/DVD drive, kartu grafis, dan perangkat lainnya.
+                              Informasi tentang konfigurasi hardware disimpan dalam EEPROM atau NVRAM (Non-Volatile RAM). <br>
+
+                              <br><code>5. Memuat   Firmware Bootloader </code>
+                              
+                              <br>Firmware bootloader memuat sistem operasi dari perangkat penyimpanan utama (seperti hard drive atau SSD) ke RAM.
+                              Sistem operasi kemudian diinisialisasi dan dimulai. Pada tahap ini, komputer atau laptop memasuki S0 (Working State). <br>
+                             
+                              
+                              Setelah POST selesai, BIOS/UEFI mencari bootloader yang akan memulai proses booting.
+                              Bootloader biasanya terletak di sektor awal hard drive atau SSD dan bertanggung jawab untuk memuat sistem operasi. <br>
+                              
+                             
+                              <br><code>6. Memuat Sistem Operasi:</code>
+                              
+                              Bootloader memuat sistem operasi dari perangkat penyimpanan utama (hard drive/SSD) ke RAM.
+                              Sistem operasi diinisialisasi dan memulai proses booting, yang melibatkan inisialisasi driver perangkat keras, layanan, dan aplikasi yang diperlukan. <br>
+
+                              <br><code>7. Mencapai S0 (Working State):</code>
+                              
+                              Setelah proses booting selesai, komputer atau laptop mencapai keadaan S0 (Working State).
+                              Di tahap ini, pengguna dapat berinteraksi dengan sistem operasi dan menjalankan aplikasi. <br>
+
+                              <br><code>8. Kondisi Standby (S1-S4) (Opsional):</code>
+                              
+                              <br> Selama booting, beberapa komputer atau laptop juga dapat melibatkan mode standby (S1-S4) atau mode tidur tergantung pada konfigurasi dan kebutuhan pengguna.
+                              Proses booting ini dapat bervariasi tergantung pada perangkat keras, firmware BIOS/UEFI, dan sistem operasi yang digunakan. Namun, tahapan-tahapan di atas 
+                              memberikan gambaran umum tentang bagaimana komputer dan laptop mengaktifkan diri dari keadaan mati hingga keadaan kerja normal.
+
+                              <code>Booting Selesai:</code>
+                              
+                              <br>Setelah sistem operasi sepenuhnya dimuat, komputer atau laptop siap untuk digunakan, dan pengguna dapat berinteraksi dengan aplikasi dan perangkat keras.
+                              Proses ini mencakup transisi dari keadaan mati (S5) hingga keadaan kerja normal (S0). Meskipun beberapa detailnya dapat bervariasi tergantung pada perangkat keras, 
+                              BIOS/UEFI, dan sistem operasi yang digunakan, tahapan ini memberikan pandangan umum tentang bagaimana laptop dan 
+                              komputer mengaktifkan diri saat tombol daya ditekan dan menginisialisasi perangkat keras serta sistem operasinya. <br>
+
+                              
+                              
+                              
+                              
+                              
+                              
                       </div>
                     </div>
                   </div>
