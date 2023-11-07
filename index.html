@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>sultan.store</title>
+    <title>smart-repair</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -1635,7 +1635,7 @@
                               BIOS/UEFI mengidentifikasi perangkat keras yang terpasang pada motherboard, termasuk hard drive/SSD, CD/DVD drive, kartu grafis, dan perangkat lainnya.
                               Informasi tentang konfigurasi hardware disimpan dalam EEPROM atau NVRAM (Non-Volatile RAM). <br>
 
-                              <br><code>5. Memuat   Firmware Bootloader </code>
+                              <br><code>5. Memuat Firmware Bootloader </code>
                               
                               <br>Firmware bootloader memuat sistem operasi dari perangkat penyimpanan utama (seperti hard drive atau SSD) ke RAM.
                               Sistem operasi kemudian diinisialisasi dan dimulai. Pada tahap ini, komputer atau laptop memasuki S0 (Working State). <br>
@@ -1668,10 +1668,6 @@
                               BIOS/UEFI, dan sistem operasi yang digunakan, tahapan ini memberikan pandangan umum tentang bagaimana laptop dan 
                               komputer mengaktifkan diri saat tombol daya ditekan dan menginisialisasi perangkat keras serta sistem operasinya. <br>
 
-                              
-                              
-                              
-                              
                               
                               
                       </div>
@@ -2392,7 +2388,9 @@
                 </button>
               </h2>
               <div id="flush-collapseThred" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"><br><strong>Protection system </strong> Merupakan mekanisme elektronik yang dirancang secara otomatis sebagai diteksi awal 
+                <div class="accordion-body">
+                  <br><strong>Protection system </strong> 
+                  Merupakan mekanisme elektronik yang dirancang secara otomatis sebagai diteksi awal 
                   untuk melindungi  mainboard atau PCB dan logic board dari berbagai
                   faktor yang dapat merusak perangkat elektronik atau motherboard. <br>
                   
@@ -2400,9 +2398,64 @@
                   <br>b. OVP    	= over voltage protection
                   <br>c. OLP    	= over load protection
                   <br>d. OCP 	    = over current protection
-                  <br> e. OTP      = over temperature protection
-                  <br>f. SCP		  =  SHORT PROTECTION
-                  <br>g. SNUBER 	= PROTEKSI DENGAN DIODA ZENER & ELCO
+                  <br>e. OTP      = over temperature protection
+                  <br>f. SCP		  = SHORT PROTECTION
+                  <br>g. SNUBER 	= PROTEKSI DENGAN DIODA ZENER & ELCO <br>
+
+                  <br>Sistem proteksi pada logic board iPhone, MacBook, PCB Android, dan motherboard komputer melibatkan berbagai komponen 
+                  dan modul yang bekerja sama untuk menjaga komponen elektronik dari berbagai risiko dan kerusakan. Berikut adalah beberapa jenis komponen dan modul perlindungan yang umum digunakan:
+
+                  <br>1.<code>ESD Protection Components (Perlindungan ESD):</code>
+                  
+                  Dioda pengaman: Dioda pengaman atau transient voltage suppressor (TVS) digunakan untuk melindungi komponen dari kerusakan akibat muatan elektrostatis.
+                  Varistors:
+                  
+                  <br>2. <code>Varistor</code>
+                   adalah komponen semikonduktor yang mempunyai resistansi yang dapat berubah tergantung pada tegangan yang diterapkan. Mereka digunakan untuk melindungi komponen dari lonjakan tegangan.
+
+                  <br>3. <code>Resettable Fuses:</code>
+                  
+                  Resettable fuses, juga dikenal sebagai polymeric positive temperature coefficient (PPTC) devices, digunakan untuk melindungi komponen dari arus berlebih. Mereka akan mengembalikan
+                   sirkuit ke keadaan normal setelah arus berlebih hilang.
+
+                  <br>4. <code>Transient Voltage Suppressors (TVS):</code>
+                  
+                  Komponen TVS digunakan untuk melindungi komponen dari lonjakan tegangan yang tiba-tiba dan memastikan tegangan tetap dalam batas yang aman.
+
+                  <br>5. <code>Thermal Management (Manajemen Suhu):</code>
+                  
+                  Pada MacBook dan komputer, sistem pendinginan seperti heatsinks dan kipas digunakan untuk menjaga suhu operasi dalam batas aman.
+
+                  <br>6. <code>Water and Dust Protection (Perlindungan terhadap Air dan Debu):</code>
+                  
+                  Beberapa perangkat iPhone, MacBook, dan Android memiliki pelindung terhadap air dan debu. Ini termasuk pelapisan khusus, gasket, dan penutup yang tahan air.
+
+                  <br>7. <code>EMI Filters (Filter EMI):</code>
+                  
+                  Filter EMI digunakan untuk mengurangi gangguan elektromagnetik yang dapat memengaruhi operasi komponen.
+
+                  <br>8. <code>Voltage Regulators (Regulator Tegangan):</code>
+                  
+                  Regulator tegangan digunakan untuk menjaga tegangan konstan dan melindungi komponen dari fluktuasi tegangan yang merugikan.
+
+                  <br>9. <code>Fuse Protection (Perlindungan Fuse):</code>
+                  
+                  Sekering elektronik digunakan untuk melindungi sirkuit dari kerusakan akibat arus berlebih.
+
+                  <br>10. <code>Overcurrent Protection (Perlindungan Terhadap Arus Berlebih):</code>
+                  
+                  Komponen seperti PTC thermistors atau resettable fuses digunakan untuk melindungi komponen dari arus berlebih yang dapat merusak.
+
+                  <br>11. <code>Mechanical Protection (Perlindungan Mekanik):</code>
+                  
+                  Sistem penahan getaran dan perlindungan mekanik lainnya digunakan untuk melindungi komponen dari kerusakan fisik akibat getaran, guncangan, atau tekanan mekanik.
+                  <br>12. <code>Shielding (Perisai Elektromagnetik):</code>
+                  
+                  Perisai elektromagnetik digunakan untuk melindungi komponen dari gangguan elektromagnetik eksternal. <br>
+                  <strong>Kombinasi komponen-komponen ini dapat bervariasi tergantung pada perangkat dan aplikasinya. Perlindungan yang baik sangat penting untuk 
+                    menjaga integritas komponen elektronik dan mencegah kerusakan akibat berbagai risiko yang mungkin terjadi. </strong>
+
+
                   
                 </div>
               </div>
