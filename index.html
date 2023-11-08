@@ -396,7 +396,7 @@
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                      <br><strong>Android (Android OS)</strong> 
+                      <br><strong>Android OS</strong> 
                       adalah sistem operasi open source yang dikembangkan oleh Google untuk perangkat bergerak seperti smartphone, tablet, dan perangkat lainnya. 
                       <br>Berikut ini adalah struktur dan cara kerja Android OS: <br>
 
@@ -1406,19 +1406,56 @@
                     </h2>
                     <div id="flush-collapseThri" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
+                        <br><strong>Proses power-on pada smartphone, komputer, dan MacBook ;</strong><br>
+
+                        <br>1. <code>Penyediaan Energi (Power Supply):</code><br>
+                        <br> Menghubungkan perangkat ke sumber daya listrik melalui adaptor daya atau baterai. <br>
                         
-                        <br>Rangkaian On ialah rangkaian yang akan pertama kali bekerja saat dilakukan switch On dengan  konsumsi arus pertama kali naik +- 200ma. Syarat kerja Rangkaian ON :
-                        Aktif sebelum On <br>
+                        <br>2. <code>Tombol Power:</code> <br>
+                        <br>Menekan tombol daya pada perangkat untuk mengaktifkannya. <br>
+                        
+                        <br>3. <code>inisialisasi Bootloader atau Firmware Awal:</code> <br>
+                        
+                        <br>Smartphone: Inisialisasi bootloader yang dapat memeriksa perangkat keras dan memuat sistem operasi.
+                        <br>Komputer: Inisialisasi BIOS (Basic Input/Output System) atau UEFI (Unified Extensible Firmware Interface) yang mengontrol proses booting awal.
+                        <br>MacBook: Inisialisasi EFI (Extensible Firmware Interface) yang mengatur booting awal. <br>
+
+                        <br>4. <code>POST (Power-On Self-Test):</code> <br>
+                        <br> Tes perangkat keras pendahuluan dijalankan untuk memeriksa kesehatan perangkat keras. Jika ada masalah, akan muncul kode kesalahan atau pesan. <br>
+                        
+                        <br>5. <code>Boot Sistem Operasi:</code><br>
+                        
+                        <br>Smartphone: Mem-boot sistem operasi yang telah diatur, seperti Android atau iOS.
+                        <br>Komputer: Mem-boot sistem operasi yang ada di perangkat penyimpanan (hard drive, SSD, dll.).
+                        <br>MacBook: Mem-boot macOS yang ada di SSD MacBook. <br>
+
+                        <br>6. <code>Inisialisasi Perangkat Lunak (Software Initialization):</code><br>
+                        <br> Memuat driver perangkat keras dan layanan yang diperlukan untuk operasi normal.
+                        
+                        <br>7. <code>Boot ke Lingkungan Desktop atau Tampilan Login:</code><br>
+                        
+                        <br>Smartphone: Boot ke tampilan utama atau layar kunci.
+                        <br>Komputer: Boot ke lingkungan desktop atau tampilan login.
+                        <br>MacBook: Boot ke desktop macOS atau layar login.
+                        
+                        <br>Rangkaian On ialah rangkaian yang akan pertama kali bekerja saat 
+                        dilakukan switch On dengan  konsumsi arus pertama kali naik +- 200ma. <br>
+                          <strong>Syarat kerja Rangkaian ON :</strong> <br>
+
+                        <br><code>Aktif sebelum On </code><br>
+
                         <br>1. VDD								=  3,3V/5V always
                         <br>2. RTC	& Clock
                         <br>3.  Syarat kerja EC = AC IN  &  SB = S5_ON terpenuhi	= 3V always/VCC
                         <br>4. Bios Normal						=  3 V di kaki 3,5,7 IC Bios
-                        <br>5. Power ON SW 1/Sys_ON	  =  +- 3V
-                        <br>Aktif setelah ON
-                        <br>4. Resume Reset						=  3,3V
-                        <br>5. Power button _Out			=  3,3V
-                        <br>6. Sleep_3,4,5 						=  3,3V
-                        <br>7.  VR_ON, Main_ON, SYS_ON,SUSP				=  3,3V
+                        <br>5. Power ON SW 1/Sys_ON	  =  +- 3V <br>
+
+                        <br><code>Aktif setelah ON</code><br>
+
+                        <br>4. Resume Reset						      =  3,3V
+                        <br>5. Power button _Out			      =  3,3V
+                        <br>6. Sleep_3,4,5 						      =  3,3V
+                        <br>7. VR_ON, Main_ON, SYS_ON,SUSP  =  3,3V
                         
                       </div>
                     </div>
@@ -1432,7 +1469,7 @@
                     <div id="flush-collapseThree4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                       
-                        <br>Rangkaian tegangan alw (Tegangan standby) 3V & 5V ialah suatu Rangkaian power yang mendapatkan tegangan Utama (main power) meskipun laptop dalam keadaan off. V alw merupakan jalur utama yang mendapatkan tegangan utama 19V/20V atau sesuai dengan  yang didesign vendornya setelah melewati Rout separator.
+                        <br><strong>Rangkaian tegangan alw (Tegangan standby) 3V & 5V</strong> ialah suatu Rangkaian power yang mendapatkan tegangan Utama (main power) meskipun laptop dalam keadaan off. V alw merupakan jalur utama yang mendapatkan tegangan utama 19V/20V atau sesuai dengan  yang didesign vendornya setelah melewati Rout separator.
                          Cirinya lampu indicator hidup serta terdapat nilai arus (pengecekan PSU) berkisar 5-10ma. Kombinasi design regulator Always diantaranya terdiri dari (3V &  5V) atau  3V , 5V atau 3V+ IC charger , 5V . Apabila hilang tegangan utama 3V dan 5V ini maka laptop akan MATI TOTAL (MATOT).
                         
                         <br>Tegangan utama (Always / AL) adalah tegangan yang wajib hadir (wajib ada) pada saat disambungkan ke charger yang telah dialiri listrik (terpasang sempurna).
