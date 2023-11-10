@@ -2098,35 +2098,106 @@
               </h2>
               <div id="flush-collapseThree6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                
-                <code>Mosfet merupakan komponen aktif yang berfumgsi sebagai saklar otomatis, penstabil tegangan 
-                  juga untuk menaikkan tegangan atau menurunkan tegangan.</code>
+              
+                <br>MOSFET (Metal-Oxide-Semiconductor Field-Effect Transistor) adalah jenis transistor yang sangat umum digunakan dalam elektronika modern.
+                 MOSFET memiliki dua jenis utama: N-channel (nMOS) dan P-channel (pMOS), yang masing-masing memiliki karakteristik dan aplikasi khusus. <br>
+
+              <strong>Fungsi MOSFET:</strong><br>
+              <br><code>Pengendalian Arus:</code> MOSFET dapat digunakan untuk mengontrol aliran arus listrik antara dua terminal (source dan drain) dengan mengatur tegangan pada terminal gate.
+
+              <br><code>Switching:</code> MOSFET dapat beroperasi sebagai saklar elektronik. Ketika tegangan yang diterapkan pada gate mencapai ambang tertentu,
+               MOSFET beralih dari keadaan mati menjadi keadaan hidup atau sebaliknya. <br>
+
+              <br><code>Penguat Sinyal:</code> MOSFET dapat digunakan sebagai penguat sinyal dalam beberapa aplikasi, terutama dalam penguat operasional dan desain penguat daya. <br>
+
+              <strong>Cara Kerja MOSFET:</strong><br>
+              <br>Struktur Dasar: MOSFET memiliki tiga terminal utama: Source (S), Gate (G), dan Drain (D). Struktur dasarnya terdiri dari lapisan semikonduktor N atau P 
+              (tergantung pada tipe MOSFET) yang dilapisi dengan lapisan oksida. <br>
+
+              <br><code>N-channel MOSFET (nMOS):</code>
+
+              <br>Source dan Drain: Terletak di lapisan semikonduktor N.
+              <br>Gate: Diaplikasikan tegangan positif untuk membentuk medan listrik yang mengendalikan aliran arus antara Source dan Drain.
+
+              <br><code>P-channel MOSFET (pMOS):</code>
+
+              <br>Source dan Drain: Terletak di lapisan semikonduktor P.
+              <br>Gate: Diaplikasikan tegangan negatif untuk membentuk medan listrik yang mengendalikan aliran arus antara Source dan Drain.
+              <br>Operasi sebagai Saklar:
+
+              <br>ON State: Ketika tegangan diaplikasikan pada terminal Gate, medan listrik yang dihasilkan mengubah konduktivitas kanal antara Source dan Drain sehingga arus dapat mengalir.
+              <br>OFF State: Tanpa tegangan pada terminal Gate, MOSFET dalam keadaan mati, dan arus tidak dapat mengalir antara Source dan Drain.
+              <br>Mode Penguatan: MOSFET dapat digunakan dalam mode penguatan dengan mengoperasikannya di daerah di mana perubahan tegangan input kecil pada terminal Gate menghasilkan perubahan arus besar antara terminal Source dan Drain.
+              MOSFET enhancemen (enhancement) dan deplesi (depletion), yang memiliki karakteristik operasional yang berbeda. Selain itu, MOSFET sering digunakan dalam rangkaian terintegrasi, seperti pada chip IC (Integrated Circuit), <br>
+                  <br>Perbedaan antara MOSFET N-channel (nMOS) dan P-channel (pMOS) terutama terletak pada tipe semikonduktor yang digunakan dan polaritas tegangan yang diterapkan untuk mengendalikan transistor. Berikut adalah perbedaan fungsi dan cara kerja antara MOSFET N-channel dan P-channel:
+
+                  <br><code>1. Tipe Semikonduktor:</code> <br>
+                  nMOS (N-channel MOSFET): Menggunakan lapisan semikonduktor tipe N sebagai kanal antara Source dan Drain.
+                  pMOS (P-channel MOSFET): Menggunakan lapisan semikonduktor tipe P sebagai kanal antara Source dan Drain.
+
+                  <br><code>2. Polaritas Tegangan:</code><br>
+
+                  <br>nMOS:
+                  
+                  Tegangan positif pada terminal Gate menghasilkan medan listrik yang menarik elektron dari lapisan semikonduktor N menuju Gate.
+                  Medan listrik ini mengubah konduktivitas kanal antara Source dan Drain, memungkinkan arus mengalir dari Source ke Drain. <br>
+
+                  <br>pMOS:
+                  
+                  Tegangan negatif pada terminal Gate menghasilkan medan listrik yang menarik elektron dari kanal P menuju Gate.
+                  Medan listrik ini mengubah konduktivitas kanal antara Source dan Drain, memungkinkan arus mengalir dari Drain ke Source.
+                  <br><code>3. Cara Kerja Sebagai Saklar:</code><br>
+                  <br>nMOS:
+                  
+                  Ketika tegangan Gate positif, MOSFET nMOS dalam keadaan aktif (ON) dan mengizinkan arus mengalir antara Source dan Drain.
+                  Ketika tegangan Gate nol atau negatif, MOSFET nMOS dalam keadaan mati (OFF), dan arus tidak dapat mengalir antara Source dan Drain. <br>
+
+                  <br>pMOS:
+                  
+                  Ketika tegangan Gate negatif, MOSFET pMOS dalam keadaan aktif (ON) dan mengizinkan arus mengalir antara Source dan Drain.
+                  Ketika tegangan Gate nol atau positif, MOSFET pMOS dalam keadaan mati (OFF), dan arus tidak dapat mengalir antara Source dan Drain. <br>
+
+                  <br><code>4. Aplikasi:</code><br>
+                  <br>nMOS:
+                  
+                  Umumnya digunakan dalam rangkaian logika CMOS (Complementary Metal-Oxide-Semiconductor) dan aplikasi switching.
+                  Digunakan dalam penguat sinyal dan rangkaian elektronika berbasis N-channel. <br>
+
+                  <br>pMOS:
+                  
+                  Juga digunakan dalam rangkaian logika CMOS.
+                  Kadang-kadang digunakan dalam situasi di mana polaritas tegangan yang diinginkan adalah positif, seperti dalam beberapa aplikasi penguat daya.
+                  Pemilihan antara nMOS dan pMOS tergantung pada kebutuhan desain sirkuit dan kecocokannya dengan aplikasi tertentu. Dalam desain CMOS, keduanya
+                  sering digunakan bersama-sama untuk mencapai konsumsi daya yang rendah dan kinerja tinggi.<br>
+
+
                  <br>FET memiliki tiga kaki juga yaitu :
-                 <br>GATE (G)	 =  Basis adalah kaki input pemicu (trigger)
-                 <br>DRAIN (D) 	 =  Colektor adalah kaki output mengalirnya tegangan
-                 <br>SOURCE (S)	 = Emitor adalah kaki input sumber masuknya tegangan Namun dalam pengaplikasiannya sumber tegangan terkadang masuk dari drain kaki 8 bukan dari source kaki 1
-                 <br>Jenis	Mosfet :
-                 <code>1.	 NPN (Fet aktif HIGH < Panah masuk) pada asalnya Fet terbuka/terputus mosfet akan menjadi terhubung = 
+                 <br>GATE (G)	    =  Basis adalah kaki input pemicu (trigger)
+                 <br>DRAIN (D) 	  =  Colektor adalah kaki output mengalirnya tegangan
+                 <br>SOURCE (S)	  = Emitor adalah kaki input sumber masuknya tegangan Namun dalam pengaplikasiannya sumber tegangan terkadang masuk dari drain kaki 8 bukan dari source kaki 1
+
+                 <br><strong>Jenis	Mosfet :</strong> <br>
+                 <br><code>1.	NPN (Fet aktif HIGH < Panah masuk) pada asalnya Fet terbuka/terputus mosfet akan menjadi terhubung = 
                   aktif saat Gate mendapat tegangan (trigger) cirinya biasa berdampingan dengan Upper dan lower serta berseri/kode genap.</code>
                  <br>Gate   (+)	= trigger
                  <br>Drain  (+)	= input V
                  <br>Source (-)	= output V
                  
-                 <code></code>2.	 PNP (Fet  aktif LOW > Panah keluar) pada asalnya tersambung dan aktif 
+                 <br><code>2. PNP (Fet  aktif LOW > Panah keluar) pada asalnya tersambung dan aktif </code>
                  Ketika tidak terdapat tegangan dikaki 4 ( Gate ) cirinya menyendiri dan berseri/kode Ganjil.</code> 
                  <br>Gate	(-)	=  trigger
                  <br>Drain	(-)	= output V
                  <br>Source (+)	= input V
                    
                  <br>Pengukuran  menggunakan avometer Analog x 100 <br>
-                 <code>Karakter FET N chanel NORMAL</code>
+                 <br><code>Karakter FET N chanel NORMAL</code>
                  <br>1.	Patokan kaki Drain Probe Hitam
                  <br>2.	Bila probe hitam digate probe merah diSource maka tidak boleh bergerak (Diam)
                  <br>3.	Bila probe hitam dipindah ke drain probe merah tetap disource harus bergerak
                  <br>4.	Bila probe hitam tetap didrain probe merah Pindah ke gate harus diam
                  <br>5.	Kemudian probe merah dikembalikan ke source probe hitam tetap didrain maka Fet akan diam (PROTEKSI)
                  <br>6.	 Cara buka Proteksi Fet probe merah disource probe hitam digate seperti point 2 maka saat probe hitam dikembalikan ke Drain jarum akan bergerak dan FET Aktif (Normal Kembali)
-                 <code>Karakter FET P chanel NORMAL</code>
+                 <br><code>Karakter FET P chanel NORMAL</code>
                  <br>1.	Patokan kaki Drain Probe Merah
                  <br>2.	Bila probe merah digate probe hitam diSource maka tidak boleh bergerak (Diam)
                  <br>3.	Bila probe merah dipindah ke drain probe hitam tetap disource harus bergerak
@@ -2134,7 +2205,7 @@
                  <br>5.	Selanjutnya  probe Hitam dikembalikan ke source probe merah tetap didrain maka Fet akan diam (PROTEKSI)
                  <br>6.	 Cara menghilangkan Proteksi Fet probe hitam disource probe merah digate seperti point 2 kemudian probe merah dikembalikan ke Drain jalur akan terhubung dan FET Aktif (Normal Kembali)
                  
-                 <br>Pengukuran & analisa menggunakan Avometer digital selector diode mode/buzzer
+                 <br><strong>Pengukuran & analisa</strong> menggunakan Avometer digital selector diode mode buzzer atau impendansi <br>
                  <br>a.	Jika bolak-balik ada selisih angka = OK
                  <br>b.	Jika bolak-balik menunjukkan angka/sama  = BOCOR
                  <br>c.	Jika bolak balik MTD tidak bereaksi = PUTUS
@@ -2165,6 +2236,60 @@
               </h2>
               <div id="flush-collapseThree7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
+                  <br>Transistor BJT (Bipolar Junction Transistor) adalah jenis transistor yang terdiri dari dua jenis semikonduktor, P-type dan N-type, yang membentuk dua junction PN (P-N junction) di dalamnya. Transistor BJT memiliki dua tipe utama: NPN (Negative-Positive-Negative) dan PNP (Positive-Negative-Positive). Berikut adalah perbedaan fungsi dan cara kerja antara kedua tipe transistor BJT:
+
+                  <br><code>1. Tipe Semikonduktor:</code><br>
+                  <br>NPN (Negative-Positive-Negative):
+                  
+                  Terdiri dari dua lapisan semikonduktor tipe N yang membatasi lapisan semikonduktor tipe P di tengahnya.
+                  <br>PNP (Positive-Negative-Positive):
+                  
+                  Terdiri dari dua lapisan semikonduktor tipe P yang membatasi lapisan semikonduktor tipe N di tengahnya.
+                  <br><code>2. Arus Elektron:</code><br>
+                  <br>NPN:
+                  
+                  Arus elektron mengalir dari lapisan semikonduktor N (Emitter) ke lapisan semikonduktor N lainnya (Collector).
+                  <br>PNP:
+                  
+                  Arus positif (arusan lubang) mengalir dari lapisan semikonduktor P (Emitter) ke lapisan semikonduktor P lainnya (Collector).
+                  <br><code>3. Cara Kerja:</code><br>
+                  <br>NPN:
+                  
+                  Ketika arus ke basis (Base) diaplikasikan, elektron mengalir dari Emitter ke Collector, dan transistor menjadi dalam keadaan aktif (ON).
+                  Ketika tidak ada arus ke basis, transistor NPN dalam keadaan mati (OFF).
+                  <br>PNP:
+                  
+                  Ketika arus ke basis diaplikasikan, lubang (hole) mengalir dari Emitter ke Collector, dan transistor menjadi dalam keadaan aktif (ON).
+                  Ketika tidak ada arus ke basis, transistor PNP dalam keadaan mati (OFF).
+                  <br><code>4. Arus Basis dan Arus Kolektor:</code><br>
+                  <br>NPN:
+                  
+                  Arus basis mengontrol arus kolektor. Arus basis kecil dapat mengendalikan arus kolektor yang besar.
+                  <br>PNP:
+                  
+                  Arus basis juga mengontrol arus kolektor, tetapi karena aliran lubang, polaritas arus basis berbeda dari NPN.
+                  <br><code>5. Aplikasi:</code><br>
+                  <br>NPN:
+                  
+                  Umumnya digunakan dalam sirkuit-sirkuit elektronika dan penguat.
+                  Basis positif terhadap Emitter untuk mengaktifkan transistor.
+                  <br>PNP:
+                  
+                  Juga digunakan dalam sirkuit-sirkuit elektronika dan penguat.
+                  Basis negatif terhadap Emitter untuk mengaktifkan transistor.
+                  <br><code>6. Pola Kaki (Pinout):</code><br>
+                  <br>NPN:
+                  
+                  Kaki Emitter biasanya dihubungkan ke ground.
+                  Kaki Collector dihubungkan ke sumber tegangan positif.
+                  Kaki Basis dihubungkan ke sumber sinyal. <br>
+
+                 <br>PNP:
+                  
+                  Kaki Emitter dihubungkan ke sumber tegangan positif.
+                  Kaki Collector biasanya dihubungkan ke ground.
+                  Kaki Basis dihubungkan ke sumber sinyal.
+                  Transistor BJT memiliki peran penting dalam rangkaian elektronika sebagai penguat, switch, dan berbagai aplikasi lainnya. Pemilihan antara NPN dan PNP tergantung pada kebutuhan sirkuit dan polaritas sinyal yang diinginkan.
                   <br>TRANSISTOR ( BJT )
                   <br>Fungsi : Sebagai  Sirkuit pemutus dan penyambung arus (SAKLAR/kran listrik), Modul sinyal serta Penguat arus
                   <br>Satuan & simbol : 
@@ -2180,8 +2305,8 @@
                   <br>Colektor (-)	= output
                   <br>Emitor  	(+)	= input V ( Symbol panah < dikaki E )
                   
-                  <code>Cara Mengukur Transistor</code>
-                  <br>Pengukuran menggunakan Avometer Analog
+                  <br><code>Cara Mengukur Transistor</code>
+                  <br>Pengukuran menggunakan Avometer Analog <br>
                   Ohm Ω mode skala x100 – x1k Ω
                   NPN Patokan mencari kaki basis Probe Hitam serta kaki emitor dan colektor harus bergerak NORMAL
                   PNP Patokan mencari kaki basis Probe Merah serta kaki emitor dan colektor harus bergerak NORMAL
@@ -2189,8 +2314,8 @@
                   kaki Emitor dan Colektor memiliki nilai impendansi dimana Resistansi kaki emitor lebih besar dari pada colektor
                   
                   
-                  <br> Pengukuran menggunakan Multimeter Digital
-                  <code>Teknik Pengukuran Transistor NPN </code>
+                  <br> Pengukuran menggunakan Multimeter Digital <br>
+                  <br><code>Teknik Pengukuran Transistor NPN </code>
                   Pastikan posisi saklar multimeter digital pada posisi dioda.
                   Hubungkan terminal/probe merah pada terminal basis transistor (B) dan terminal/probe hitam pada kaki emitor transistor (E). Bila display pada multimeter menampilkan nilai voltage 1 atau selain 0 maka transistor dalam kondisi bagus.
                   Kemudian pindahkan terminal/probe hitam pada kaki kolektor transistor (C). Bila display multimeter menampilkan nila voltage tertentu maka transistor dalam kondisi baik dan layak digunakan dalam sebuah rangkaian.<br>
@@ -2198,7 +2323,7 @@
                   <br>A. Atur posisi saklar multimeter digital pada posisi Dioda
                   <br>B. Hubungkan terminal/probe hitam pada kaki basis transistor (B) dan terminal/probe merah pada kaki emitor   . Bila display pada multimeter menampilkan angka 1 atau selain 0 atau voltage tertentu, maka transistor tersebut dalam kondisi baik.
                   <br>C. Pindahkan terminal/probe merah ke kaki kolektor (C), bila display multimeter menampilkan nilai voltage 1 atau selain 0 berarti transistor baik dan layak digunakan.
-                   Analisa : Bila display multimeter digital menampilkan nilai voltage 0 atau 000 atau OL maka terdapat kesalahan pada cara pengukuran atau ada kerusakan pada kaki-kaki transistor sehingga transistor tersebut tidak disarankan untuk digunakan
+                   <br><strong>Analisa :</strong> Bila display multimeter digital menampilkan nilai voltage 0 atau 000 atau OL maka terdapat kesalahan pada cara pengukuran atau ada kerusakan pada kaki-kaki transistor sehingga transistor tersebut tidak disarankan untuk digunakan
                 </div>
               </div>
             </div>
