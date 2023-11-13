@@ -52,7 +52,7 @@
           class="fa fa-remove w3-hide-large w3-button w3-display-topright"
         ></i>
         <h3
-          class="w3-container w3-black w3-text-white w3-hover-red w3-animate-zoom"
+          class="w3-container w3-black w3-text-white w3-hover-red "
           style="animation-duration: 2s;"
         >
           <span>Sultan Repair</span>
@@ -119,14 +119,11 @@
       <div class="w3-hide-large" style="margin-top: 83px;"></div>
 
       <!-- Top header -->
-      <header class="w3-container w3-indigo w3-hover-red w3-xlarge">
+      <header class="w3-container w3-black w3-hover-indigo w3-xlarge">
         <p class="w3-left w3-animate-bottom" style="animation-duration: 2s;">
           Technical engineer
         </p>
-        <p class="w3-right">
-          <i class="fa fa-shopping-cart w3-margin-right"></i>
-          <i class="fa fa-search"></i>
-        </p>
+        
       </header>
 
       <!-- Image header -->
@@ -653,6 +650,41 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree7" aria-expanded="false" aria-controls="flush-collapseThree7">
+                        Booting Phase
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <br><strong>Tahapan start Up Hp</strong>
+
+                        <br>1. Vbatt
+                        
+                        <br>2. SMB/PMI
+                        
+                        <br>3. Vph Power» PMU» Sw on
+                        
+                        <br>4. tekan Sw On» clock 32khz
+                        
+                        <br>5. Pwr_Reset» Reset in Soc
+                        
+                        <br>6. Soc» Ps_hold(Qc)/wactchdog(MTK)/keeplive(iphone)» PMU
+                        
+                        <br>7. Soc» msm_bbclk_enable
+                        (detec 9008/MTK usb port) 
+                        
+                        <br>8. Pmu» Vctcxo» Ic RF 26mhz
+                        
+                        <br>9. Rf_clk» Soc
+                        
+                        <br>10. Getar = Vbooting > 60ma
+                      </div>
+                    </div>
+                  </div>
+                  
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2" aria-expanded="false" aria-controls="flush-collapseTwo2">
@@ -663,36 +695,35 @@
                       <div class="accordion-body">
                        
 
-                        <br>1.Short before On = Arus naik tinggi tegangan drop sebelum ditekan ON dimana IC power bekerja ( short rangkaian Vbat)
+                        <br><code>1.Short before On</code> = Arus naik tinggi tegangan drop sebelum ditekan ON dimana IC power bekerja ( short rangkaian Vbat)
                         Cek komponen Voltage phase 1 tegangan yang hadir sebelum skelar ditekan ON
                         
-                        <br>2. Short after On = Arus naik tegangan drop setelah switch ON IC Power (PMU) telah bekerja
+                        <br><code>2. Short after On</code> = Arus naik tegangan drop setelah switch ON IC Power (PMU) telah bekerja
                         Cek tegangan yang mendapat tegangan kerja dari IC Power Rangkaian CPU,EMMC, AUDIO, WIFI, IC RF DLL
                         
-                        <br>3. No current(Unresponable) = Tidak ada arus  Rangkaian power Vbat tidak bekerja atau IC Power rusak atau putus jalur
+                        <br><code>3. No current(Unresponable)</code> = Tidak ada arus  Rangkaian power Vbat tidak bekerja atau IC Power rusak atau putus jalur
                         CEK Rangkaian voltage phase 1 baterai (Vbat), IC CHARGING, VPH PWR, VBAT SYS, IC POWER/PMU, POWER ON
                         
-                        <br>4. Ampere gantung kecil = Arus 10 MA CPU tidak bekerja
+                        <br><code>4. Ampere gantung kecil</code> = Arus 10 MA CPU tidak bekerja
                         CEK Syarat Kerja CPU Qualqom 9008, Mediatek MTK USB PORT
                         <br>1. TEGANGAN KERJA
                         <br>2. TEGANGAN PERINTAH (ENABLE)
                         <br>3. CLOCK
                         <br>4. RESET
                         
-                        <br>5. Arus gantung sedang = 60 - 120MA EMMC/UFS bermasalah
+                        <br><code>5. Arus gantung sedang</code> = 60 - 120MA EMMC/UFS bermasalah
                         CEK EMMC/UFS dan Rangkaiannya
                         
-                        <br>6. Arus jatuh/kembali ke 0 meski sudah Power UP >60Ma = Ic power RUSAK
+                        <br><code>6. Arus jatuh/kembali ke 0 meski sudah Power UP >60Ma</code> = Ic power RUSAK
                         
-                        <br>7.Arus Normal = Hp hidup problem Interface display, backlight, charging dan software
+                        <br><code>7.Arus Normal</code> = Hp hidup problem Interface display, backlight, charging dan software
                         
-                        <br>CEK INTERFACE & JALUR = DISPLAY, BACKLIGHT, CHARGING
+                        <br><code>CEK INTERFACE & JALUR</code> = DISPLAY, BACKLIGHT, CHARGING
                          
                         <br>1AMPERE	= 1000MA
-                        <br> 0,9A		= 900MA		
+                        <br>0,9A		= 900MA		
                         <br>0,5A		= 500MA
                         <br>0,02A		= 20MA
-                        
                         
                       </div>
                     </div>
@@ -810,22 +841,23 @@
                           Komponen ponsel yang mengalami konslet pada kasus seperti ini biasanya berada pada komponen yang mendapatkan tegangan kerja langsung dari baterai. Gejala yang timbul akibat konslet ini ialah ponsel Panas hingga MATOT 
                         
                           <br>2. konslet setelah IC power bekerja
-                         terjadi takkala kita menghubungkan ponsel dengan power supply kemudian menekan saklar ON/OFF. Indicator Ampere Arus menunjukkan pergerakan Arus tertentu dan berhenti diposisi tertentu yang tidak Normal ( konsumsi Arus naik tinggi melebihi nilai konsumsi yang dibutuhkan secara wajar). Biasanya terdapat short pada komponen yang mendapatkan tegangan kerja dari IC Power.
+                         <br>terjadi takkala kita menghubungkan ponsel dengan power supply kemudian menekan saklar ON/OFF. Indicator Ampere Arus menunjukkan pergerakan Arus tertentu dan berhenti diposisi tertentu yang tidak Normal
+                          ( konsumsi Arus naik tinggi melebihi nilai konsumsi yang dibutuhkan secara wajar). Biasanya terdapat short pada komponen yang mendapatkan tegangan kerja dari IC Power.
                            Gejala yang timbul akibat konslet ini ponsel panas saat ditekan On/off.
                         
                            <br>3. konslet pada saat transmit/calling
-                         terjadi disaat pengguna melakukan panggilan indicator Arus PSU melampaui konsumsi normal +- 3,7V s.d 4,5V
+                         <br>terjadi disaat pengguna melakukan panggilan indicator Arus PSU melampaui konsumsi normal +- 3,7V s.d 4,5V
                          Gejala Ic panas dan boros baterai saat melakukan panggilan telepon.
                         
                          <br>4. konslet WIFI, GPS, Bluetooth Apk dll
                         Short ini terjadi saat Wifi/GPS/BLUETOOTH DIAKTIFKAN
                         
                         <br>5. KONSLET ARUS STANDBY 
-                        ialah konslet yang terjadi dimana ponsel pada keadaan dia(standby) komsumsi arus 0. Cirinya indicator arus PSU menunjukkan pergerakan arus tertentu padahal konsumsi arus standby adalah O ampere. Komponen yang short pada kasus ini biasanya yang mendapatkan tegangan kerja dari IC power. Gejala ponsel panas saat standby
+                        <br>ialah konslet yang terjadi dimana ponsel pada keadaan dia(standby) komsumsi arus 0. Cirinya indicator arus PSU menunjukkan pergerakan arus tertentu padahal konsumsi arus standby adalah O ampere. Komponen yang short pada kasus ini biasanya yang mendapatkan tegangan kerja dari IC power. Gejala ponsel panas saat standby
                         
                         
                         <br>Short sircuit adalah short yang terdapat pada jalur Rangkaian sebuah PCB atau mainboard.
-                        Perbedan short sirkuit (jalur) dan short komponen
+                        <strong>Perbedan short sirkuit (jalur) dan short komponen</strong>
                         
                         <br>1.	Bila terdapat selisih nilai Ampere yang signifikan pada saat pengujian konsleting  PSU dengan  nilai ampere short pada  Vbus/VBat atau area voltage injection (titik penyuntikan tegangan Maka ini merupakan short komponen
                         
@@ -834,18 +866,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree7" aria-expanded="false" aria-controls="flush-collapseThree7">
-                        
-                      </button>
-                    </h2>
-                    <div id="flush-collapseThree7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                     
-                      </div>
-                    </div>
-                  </div>
+                 
                  
                   <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -854,6 +875,19 @@
                       </button>
                     </h2>
                     <div id="flush-collapseThree8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                    
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree8" aria-expanded="false" aria-controls="flush-collapseTree8">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTree8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                     
                       </div>
@@ -1179,7 +1213,7 @@
                     <div id="flush-collapsehreee" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                        
-                        Root (android) atau jailbreak (Ios) adalah sebuah proses customisasi Os menggunakan file library exploit 
+                      <strong>Root (android) atau jailbreak (Ios)</strong> adalah sebuah proses customisasi Os menggunakan file library exploit 
                         yang ditanam pada system Os melalui folder binary yg bekerja membuka akses izin untuk merubah Value maupun konfigurasi ekosistem Os
                       
                         
@@ -1304,33 +1338,33 @@
                       <div class="accordion-body">
                         
                         <br>1. Arus naik bersamaan dengan tegangan sebelum tegangan adaptor 19V atau ampere naik drastis sementara voltase turun(drop) sebelum diswicht ON. Konslet pada area rangkaian separator dan outputnya.
-                        Perbaikan : cabut R out lalu inject(suntik) tegangan cari komponen yang panas
+                      <strong>Perbaikan : cabut R out lalu inject(suntik) tegangan cari komponen yang panas</strong>
                         <br>2. Arus naik tinggi/menyentak sesaat saat tegangan adaptor 19V/20V
                         Konslet pada rangkaian 3V/5V atau outputnya.
-                        Perbaikan : Cabut kumparan pada masing-masing regulator 3V/5V lalu beri tegangan yang sesuai kemudian cari komponen yang panas atau hangus 
+                      <strong>Perbaikan : Cabut kumparan pada masing-masing regulator 3V/5V lalu beri tegangan yang sesuai kemudian cari komponen yang panas atau hangus </strong>
                         <br>3. Arus menyentak naik drastic > 400MA saat di switch ON. Konslet pada area Regulator IC* BESAR seperti EC, SB, NB, VGA, RAM.
-                        Perbaikan : cabut kumparan pada tiap Regulator beri tegangan yang sesuai lalu cari komponen yang panas.
+                      <strong>Perbaikan : cabut kumparan pada tiap Regulator beri tegangan yang sesuai lalu cari komponen yang panas.</strong>
                         <br>4. Arus naik pertama kali < 200MA. Ada rangkaian regulator yang tidak bekerja.
-                        Perbaikan : setelah di ON ukur semua kumparan pada tiap rangkaian Regulator
+                      <strong>Perbaikan : setelah di ON ukur semua kumparan pada tiap rangkaian Regulator</strong>
                         <br>5. Arus naik pertama kali +- 300MA lalu naik lagi +- 500-600MA.
-                        Perbaikan : Cek RAM & Prosesor
+                      <strong>Perbaikan : Cek RAM & Prosesor</strong>
                         <br>6.amper kecil/Arus naik pertama kali +- 300MA lalu naik lagi +- 700MA lalu jatuh ke Nol.
-                        Perbaikan : CEK NEC TOKIN & Rehot NB 
+                      <strong>Perbaikan : CEK NEC TOKIN & Rehot NB </strong>
                         
                         <br>7. Arus naik +- 1A lalu Stagnan. 
-                        Perbaikan :Cek/flash bios, cek Rangkaian LVDS & Panaskan VGA
+                      <strong>Perbaikan :Cek/flash bios, cek Rangkaian LVDS & Panaskan VGA</strong>
                         <br>8. ada garis kecil disudut layar (  blank hitam/black screen)
-                        Perbaikan : Cek RAM dan Rangkaian RAM bila normal coba Flash bios
+                      <strong>Perbaikan : Cek RAM dan Rangkaian RAM bila normal coba Flash bios</strong>
                         <br>9. Hang logo atau sesudah windows & Operating System (OS) not found. 
-                        Perbaikan :
+                      <strong>Perbaikan :</strong>
                         <br>a.  CEK RAM & HDD
                         <br>b. cabut satu persatu Keyboard/baterai/Wifi/DVD/speaker/camera dll
-                        <br>10. Arus +- 100MA cek IC bios dan flashing
-                        <br>11. Ampare PSU tidak respon cek jack adaptor dan fleksibel jack serta test point distribusi 19V.
-                        <br>12. distribusi tegangan normal tapi tidak bisa di On.
-                         Perbaikan : Cek tegangan 3V dikaki swicht ON atau fleksibel rangkaian ON
+                      <strong><br>10. Arus +- 100MA cek IC bios dan flashing</strong>
+                      <strong><br>11. Ampare PSU tidak respon cek jack adaptor dan fleksibel jack serta test point distribusi 19V.</strong>
+                      <br>12. distribusi tegangan normal tapi tidak bisa di On.
+                      <strong>Perbaikan : Cek tegangan 3V dikaki swicht ON atau fleksibel rangkaian ON</strong>
                          <br>13. Arus PSU normal tapi laptop terkadang mau hidup terkadang MATOT.
-                        Perbaikan : cek mosfet dan elco
+                      <strong>Perbaikan : cek mosfet dan elco</strong>
                         <br>14. adapun laptop baru Single CHIP (SOC)  > +350 -500MA sudah dapat start UP booting secara sempurna sampai ke Menu desktop
                         
                       </div>
@@ -1354,10 +1388,10 @@
                         <br>F.	Test point dan tracking jalur serta lokalisir sumber kerusakan
                         <br>G.	Pelajari berbagai alternatif penyelesaiannya
                         
-                        <code>point atau Pengukuran baik pasif (hambatan dalam/impedansi) maupun aktif (tegangan kerja dan perintah) merupakan 
+                        <code>Test point atau Pengukuran </code> Pasif (hambatan dalam/impedansi) maupun aktif (tegangan kerja dan perintah) merupakan 
                           tahapan Analisa setelah melakukan identifikasi fisik, gejala dan indikasi kerusakan untuk menentukan sumber kerusakan 
-                          berasal dari suatu jalur Normal atau terputus atau berasal dari komponen atau IC regulatornya Caranya :</code>
-                          
+                          berasal dari suatu jalur Normal atau terputus atau berasal dari komponen atau IC regulatornya Caranya : <br>
+
                         <br>a. gunakan MTD skala Ohm Ω atau buzzer max 2k ohm Probe Merah pada ground dan Probe Hitam pada tujuan titik pengukuran.
                         <br>b. jika MTD menunjukkan angka 		= umumnya OK
                         <br>c. jika MTD menunjukkan angka 000 	= terhubung ground/beep buzzer
@@ -1485,7 +1519,7 @@
                               <li>e. Dua kumparan besar</li>
                               <li>f. Enable (perintah kerja)</li>
                           </ul>
-                          jika 3V & 5V yang hilang padahal main power Out Separatormengalir ganti elco/lilitannya	
+                          <strong>jika 3V & 5V yang hilang padahal main power Out Separatormengalir ganti elco/lilitannya	</strong>
                       </div>
                     </div>
                   </div>
@@ -1497,14 +1531,19 @@
                     </h2>
                     <div id="flush-collapseThree51" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                        <strong>BIOS (Basic Input Output System )</strong> merupakan sebuah program atau perangkat lunak antarmuka tingkat rendah yang berfungsi mengendalikan atau mengontrol perangkat keras yang terpasang pada komputer.BIOS disimpan atau ditanamkan di dalam ROM (read only memory).
+                        <strong>BIOS (Basic Input Output System )</strong> merupakan sebuah program atau perangkat lunak antarmuka tingkat rendah yang berfungsi mengendalikan atau mengontrol perangkat keras
+                         yang terpasang pada komputer.BIOS disimpan atau ditanamkan di dalam ROM (read only memory).
 
-                        BIOS menyediakan antarmuka komunikasi tingkat rendah, dan dapat mengendalikan banyak jenis perangkat keras (seperti keyboard). Karena kedekatannya dengan perangkat keras, BIOS umumnya dibuat dengan menggunakan bahasa rakitan (assembly) yang digunakan oleh mesin yang bersangkutan. BIOS pertama kali muncul dalam sistem operasi CP/M. BIOS merupakan bagian dari CP/M yang dimuat pada saat proses booting dimulai Beberapa mesin yang menjalankan CP/M memiliki boot loader sederhana dalam ROM). Kebanyakan versi DOS memiliki sebuah berkas yang disebut “IBMBIO.COM” (IBM PC-DOS) atau “IO.SYS” (MS-DOS) yang berfungsi sama seperti halnya CP/M disk BIOS
+                        <br>BIOS menyediakan antarmuka komunikasi tingkat rendah, dan dapat mengendalikan banyak jenis perangkat keras (seperti keyboard). Karena kedekatannya dengan perangkat keras, BIOS umumnya
+                         dibuat dengan menggunakan bahasa rakitan (assembly) yang digunakan oleh mesin yang bersangkutan. BIOS pertama kali muncul dalam sistem operasi CP/M. BIOS merupakan bagian dari CP/M yang 
+                         dimuat pada saat proses booting dimulai Beberapa mesin yang menjalankan CP/M memiliki boot loader sederhana dalam ROM). Kebanyakan versi DOS memiliki sebuah berkas yang disebut “IBMBIO.COM”
+                          (IBM PC-DOS) atau “IO.SYS” (MS-DOS) yang berfungsi sama seperti halnya CP/M disk BIOS
                         
                         
-                        BIOS juga sering disebut sebagai ROM BIOS karena pada awalnya BIOS disimpan dalam chip memori hanya baca (ROM) dalam motherboard. Sehingga BIOS dapat dieksekusi pada waktu komputer dinyalakan. BIOS dalam komputer PC modern disimpan dalam chip ROM yang dapat ditulisi ulang secara elektrik atau Flash ROM. Saat ini Flash BIOS lebih populer dibandingkan dengan ROM BIOS.
+                        <br>BIOS juga sering disebut sebagai ROM BIOS karena pada awalnya BIOS disimpan dalam chip memori hanya baca (ROM) dalam motherboard. Sehingga BIOS dapat dieksekusi pada waktu komputer dinyalakan.
+                         BIOS dalam komputer PC modern disimpan dalam chip ROM yang dapat ditulisi ulang secara elektrik atau Flash ROM. Saat ini Flash BIOS lebih populer dibandingkan dengan ROM BIOS.
                         
-                        Meskipun BIOS disimpan dalam memori hanya baca, konfigurasi BIOS tidak disimpan dalam ROM melainkan sebuah chip terpisah yang disebut se-bagai Real-time clock (RTC). 
+                        <br>Meskipun BIOS disimpan dalam memori hanya baca, konfigurasi BIOS tidak disimpan dalam ROM melainkan sebuah chip terpisah yang disebut se-bagai Real-time clock (RTC). 
                         RTC ini berupa sebuah Non-Volatile Random Ac-cess Memory (NVRAM). NVRAM juga sering disebut sebagai Complimentary Metal-Oxide Random Access Memory (CMOS RAM), Karena menggunakan metode pembuatan CMOS, NVRAM membutuhkan daya yang sangat kecil agar dapat bekerja. 
                         Meskipun disebut non-volatile, NVRAM sebenarnya meru-pakan sebuah chip yang volatile, sehingga data yang tersimpan di dalamnya dapat terhapus dengan mudah. NVRAM "dihidupi" oleh sebuah baterai (mirip baterai kalkulator atau jam) dengan bahan Litium dengan seri CR-2032.
                         Se-buah baterai Litium CR-2032 dapat menghidupi NVRAM selama tiga hingga lima tahun. Jika daya dalam baterai habis, atau daya yang disuplainya terputus (akibat dicabut dari slotnya), maka semua konfigurasi akan dikembalikan ke kondisi standar,
@@ -1561,48 +1600,48 @@
 
                         Sedangkan untuk kode beep pada PHOENIX BIOS sedikit berbeda yakni tidak diatur menurut panjang pendeknya bunyi beep. Pada phoenik, kode diatur dengan jeda. Misalkan bunyi ’beep beep – beep – beep beep’ kodenya 2 – 1 – 2. Ketahui pula beberapa atri kode beep yang muncul pada saat menyalakan komputer yang menggunakan PHOENIX BIOS:
                         
-                        - 1 – 1 – 4 -> BIOS rusak.
+                        <br>- 1 – 1 – 4 -> BIOS rusak.
                         
-                        - 1 – 2 – 1 -> Motherboard rusak.
+                        <br>- 1 – 2 – 1 -> Motherboard rusak.
                         
-                        - 1 – 3 – 1 -> RAM rusak/tidak terpasang dengan benar.
+                        <br>- 1 – 3 – 1 -> RAM rusak/tidak terpasang dengan benar.
                         
-                        - 3 – 1 – 1 -> Motherboard rusak.
+                        <br>- 3 – 1 – 1 -> Motherboard rusak.
                         
-                        - 3 – 3 – 4 -> VGA rusak/ tidak terpasang dengan benar .
+                        <br>- 3 – 3 – 4 -> VGA rusak/ tidak terpasang dengan benar .
                         
-                        - 1 – 1 – 4 – 1 -> Kesalahan Cache (Level 2).
+                        <br>- 1 – 1 – 4 – 1 -> Kesalahan Cache (Level 2).
                         
-                        - 1 – 2 – 2 – 3 -> ROM BIOS Cheksum.
+                        <br>- 1 – 2 – 2 – 3 -> ROM BIOS Cheksum.
                         
-                        - 1 – 3 – 1 – 1 -> DRAM Segarkan Uji.
+                        <br>- 1 – 3 – 1 – 1 -> DRAM Segarkan Uji.
                         
-                        - 1 – 3 – 1 – 3 -> Keyboard kontroller uji.
+                        <br>- 1 – 3 – 1 – 3 -> Keyboard kontroller uji.
                         
-                        - 1 – 3 – 4 – 1 -> Permasalahan pada RAM: Kegagalan pada baris alamat xxxx.
+                        <br>- 1 – 3 – 4 – 1 -> Permasalahan pada RAM: Kegagalan pada baris alamat xxxx.
                         
-                        - 1 – 3 – 4 – 3 -> Permasalahan pada RAM: Kegagalan pada xxxx it data byte rendah dari bus memori.
+                        <br>- 1 – 3 – 4 – 3 -> Permasalahan pada RAM: Kegagalan pada xxxx it data byte rendah dari bus memori.
                         
-                        - 1 – 4 – 1 – 1 -> Permasalahan pada RAM: Kegagalan pada xxxx it data byte tinggi dari bus memori.
+                        <br>- 1 – 4 – 1 – 1 -> Permasalahan pada RAM: Kegagalan pada xxxx it data byte tinggi dari bus memori.
                         
-                        - 2 – 1 – 2 – 3 -> ROM: pemberitahuan hak cipta. <br>
+                        <br>- 2 – 1 – 2 – 3 -> ROM: pemberitahuan hak cipta. <br>
 
                         <br><strong>IBM BIOS</strong>
                         <br> merupakan BIOS yang dikembangkan oleh IBM Inc. Perusahaan ini berdiri pada tahun 1911 dan bermarkas di Armonk, New York, Amerika Serikat. Agar bisa masuk k edalam setup IBM BIOS, perlu dilakukan dengan menekan tombol F2 pada saat proses POST (Power On Self-Test). Ketahui juga beberapa atri kode beep yang muncul pada saat menyalakan komputer yang menggunakan IBM BIOS:
 
-                        - Tidak ada bunyi beep: Power Supply rusak/VGA/RAM tidak terpasang dengan benar.
+                        <br>- Tidak ada bunyi beep: Power Supply rusak/VGA/RAM tidak terpasang dengan benar.
                         
-                        - Beep terus menerus: Power Supply rusak/VGA/RAM tidak terpasang dengan benar.
+                        <br>- Beep terus menerus: Power Supply rusak/VGA/RAM tidak terpasang dengan benar.
                         
-                        - Beep Panjang 3 kali: Keyboard bermasalah. 
+                        <br>- Beep Panjang 3 kali: Keyboard bermasalah. 
                         
-                        - Beep Panjang 1 kali dan beep pendek 1 kali: Motherboard bermasalah.
+                        <br>- Beep Panjang 1 kali dan beep pendek 1 kali: Motherboard bermasalah.
                         
-                        - Beep Panjang 1 kali dan beep pendek 2 kali: VGA Card bermasalah (mono). 
+                        <br>- Beep Panjang 1 kali dan beep pendek 2 kali: VGA Card bermasalah (mono). 
                         
-                        - Beep Panjang 1 kali dan beep pendek 3 kali: VGA Card bermasalah (EGA).
+                        <br>- Beep Panjang 1 kali dan beep pendek 3 kali: VGA Card bermasalah (EGA).
                         
-                        - Beep pendek 1 kali: Normal POST dan PC dalam keadaan baik.
+                        <br>- Beep pendek 1 kali: Normal POST dan PC dalam keadaan baik.
                         
                       </div>
                     </div>
@@ -1669,7 +1708,7 @@
                               <br>Setelah POST selesai, BIOS/UEFI akan mencari firmware bootloader yang akan memuat sistem operasi.
                               Bootloader biasanya ada di sektor awal hard drive atau SSD. <br>
                               
-                              BIOS/UEFI mengidentifikasi perangkat keras yang terpasang pada motherboard, termasuk hard drive/SSD, CD/DVD drive, kartu grafis, dan perangkat lainnya.
+                              <br>BIOS/UEFI mengidentifikasi perangkat keras yang terpasang pada motherboard, termasuk hard drive/SSD, CD/DVD drive, kartu grafis, dan perangkat lainnya.
                               Informasi tentang konfigurasi hardware disimpan dalam EEPROM atau NVRAM (Non-Volatile RAM). <br>
 
                               <br><code>5. Memuat Firmware Bootloader </code>
@@ -1852,12 +1891,28 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreec" aria-expanded="false" aria-controls="flush-collapseThreec">
-                      
+                        Arsitektur laptop Intel gen 12 (Alder Lake)
                       </button>
                     </h2>
                     <div id="flush-collapseThreec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                      
+                                    <br> Beberapa elemen yang mungkin ada dalam arsitektur laptop Intel generasi ke-12:
+
+                                    <br>1. Hybrid Architecture: Alder Lake memperkenalkan arsitektur hibrida yang mencakup kombinasi inti performa tinggi (High-Performance Cores atau P-cores) dan inti daya rendah (Efficient Cores atau E-cores). Kombinasi ini bertujuan untuk meningkatkan efisiensi energi dan kinerja secara keseluruhan.
+                                    
+                                    <br>2. Golden Cove CPU Architecture: CPU di Alder Lake menggunakan arsitektur terbaru yang disebut Golden Cove. Ini diharapkan membawa peningkatan signifikan dalam kinerja per core dibandingkan dengan arsitektur sebelumnya.
+                                    
+                                    <br>3. Intel Xe Graphics: Generasi ke-12 akan melibatkan peningkatan dalam GPU terintegrasi, termasuk teknologi terbaru dari Intel Xe Graphics. Hal ini diharapkan dapat meningkatkan kinerja grafis terintegrasi dibandingkan dengan generasi sebelumnya.
+                                    
+                                    <br>4. Intel Thread Director: Alder Lake diharapkan menggunakan teknologi baru yang disebut Intel Thread Director. Ini dirancang untuk mengelola dan mengalokasikan beban kerja dengan lebih efisien antara inti P-core dan E-core.
+                                    
+                                    <br>5. DDR5 dan LPDDR5 Memory Support: Prosesor ini dapat mendukung jenis RAM yang lebih baru, termasuk DDR5 dan LPDDR5. Ini diharapkan dapat meningkatkan throughput dan efisiensi memori.
+                                    
+                                    <br>6. Intel 7 Process Technology: Alder Lake akan menggunakan proses manufaktur 10nm SuperFin yang diperbarui, yang dijuluki Intel 7. Ini bertujuan untuk meningkatkan efisiensi daya dan performa dibandingkan dengan generasi sebelumnya.
+                                    
+                                    <br>7. Intel Evo Platform: Beberapa laptop yang menjalankan prosesor generasi ke-12 dengan label "Intel Evo" dapat memenuhi standar yang sama seperti generasi sebelumnya, menjamin pengalaman laptop yang responsif, tipis, ringan, dan memiliki daya tahan baterai yang baik.
+                                    
+                                    <br>8. Wi-Fi 6E: Alder Lake diharapkan mendukung Wi-Fi 6E, yang memperkenalkan frekuensi 6GHz untuk meningkatkan kapasitas jaringan nirkabel.
                         
                       </div>
                     </div>
@@ -1865,12 +1920,61 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreed" aria-expanded="false" aria-controls="flush-collapseThreed">
-                        
+                        Struktur dan arsitektur AMD Ryzen
                       </button>
                     </h2>
                     <div id="flush-collapseThreed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                      
+                              <br>System on Chip (SoC) dan motherboard, melibatkan integrasi beberapa komponen untuk menyediakan fungsionalitas dan kinerja sistem. Berikut adalah gambaran umum tentang struktur arsitektur SoC dan motherboard AMD Ryzen:
+
+                              <br><strong>Struktur Arsitektur SOC (System on a Chip) AMD Ryzen:</strong><br>
+                              <br>1. CPU (Central Processing Unit): Inti pemrosesan utama yang menangani instruksi dan tugas komputasi. Pada SoC AMD Ryzen, CPU ini mungkin mencakup inti performa tinggi dan inti daya rendah untuk efisiensi energi.
+                              
+                              <br>2. GPU (Graphics Processing Unit): Unit pemrosesan grafis terintegrasi, seperti Radeon Vega atau yang lebih baru. GPU ini menangani tugas-tugas grafis dan visual.
+                              
+                              <br>3. RAM Controller: Mengelola akses dan transfer data ke dan dari RAM. Memastikan SoC dapat berkomunikasi dengan memori sistem dengan efisien.
+                              
+                              <br>4. I/O Controller: Kontroler Input/Output yang mengatur koneksi dan transfer data antara SoC dan perangkat-perangkat eksternal. Ini melibatkan port USB, HDMI, DisplayPort, dan port I/O lainnya.
+                              
+                              <br>5. Storage Controller: Mengatur koneksi dan transfer data dari dan ke penyimpanan internal, seperti SSD atau HDD.
+                              
+                              <br>6. Konektivitas Nirkabel: Modul nirkabel yang mendukung Wi-Fi dan Bluetooth untuk koneksi tanpa kabel.
+                              
+                              <br>7. Power Management Unit (PMU): Bertanggung jawab atas manajemen daya dan pengaturan konsumsi daya untuk meningkatkan efisiensi energi dan memperpanjang masa pakai baterai.
+                              
+                              <br>8. Security Features: SoC AMD Ryzen mungkin mencakup fitur-fitur keamanan seperti teknologi enkripsi, Secure Boot, dan keamanan perangkat keras terintegrasi lainnya.
+                              
+                              <br>9. BIOS/UEFI: Program firmware yang memberikan instruksi awal untuk booting sistem operasi dan konfigurasi awal perangkat keras.
+                              
+                              <br>10. Audio Controller: Komponen yang mengelola audio dan mengontrol output suara melalui speaker atau jack audio.
+                              
+                              <br>11. Sensor dan Kontroler Kelistrikan: Sensor suhu, kecepatan kipas, dan kontroler kelistrikan lainnya untuk memantau dan mengelola suhu serta daya perangkat.
+                              
+                              <br><strong>Arsitektur Motherboard AMD Ryzen:</strong><br>
+
+                              <br>1. Socket: Area tempat prosesor AMD Ryzen ditempatkan di motherboard. Socket ini sesuai dengan jenis prosesor tertentu dan memastikan koneksi yang tepat.
+                              
+                              <br>2. Chipset: Chipset motherboard mengelola komunikasi antara berbagai komponen, termasuk prosesor, RAM, GPU, dan perangkat keras lainnya. Beberapa motherboard menggunakan chipset AMD seperti seri B450, B550, X570, atau varian terbaru.
+                              
+                              <br>3. RAM Slots: Slot untuk menempatkan modul RAM, yang menyediakan penyimpanan sementara untuk data yang digunakan oleh CPU.
+                              
+                              <br>4. PCIe Slots: Slot ekspansi yang mendukung kartu tambahan seperti kartu grafis, kartu suara, atau kartu Wi-Fi.
+                              
+                              <br>5. Storage Connectors: Konektor untuk SSD atau HDD yang menghubungkan penyimpanan ke motherboard, seperti port SATA atau konektor PCIe untuk SSD NVMe.
+                              
+                              <br>6. I/O Ports: Berbagai port USB, HDMI, DisplayPort, dan port lainnya yang memungkinkan laptop terhubung ke perangkat eksternal.
+                              
+                              <br>7. Power Delivery System: Bagian yang mengatur dan menyediakan daya untuk prosesor dan komponen lainnya.
+                              
+                              <br>8. Cooling Solutions: Area untuk kipas dan sistem pendinginan untuk menjaga suhu optimal pada prosesor dan komponen kritis lainnya.
+                              
+                              <br>9. BIOS/UEFI Chip: Tempat firmware sistem disimpan, memberikan instruksi awal saat sistem dinyalakan.
+                              
+                              <br>10. Audio Components: Chip audio dan komponen lain yang mengatur suara dan output audio.
+                              
+                              <br>11. Networking Components: Komponen untuk konektivitas jaringan, seperti chip Ethernet atau modul Wi-Fi.
+                              
+                              <br>12. Baterai CMOS: Baterai kecil yang menyediakan daya untuk penyimpanan konfigurasi BIOS/UEFI.
                         
                       </div>
                     </div>
@@ -1984,6 +2088,13 @@
                   <br>Rumus menaik dan menurunkan tegangan ( Devider )
                   <code>Vout = Vin x ( R2 / R1+R2) kunci menaikkan tegangan ialah menaikkan nilai R2 yang terhubung ke GND</code>
 
+                  <strong>ciri R fuse Fusak </strong>
+                    <br>1. restart
+                    <br>2. gagal booting
+                    <br>3. tidak mampu buka kamera, high contras, 
+                    <br>4. mau hidup hanya saat dicharger
+                    <br>5. Vbatt mampu menyimpan daya tapi tidak mampu start up
+                    <br>6. tidak mengisi (putus)
                 </div>
               </div>
             </div>
@@ -2236,7 +2347,9 @@
               </h2>
               <div id="flush-collapseThree7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <br>Transistor BJT (Bipolar Junction Transistor) adalah jenis transistor yang terdiri dari dua jenis semikonduktor, P-type dan N-type, yang membentuk dua junction PN (P-N junction) di dalamnya. Transistor BJT memiliki dua tipe utama: NPN (Negative-Positive-Negative) dan PNP (Positive-Negative-Positive). Berikut adalah perbedaan fungsi dan cara kerja antara kedua tipe transistor BJT:
+                  <br>Transistor BJT (Bipolar Junction Transistor) adalah jenis transistor yang terdiri dari dua jenis semikonduktor,
+                   P-type dan N-type, yang membentuk dua junction PN (P-N junction) di dalamnya. Transistor BJT memiliki dua tipe utama: NPN (Negative-Positive-Negative) dan PNP (Positive-Negative-Positive).
+                  Berikut adalah perbedaan fungsi dan cara kerja antara kedua tipe transistor BJT: <br>
 
                   <br><code>1. Tipe Semikonduktor:</code><br>
                   <br>NPN (Negative-Positive-Negative):
