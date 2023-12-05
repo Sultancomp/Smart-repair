@@ -39,27 +39,27 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="w3-content w3-gray" style="max-width: 1000px auto; ">
+  <body class="w3-content w3-blue-grey" style="max-width: 1000px auto; ">
     <!-- Sidebar/menu -->
     <nav
-      class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top"
-      style="z-index: 3; width: 250px;"
+      class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top"
+      style="z-index: 2; width: 250px;"
       id="mySidebar"
     >
-      <div class="w3-container w3-display-container w3-gray">
+      <div class="w3-container w3-display-container w3-steel">
         <i
           onclick="w3_close()"
           class="fa fa-remove w3-hide-large w3-button w3-display-topright"
         ></i>
         <h3
-          class="w3-container w3-black w3-text-white w3-hover-red "
+          class="w3-container w3-black w3-text-white w3-hover-black "
           style="animation-duration: 2s;"
         >
           <span>Sultan Repair</span>
         </h3>
       </div>
       <div
-        class="w3-padding-64 w3-large w3-text-grey"
+        class="w3-padding-64 w3-large w3-text-white"
         style="font-weight: bold;"
       >
         <a
@@ -80,8 +80,8 @@
           <a href="#ts" class="w3-bar-item w3-button">Troubleshooting</a>
         </div>
         <a href="#soc" class="w3-bar-item w3-button">S O C</a>
-        <a href="#ios" class="w3-bar-item w3-button"> IOS</a>
-        <a href="#android" class="w3-bar-item w3-button"> Android</a>
+        <a href="#smart" class="w3-bar-item w3-button"> smartphone</a>
+        <a href="#komputer" class="w3-bar-item w3-button"> komputer</a>
         <a href="#prog" class="w3-bar-item w3-button">Program</a>
         
       </div>
@@ -91,7 +91,7 @@
    
     <!-- Top menu on small screens -->
     <header
-      class="w3-bar w3-top w3-hide-large w3-container w3-light-gray w3-hover-red w3-xlarge"
+      class="w3-bar w3-top w3-hide-large w3-container w3-light-gray w3-hover-teal w3-xlarge"
     >
       <div class="w3-bar-item w3-margin-10 w3-black" style="position: relative;">
         <b>Smart-tech</b>
@@ -205,8 +205,8 @@
           </div>
           <div class="card bg-black">
             <div class="card-body text-center w3-text-white">
-              <h5>Mediatek</h5>
-              <img src="img/smart.jpg" alt="Avatar" style="width: 80%;" />
+              <h5>Kirin</h5>
+              <img src="img/Kirin-9000-5G-ranked-1st.png" alt="Avatar" style="width: 80%;" />
               <div class="w3-section">
                 <button class="w3-button w3-green m-4">flash</button>
                 <button class="w3-button w3-red m-4">Arsitektur</button>
@@ -227,7 +227,7 @@
             <div class="card-body text-center w3-text-white">
               <h5>Exynos</h5>
               <img
-                src="img/10 Stages of Mobile App.jpg"
+                src="img/exynos.jpg"
                 alt="Avatar"
                 style="width: 80%;"
               />
@@ -620,7 +620,7 @@
           <!--hp-->
             <section class="flex-container d-md-flex">
               <div class="container ">
-                <h3>Hp repair</h3>
+                <h3 id="smart">Hp repair</h3>
                 <div class="accordion accordion-flush " id="accordionFlushExample">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -684,7 +684,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2" aria-expanded="false" aria-controls="flush-collapseTwo2">
@@ -836,27 +836,28 @@
                       <div class="accordion-body">
                        
 
-                        <br>1.konslet sebelum  IC power bekerja terjadi saat kita menghubungkan ponsel dengan power supply langsung menunjukkan pergerakan Arus tertentu dan berhenti pada posisi tertentu tanpa kita tekan saklar On/off.
+                        <br><code>1.konslet sebelum  IC power bekerja </code>  terjadi saat kita menghubungkan ponsel dengan power supply langsung menunjukkan pergerakan Arus tertentu dan berhenti pada posisi tertentu tanpa kita tekan saklar On/off.
                         
                           Komponen ponsel yang mengalami konslet pada kasus seperti ini biasanya berada pada komponen yang mendapatkan tegangan kerja langsung dari baterai. Gejala yang timbul akibat konslet ini ialah ponsel Panas hingga MATOT 
                         
-                          <br>2. konslet setelah IC power bekerja
+                        <br><code>2. konslet setelah IC power bekerja</code>
                          <br>terjadi takkala kita menghubungkan ponsel dengan power supply kemudian menekan saklar ON/OFF. Indicator Ampere Arus menunjukkan pergerakan Arus tertentu dan berhenti diposisi tertentu yang tidak Normal
                           ( konsumsi Arus naik tinggi melebihi nilai konsumsi yang dibutuhkan secara wajar). Biasanya terdapat short pada komponen yang mendapatkan tegangan kerja dari IC Power.
                            Gejala yang timbul akibat konslet ini ponsel panas saat ditekan On/off.
                         
-                           <br>3. konslet pada saat transmit/calling
+                        <br><code>3. konslet pada saat transmit/calling</code>
                          <br>terjadi disaat pengguna melakukan panggilan indicator Arus PSU melampaui konsumsi normal +- 3,7V s.d 4,5V
                          Gejala Ic panas dan boros baterai saat melakukan panggilan telepon.
                         
-                         <br>4. konslet WIFI, GPS, Bluetooth Apk dll
+                         <br><code>4. konslet WIFI, GPS, Bluetooth Apk dll</code>
                         Short ini terjadi saat Wifi/GPS/BLUETOOTH DIAKTIFKAN
                         
-                        <br>5. KONSLET ARUS STANDBY 
-                        <br>ialah konslet yang terjadi dimana ponsel pada keadaan dia(standby) komsumsi arus 0. Cirinya indicator arus PSU menunjukkan pergerakan arus tertentu padahal konsumsi arus standby adalah O ampere. Komponen yang short pada kasus ini biasanya yang mendapatkan tegangan kerja dari IC power. Gejala ponsel panas saat standby
+                        <br><code>5. KONSLET ARUS STANDBY </code>
+                        <br>ialah konslet yang terjadi dimana ponsel pada keadaan dia(standby) komsumsi arus 0. Cirinya indicator arus PSU menunjukkan pergerakan arus tertentu padahal konsumsi arus standby adalah O ampere. 
+                        Komponen yang short pada kasus ini biasanya yang mendapatkan tegangan kerja dari IC power. Gejala ponsel panas saat standby. <br>
                         
                         
-                        <br>Short sircuit adalah short yang terdapat pada jalur Rangkaian sebuah PCB atau mainboard.
+                        <br>Short sircuit adalah short yang terdapat pada jalur Rangkaian sebuah PCB atau mainboard. <br>
                         <strong>Perbedan short sirkuit (jalur) dan short komponen</strong>
                         
                         <br>1.	Bila terdapat selisih nilai Ampere yang signifikan pada saat pengujian konsleting  PSU dengan  nilai ampere short pada  Vbus/VBat atau area voltage injection (titik penyuntikan tegangan Maka ini merupakan short komponen
@@ -1326,7 +1327,7 @@
           <!--laptop-->
             <section class="flex-container d-md-flex">
               <div class="container ">
-                <h3>laptop repair</h3>
+                <h3 id="komputer">laptop repair</h3>
                 <div class="accordion accordion-flush " id="accordionFlushExample">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -1337,33 +1338,34 @@
                     <div id="flush-collapseOne1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         
-                        <br>1. Arus naik bersamaan dengan tegangan sebelum tegangan adaptor 19V atau ampere naik drastis sementara voltase turun(drop) sebelum diswicht ON. Konslet pada area rangkaian separator dan outputnya.
+                        <br>1. Arus naik bersamaan dengan tegangan sebelum tegangan adaptor 19V atau ampere naik drastis 
+                        sementara voltase turun(drop) sebelum diswicht ON. Konslet pada area rangkaian separator dan outputnya. <br>
                       <strong>Perbaikan : cabut R out lalu inject(suntik) tegangan cari komponen yang panas</strong>
                         <br>2. Arus naik tinggi/menyentak sesaat saat tegangan adaptor 19V/20V
-                        Konslet pada rangkaian 3V/5V atau outputnya.
+                        Konslet pada rangkaian 3V/5V atau outputnya. <br>
                       <strong>Perbaikan : Cabut kumparan pada masing-masing regulator 3V/5V lalu beri tegangan yang sesuai kemudian cari komponen yang panas atau hangus </strong>
-                        <br>3. Arus menyentak naik drastic > 400MA saat di switch ON. Konslet pada area Regulator IC* BESAR seperti EC, SB, NB, VGA, RAM.
+                        <br>3. Arus menyentak naik drastic > 400MA saat di switch ON. Konslet pada area Regulator IC* BESAR seperti EC, SB, NB, VGA, RAM. <br>
                       <strong>Perbaikan : cabut kumparan pada tiap Regulator beri tegangan yang sesuai lalu cari komponen yang panas.</strong>
-                        <br>4. Arus naik pertama kali < 200MA. Ada rangkaian regulator yang tidak bekerja.
+                        <br>4. Arus naik pertama kali < 200MA. Ada rangkaian regulator yang tidak bekerja. <br>
                       <strong>Perbaikan : setelah di ON ukur semua kumparan pada tiap rangkaian Regulator</strong>
-                        <br>5. Arus naik pertama kali +- 300MA lalu naik lagi +- 500-600MA.
+                        <br>5. Arus naik pertama kali +- 300MA lalu naik lagi +- 500-600MA. <br>
                       <strong>Perbaikan : Cek RAM & Prosesor</strong>
-                        <br>6.amper kecil/Arus naik pertama kali +- 300MA lalu naik lagi +- 700MA lalu jatuh ke Nol.
+                        <br>6.amper kecil/Arus naik pertama kali +- 300MA lalu naik lagi +- 700MA lalu jatuh ke Nol. <br>
                       <strong>Perbaikan : CEK NEC TOKIN & Rehot NB </strong>
                         
-                        <br>7. Arus naik +- 1A lalu Stagnan. 
+                        <br>7. Arus naik +- 1A lalu Stagnan. <br>
                       <strong>Perbaikan :Cek/flash bios, cek Rangkaian LVDS & Panaskan VGA</strong>
-                        <br>8. ada garis kecil disudut layar (  blank hitam/black screen)
+                        <br>8. ada garis kecil disudut layar (  blank hitam/black screen) <br>
                       <strong>Perbaikan : Cek RAM dan Rangkaian RAM bila normal coba Flash bios</strong>
-                        <br>9. Hang logo atau sesudah windows & Operating System (OS) not found. 
+                        <br>9. Hang logo atau sesudah windows & Operating System (OS) not found. <br>
                       <strong>Perbaikan :</strong>
                         <br>a.  CEK RAM & HDD
                         <br>b. cabut satu persatu Keyboard/baterai/Wifi/DVD/speaker/camera dll
                       <strong><br>10. Arus +- 100MA cek IC bios dan flashing</strong>
                       <strong><br>11. Ampare PSU tidak respon cek jack adaptor dan fleksibel jack serta test point distribusi 19V.</strong>
-                      <br>12. distribusi tegangan normal tapi tidak bisa di On.
+                      <br>12. distribusi tegangan normal tapi tidak bisa di On. <br>
                       <strong>Perbaikan : Cek tegangan 3V dikaki swicht ON atau fleksibel rangkaian ON</strong>
-                         <br>13. Arus PSU normal tapi laptop terkadang mau hidup terkadang MATOT.
+                         <br>13. Arus PSU normal tapi laptop terkadang mau hidup terkadang MATOT. <br>
                       <strong>Perbaikan : cek mosfet dan elco</strong>
                         <br>14. adapun laptop baru Single CHIP (SOC)  > +350 -500MA sudah dapat start UP booting secara sempurna sampai ke Menu desktop
                         
@@ -2088,7 +2090,7 @@
                   <br>Rumus menaik dan menurunkan tegangan ( Devider )
                   <code>Vout = Vin x ( R2 / R1+R2) kunci menaikkan tegangan ialah menaikkan nilai R2 yang terhubung ke GND</code>
 
-                  <strong>ciri R fuse Fusak </strong>
+                  <br><strong>ciri R fuse Batt Fusak </strong>
                     <br>1. restart
                     <br>2. gagal booting
                     <br>3. tidak mampu buka kamera, high contras, 
@@ -2150,7 +2152,8 @@
               </h2>
               <div id="flush-collapseThree4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <br>4.	DIODA (D) = Komponen elektronika Aktif yang terbuat dari bahan semikonduktor umumnya mempunyai 2 elektroda(terminal) yaitu ANODA(+) dan KATODA (-). Prinsip kerjanya mengalirkan arus dari sisi tipe P (anoda) menuju ke sisi tipe N (katoda) namun tidak dapat mengalirkan arus kearah sebaliknya.
+                  <br>4.	DIODA (D) = Komponen elektronika Aktif yang terbuat dari bahan semikonduktor umumnya mempunyai 2 elektroda(terminal) yaitu ANODA(+) dan KATODA (-). Prinsip kerjanya 
+                  mengalirkan arus dari sisi tipe P (anoda) menuju ke sisi tipe N (katoda) namun tidak dapat mengalirkan arus kearah sebaliknya. <br>
 
                   <br>Fungsi : penyearah arus listrik AC ke DC satu arah tapi menghambat kearah sebaliknya, diode Zener pengaman rangkaian serta penstabil tegangan.
 
@@ -2159,9 +2162,9 @@
                       <br>Teknik Pengukuran & analisa : skala Ohm x1k atau x100 AVO ANALOG
                     <br>Indikasi kerusakan serta dampaknya :
 
-                    <br>1.	Bila bolak balik ada selisih angka = OK
-                    <br>2.	Bila bolak balik angka sama	  = Bocor/short	
-                    <br>3.	Bila MTD tidak bereaksi	        	 = PUTUS
+                    <br>1.	Bila bolak balik ada selisih angka  = OK
+                    <br>2.	Bila bolak balik angka sama	        = Bocor/short	
+                    <br>3.	Bila MTD tidak bereaksi	        	  = PUTUS
                     <br>Cara Mengukur Dioda dengan menggunakan Multimeter Digital
                         (Fungsi Ohm / Ohmmeter)
 
@@ -2911,23 +2914,73 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsea" aria-expanded="false" aria-controls="flush-collapsea">
-                  lemot 
+                 IC PMI
                 </button>
               </h2>
               <div id="flush-collapsea" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  Hal-hal yang bisa menyebabkan Smartphone dan laptop menjadi berat,
-                  lambat, hang atau freezer bahkan mati total. <br>
-          
-              <br>1. full cache
-              <br>2. Rooting & jailbrick
-              <br>3. Kesalahan konfigurasi atau Human error
-              <br>4. RAM/ROM low-Healthy
-              <br>5. EMMC/HDD/SSD crash
-              <br>6. Storage Urgent/bad sector
-              <br>7. Malware & spyware attack
-              <br>8. hacking atau penyadapan
-            
+                <code>Ciri-ciri Kerusakan IC PMI HP:</code> <br>
+
+                <br>Tidak Bisa Menyala:
+                
+                Perangkat sulit atau tidak dapat menyala sama sekali.<br>
+                <br>Masalah Pengisian Daya:
+                
+                Kesulitan mendeteksi charger, pengisian daya yang lambat, atau kegagalan total untuk mengisi daya.
+                Overheating:
+                
+                Perangkat terasa sangat panas, terutama selama penggunaan normal.<br>
+                <br>Mati Mendadak:
+                
+                Perangkat dapat mati secara tiba-tiba tanpa pemberitahuan sebelumnya.<br>
+
+                <br>Performa Menurun:
+                
+                Performa umum perangkat menurun, mungkin karena pengelolaan daya yang tidak efisien.<br>
+
+                <br>Masalah Jaringan:
+                
+                Gangguan pada fungsi jaringan, seperti masalah sinyal atau konektivitas data.<br>
+
+                <code>Jenis Kerusakan IC PMI HP:</code>
+                
+                <br>Tegangan Tidak Stabil:
+                
+                Dapat menyebabkan masalah pada pengelolaan daya dan kinerja perangkat.<br>
+
+               <br>Overheating:
+                
+                Berlebihan panas akibat beban daya yang tinggi atau kegagalan pendinginan.<br>
+
+                <br>Short Circuit:
+                
+                Kontak langsung antara jalur positif dan negatif dalam IC PMI, menyebabkan mati mendadak atau kerusakan pada komponen lain.<br>
+
+                <br>Kelebihan Arus:
+                
+                Terjadi ketika daya yang dihasilkan oleh IC PMI melebihi kapasitasnya.<br>
+
+               <br>Charging Issues:
+                
+                Kesalahan dalam mengelola proses pengisian daya, termasuk masalah deteksi charger.<br>
+
+                <code>Dampak Kerusakan IC PMI HP:</code>
+                
+                <br>Fungsi Dasar Terganggu:
+                
+                Tidak dapat melakukan fungsi dasar seperti menyala atau mengisi daya dengan baik.<br>
+
+                <br>Penggunaan Daya Tidak Efisien:
+                
+                Penggunaan daya baterai tidak efisien, mengakibatkan durasi baterai yang lebih pendek.<br>
+
+                <br>Kerusakan Komponen Lain:
+                
+                Kerusakan IC PMI dapat menyebabkan kerusakan pada komponen lain dalam perangkat.<br>
+
+                <br>Kerusakan Jaringan:
+                
+                Gangguan pada fungsi jaringan, menyebabkan masalah sinyal atau konektivitas data.
                 </div>
               </div>
             </div>
@@ -2935,7 +2988,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseb" aria-expanded="false" aria-controls="flush-collapseb">
-                  Crash system
+                  IC PMU
                 </button>
               </h2>
               <div id="flush-collapseb" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -2957,7 +3010,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsec" aria-expanded="false" aria-controls="flush-collapsec">
-                  Bootloop dan stuck logo
+                IC RF
                 </button>
               </h2>
               <div id="flush-collapsec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -2983,7 +3036,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsed" aria-expanded="false" aria-controls="flush-collapsed">
-                  Install Bios Window Mac
+               IC WTR
                 </button>
               </h2>
               <div id="flush-collapsed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -2997,7 +3050,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsee" aria-expanded="false" aria-controls="flush-collapsee">
-                  Black, White, Bluescreen
+                IC PA
                 </button>
               </h2>
               <div id="flush-collapsee" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -3050,7 +3103,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsef" aria-expanded="false" aria-controls="flush-collapsef">
-                  Hapus Pola sandi FRP
+            IC baseband
                 </button>
               </h2>
               <div id="flush-collapsef" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -3074,7 +3127,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseg" aria-expanded="false" aria-controls="flush-collapseg">
-                  Data recovery
+                 IC DISPLAY
                 </button>
               </h2>
               <div id="flush-collapseg" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -3090,7 +3143,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseh" aria-expanded="false" aria-controls="flush-collapseh">
-                  Wifi & Signal
+                 backlight
                 </button>
               </h2>
               <div id="flush-collapseh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -3124,7 +3177,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsei" aria-expanded="false" aria-controls="flush-collapsei">
-                  Malware
+                  Amper gantung
                 </button>
               </h2>
               <div id="flush-collapsei" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -3148,7 +3201,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsej" aria-expanded="false" aria-controls="flush-collapsej">
-                  Overheating
+                  IC audio
                 </button>
               </h2>
               <div id="flush-collapsej" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
