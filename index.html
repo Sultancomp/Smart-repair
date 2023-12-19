@@ -327,7 +327,17 @@
                     </h2>
                     <div id="flush-collapseThreed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                      
+                                  <br><strong><code>Syarat Booting Soc MTK</code></strong>
+                                  <br>1. Tegangan kerja <br>
+                                  VBatt ~ Pmi/BQ(Sw sys) ~VPH_Power~PMU (VReg1 ~ Vreg_s2 ~ SOC(Vdd_acp) 
+                                  
+                                  <br>2. Tegangan perintah enable(sys Reset) 
+                                  
+                                  <br>3. Clock x-tal
+                                  
+                                  <br>4. I2C controller (SPMI)
+                                  
+                                  <br>5 IC RF MT61 seri lama bagian syarat kerja SOC
                       
                       </div>
                     </div>
@@ -403,7 +413,7 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreej" aria-expanded="false" aria-controls="flush-collapseThreej">
-                        MAC
+                        Arm MAC
                       </button>
                     </h2>
                     <div id="flush-collapseThreej" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -578,22 +588,26 @@
                         <br>E.	Identifikasi gejala dan indikasi jenis kerusakan serta system proteksinya <br>
                         
                         
-                        <strong><code>Analisa lanjutan kerusakan Smartphone</code></strong>
+                        <br><strong><code>Analisa lanjutan kerusakan Smartphone</code></strong>
                         
                         <br>1. Cek Arus  PSU		=  tekan power untuk identifikasi mode On
-                        <br>2. cek fastboot		=  hubungkan Hp ke Pc jika terkoneksi (respon) berarti Cpu bekerja
+                        <br>2. cek fastboot		  =  hubungkan Hp ke Pc jika terkoneksi (respon) berarti Cpu bekerja
                         <br>3. Cek rangkain Konektor, rangkaian Vbus & flexible2, Vbatt
                         <br>4. Test point dan tracking jalur serta lokalisir sumber kerusakan
-                        <br>5. cek syarat kerja CPU :
+                        <br>5. Bila sebelum 3v sudah naik arusnya, artinya koslet sebelum IC power bekerja. 
+                          Karena di 3v ada  ic power di beberapa hp yang bekerja tanpa tekan saklar.
+                          Kalau setwlah 3v baru naik. Bisa dipastikan ic power bekerja dulu, baru terjadi koslet.
+                          namun kalau cuma  0.06A itu bukan koslet kalau setelah ic power bekerja.
+                        <br>6. cek syarat kerja CPU :
                         <br>a. tegangan kerja V1		= 1,8 V
                         <br>b. tegangan kerja V3 		= 2,8V (output IC power ke RF)
-                        <br>c. control                      		= 1,8V (output CPU ke PMU)
+                        <br>c. control              = 1,8V (output CPU ke PMU)
                         <br>d. RESET		           	= 1,8V
-                        <br>e. Vcore		    		= 1,5V
-                        <br>f. RF clock 		          	 	 = 26 Mhz 
-                        <br>6.	Pelajari berbagai alternatif penyelesaiannya 
+                        <br>e. Vcore		    		    = 1,5V
+                        <br>f. RF clock 		        = 26 Mhz 
+                        <br>7. Pelajari berbagai alternatif penyelesaiannya 
                         
-                        <code>SYARAT menjadi TEKNISI MANDIRI</code>
+                        <br><code><strong>SYARAT menjadi Teknisi Pro MANDIRI</strong></code>
                         <br>1. Bisa melakukan pengukuran MTD
                         <br>2. menguasai skematik
                         <br>3. mampu melakukan menganalisa
@@ -671,12 +685,16 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree8" aria-expanded="false" aria-controls="flush-collapseThree8">
-                        
+                        Tracking
                       </button>
                     </h2>
                     <div id="flush-collapseThree8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                    
+                                <br><strong>Vbus      =</strong> Vinput Dcin to Vbatt
+                                <br><strong>Vcc       =</strong> Output Vbatt
+                                <br><strong>Vph_Power =</strong> Output IC SMB/PMI code BQ series... 
+                                <br><strong>VReg      =</strong> Output PMU after Sw_0n
+                                <br><strong>Vdd       =</strong> Output VSoc
                       </div>
                     </div>
                   </div>
@@ -2940,6 +2958,12 @@
               <div id="flush-collapsea" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                 <code>Ciri-ciri Kerusakan IC PMI HP:</code> <br>
+                  <br><strong>IC BQ (charger) </strong>
+                    <code>fungsi Swicthing VBUS to VBAtt,  menghasilkan VPH_Power</code>
+                    
+                   <br>1. kesalahan hub baterai+ lcd bergetar bila dicharger saat hidup dan alert notif merah saat dicharger dlm keaadaan mati = bad conected IC PMI
+                    
+                    <br>2. not charger + led indikator pengisian tidak menyala
 
                 <br>Tidak Bisa Menyala:
                 
@@ -2982,7 +3006,7 @@
 
                <br>Charging Issues:
                 
-                Kesalahan dalam mengelola proses pengisian daya, termasuk masalah deteksi charger.<br>
+                Kesalahan dalam mengelola proses pengisian daya(fake charging), termasuk masalah deteksi charger.<br>
 
                 <code>Dampak Kerusakan IC PMI HP:</code>
                 
@@ -3013,16 +3037,7 @@
               </h2>
               <div id="flush-collapseb" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  Terdapat banyak indikasi atau Ciri-ciri kerusakan sistem operasi (OS) 
-                  pada mobile yang sering kita temukan seperti;<br>
-                      
-                      <br>1.beberapa fitur utama tidak berfungsi atau berjalan dengan Normal
-                      <br>2.fitur interface seperti speaker, kamera, video, bluetooth dll bermasalah
-                      <br>3.Aplikasi unsupported
-                      <br>4.Force close (Aplikasi atau google play terhenti)
-                      <br>5.hang/stuck logo 
-                      <br>6.bootloop/restart
-                      <br>7.blank dan blue screen
+                        <br>No swicthing
                 </div>
               </div>
             </div>
@@ -3271,24 +3286,21 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsel" aria-expanded="false" aria-controls="flush-collapsel">
-                  Battery isues
+                 IC BIOS UEFI
                 </button>
               </h2>
               <div id="flush-collapsel" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-           
-                  <br>Permasalahan seputar Battery 
-                      akan berdampak pada kestabilan mesin atau motherboard
-                      yang akan menimbulkan banyak permasalahan berikutnya<br>
               
-                      <br>1. battery kembung
-                      <br>2. battery boros
-                      <br>3. battery tidak mengisi
-                      <br>4. Suhu Battery high/low 
-                      <br>5. restart dan stuck logo (freezer)
-                      <br>6. Overheating
-                      <br>7. sering mati mendadak
-                      <br>8. Mati total
+                      <br><strong>IC BIOS 3Valw</strong>
+
+                      <br><code>winbond W25Q64fw</code>
+                      <br>1. W      = merk dagang
+                      <br>2. 25Q    =jenis SPI Flash memory
+                      <br>3. 64f    =kapasitas IC flash
+                      <br>4. W      = Range Vcc (1,65-1,9V) 
+                      <br>5. kode akhir = size package (ukuran IC)
+                      
                 </div>
               </div>
             </div>
@@ -3296,21 +3308,17 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsem" aria-expanded="false" aria-controls="flush-collapsemm">
-                  Not Charging 
+                  HP jatuh
                 </button>
               </h2>
               <div id="flush-collapsem" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-               
-                      <br>Terdapat banyak faktor penyebab permasalahan pada Pengisian daya
-                          yang dapat menghambat berbagai aktivitas diantaranya; <br>
-                      <br>1. Adaptor / kabel damaged
-                      <br>2. UI board/Dc in
-                      <br>3. Main flexible
-                      <br>4. Battery damaged 
-                      <br>5. Vbatt sircuit
-                      <br>6. IC PMI damaged
-                      <br>7. Sircuit Protection 
+                  1. cabut baterai
+                  2. Cek interfaces
+                  3. rehot BQ/PMU
+                  3. ACP
+                  4. Ganti Ic Charger/Power
+                  5. Rehot SOC/Ufs
                 </div>
               </div>
             </div>
@@ -3392,28 +3400,32 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseq" aria-expanded="false" aria-controls="flush-collapseq">
-                  Waterdamage konsleting
+                 CPU dan chipset
                 </button>
               </h2>
               <div id="flush-collapseq" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                  
-                      <br>Langkah penanganan pada perangkat elektronik, smartphone 
-                      laptop dan komputer AIO yang terkena cairan<br>
-                       <code>Water damage treatment.</code>
+                      <strong>Kerusakan SoC</strong><br>
+                       <code>smartphone</code>
                       
-                      <br>1. Disassembly interfaces
-                      <br>2. Water removing
-                      <br>3. Corrosion cleaning
-                      <br>4. Heating PCB / mainboard / logic board
-                      <br>5. Impendansi tracking
-                      <br>6. Tool tester <br>
+                      <br>1. tidak ada versi pita basis
+                      <br>2. WIFI Error
+                      <br>3. simcard not detected
+                      <br>4. imei unknow
+                      <br>5. No signal
+                      <br>6. touchscreen unfungtion
+                      <br>7. kamera blank dan video error
+                      <br>8. not speaker 
+                      <br>9. Rekaman audio error
+
                  
-                        <code>konsleting types</code>
+                        <br><code>laptop</code>
                   
-                      <br>short sircuit
-                      <br>short component
-                      <br>short Ic
+                      <br>1. touchscreen atau trackpad
+                      <br>2. keyboard, sound, fan dll
+                      <br>3. booting failure
+                      <br>
                 </div>
               </div>
             </div>
@@ -3451,12 +3463,13 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
-                  
+                  Iphone
                 </button>
               </h2>
               <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-               
+                          <br><code> Baseband</code>
+                          <br>jika firmware modem tidak ada Ic baseband rusak
                 </div>
               </div>
             </div>
