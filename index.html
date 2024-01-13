@@ -2770,9 +2770,6 @@
                   Perisai elektromagnetik digunakan untuk melindungi komponen dari gangguan elektromagnetik eksternal. <br>
                   <strong>Kombinasi komponen-komponen ini dapat bervariasi tergantung pada perangkat dan aplikasinya. Perlindungan yang baik sangat penting untuk 
                     menjaga integritas komponen elektronik dan mencegah kerusakan akibat berbagai risiko yang mungkin terjadi. </strong>
-
-
-                  
                 </div>
               </div>
             </div>
@@ -3104,7 +3101,7 @@
         
                  <br>a. kesalahan konfigurasi Bios/OS/APK, costumize user dan Overclocking
                  <br>b. instalasi aplikasi yang tidak diizinkan atau tidak kompatibel
-                 brUpdate Os/Driver failured
+                 <br> Update Os/Driver failured
                  <br>c. DATA_BUS_ERROR ; Kondisi ini terjadi ketika RAM penuh atau erorr
                  <br>d. PAGE_FAULT_IN_NONPAGED_AREA ; Kondisi ini bisa terjadi ketika ada kerusakan pada hardware, 
                      utamanya pada Memory (RAM), VGA, dan memory pada processor (L2 cache)
@@ -3308,17 +3305,30 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsem" aria-expanded="false" aria-controls="flush-collapsemm">
-                  HP jatuh
+                 HP fallen down treatment
                 </button>
               </h2>
               <div id="flush-collapsem" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  1. cabut baterai
-                  2. Cek interfaces
-                  3. rehot BQ/PMU
-                  3. ACP
-                  4. Ganti Ic Charger/Power
-                  5. Rehot SOC/Ufs
+                  <br> <strong>Pengukuran PSU Via con_Vbatt</strong>
+
+                  <br>1. hp tanpa cpu+ram+ufs  10ma lepas Sw harus 0 amper. tidak terditeksi PC bila kurang cek BQ / Pmu / Sw
+                  
+                  <br>2. pasang Cpu 80ma Gantung terditeksi PC
+                  
+                  <br>3. pasang CPU + ufs 200-220ma tdk terditeksi PC     harus TP. amper jatuh 0 amper saat lepas Sw . 
+                  ampere gantung 
+                  180ma data ufs corrupt
+                  
+                  <br>4. Pasang CPU + UFS + RAM
+                  arus 200-220ma indikator pengisian muncul didisplay<br>
+                  <br><strong><code>Treatment</code></strong>
+                  <br>1. cabut baterai
+                  <br>2. Cek interfaces
+                  <br>3. rehot BQ/PMU
+                  <br>4. Ganti Ic Charger/Power
+                  <br>5. Rehot SOC / UFS
+                  <br>6. ACP
                 </div>
               </div>
             </div>
@@ -3326,24 +3336,16 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsen" aria-expanded="false" aria-controls="flush-collapsen">
-                  Sound Isues
+                  Port Usb
                 </button>
               </h2>
               <div id="flush-collapsen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                  
-                      <br>Berbagai Faktor Penyebab yang dapat merusak 
-                      interface audio, speaker dan buzzer smartphone dan laptop maupun macbook<br>
-                      <br> Debu atau air
-                      <br> Driver atau firmware
-                      <br> Crash atau Bug Os
-                      <br> Buzzer
-                      <br> Speaker
-                      <br> Update/restore OS/APK
-                      <br> Ui board
-                      <br> Ic Audio
-                      <br> Ic Pmi/Pmu
-                      <br> S O C
+                      <br>1. bila 5V Usb hilang Cek suplay input to IC reg 5V usb 
+                      <br>2. bila input 5v to IC normal namun output IC tidak ada ganti IC 
+                      <br>3. bila port usb tidak berfungsi padahal output 5V IC normal, 
+                      driver normal cek impendansi kapasitor filter to Port usb  
                 </div>
               </div>
             </div>
