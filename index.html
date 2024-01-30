@@ -2449,7 +2449,7 @@
                   <br>Satuan & simbol : 
                   
                   <br>Jenis	: N chanel (NPN) & P chanel PNP
-                  <br>6.	Transistor NPN akan mentrigger saat tegangan kaki Basis lebih besar dari nilai tegangan dikaki emitor jika sebagai saklar  >0,6V dan amplifayer  <0,6V
+                  <br>6.	Transistor NPN akan mentrigger saat tegangan kaki Basis lebih besar dari nilai tegangan dikaki emitor jika sebagai saklar  > 0,6V dan amplifayer  < 0,6V
                   <br>BASIS 	(+)	= enable
                   <br>Colektor  (+)	= input tegangan
                   <br>Emitor  (-)	= output V ( symbol panah > dikaki E )
@@ -3316,7 +3316,7 @@
                   
                   <br>2. pasang Cpu 80ma Gantung terditeksi PC
                   
-                  <br>3. pasang CPU + ufs 200-220ma tdk terditeksi PC     harus TP. amper jatuh 0 amper saat lepas Sw . 
+                  <br>3. pasang CPU + UFS 200-220ma tdk terditeksi PC     harus TP. amper jatuh 0 amper saat lepas Sw . 
                   ampere gantung 
                   180ma data ufs corrupt
                   
@@ -3336,7 +3336,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsen" aria-expanded="false" aria-controls="flush-collapsen">
-                  Port Usb
+                  Port Usb laptop
                 </button>
               </h2>
               <div id="flush-collapsen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -3377,15 +3377,20 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsep" aria-expanded="false" aria-controls="flush-collapsep">
-                  LCD & Not display
+                  Display problems
                 </button>
               </h2>
               <div id="flush-collapsep" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                                         
-                <br>Kerusakan pada tampilan layar Desktop, laptop maupun gadget (Display Problems)
-                  disebabkan oleh berbagai faktor diantaranya ;<br>
-                <br>VGA/HDMI
+                <br>Kerusakan layar Desktop, laptop maupun gadget disebabkan oleh berbagai faktor diantaranya ;<br>
+                <strong>Cek software win</strong>
+                <code><br>1. mengaktifkan layar, gunakan salah satu pintasan keyboard berikut ini :tekan  Windows logo + P atau Ctrl + Alt + Del.
+
+                  <br>2. layar hitam/putih, gunakan pintasan keyboard berikut: Windows logo + Ctrl + Shift + B.
+                  <br>3. Ctrl + shift+esc» Run new task» ketik explore.exe + klik centang OK
+                </code>
+                <br>interface VGA/HDMI
                 <br>RAM & ROM
                 <br>HDD/SSD/Nvme
                 <br>Lcd demaged
@@ -3394,7 +3399,7 @@
                 <br>LVDS sircuit
                 <br>VGA/GPU
                 <br>SoC PCH
-                <br>Crash OS & Bios
+                <br>Bios/SMC
                 </div>
               </div>
             </div>
@@ -3478,13 +3483,24 @@
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
-                  
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapserec" aria-expanded="false" aria-controls="flush-collapserec">
+                  Recovery Windows
                 </button>
               </h2>
-              <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div id="flush-collapserec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                
+                  <br>1. sfc /scannow
+               
+                  <br>2. dism /online /cleanup-image /restorehealth
+               
+                  <br>3. in-place Upgrade
+               
+                  <br>4. Restore
+
+                  <br>5. Reset
+               
+                  <br>6. Reinstall OS
                 </div>
               </div>
             </div>
