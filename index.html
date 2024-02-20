@@ -92,7 +92,7 @@
       class="w3-bar w3-top w3-hide-large w3-container w3-light-gray w3-hover-teal w3-xlarge"
     >
       <div class="w3-bar-item w3-margin-10 w3-black" style="position: relative;">
-        <b>Smart-tech</b>
+        <b>Sultan-tech repair</b>
       </div>
       <a
         href="javascript:void(0)"
@@ -701,6 +701,39 @@
                 
                   <div class="accordion-item">
                     <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree8s" aria-expanded="false" aria-controls="flush-collapseTree8s">
+                        SAP Matot
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTree8s" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                    <br> <code>Tahapan analisa mati total</code>
+                    <br> <strong>Step1</strong>
+                    
+                    <br>1. cek arus dari min Volt
+                    <br>2. Kalibarasi 
+                    
+                    <br><strong>Step2</strong>
+                    <br>Cek interfaces :
+                    <br>1. Conektor
+                    <br>2. UI board
+                    <br>3  Mainflexi
+                    <br>4. cek Vbatt
+                    
+                    <br><strong>Step3</strong>
+                    
+                    <br>1. Cek short Con via buzzer
+                    <br>2. cek hambatan via diode mode
+                    <br>3. TP Vcc to BQ PMI
+                    <br>4. TP VPH_Power to 
+                     Pwr_Key_sw
+                    <br>5. TP Vdd to Emmc
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree8" aria-expanded="false" aria-controls="flush-collapseTree8">
                         
                       </button>
@@ -711,7 +744,33 @@
                       </div>
                     </div>
                   </div>
-                
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree8" aria-expanded="false" aria-controls="flush-collapseTree8">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTree8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                    
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree8" aria-expanded="false" aria-controls="flush-collapseTree8">
+                        
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTree8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                    
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree9" aria-expanded="false" aria-controls="flush-collapseThree9">
@@ -1783,8 +1842,6 @@
                               Proses ini mencakup transisi dari keadaan mati (S5) hingga keadaan kerja normal (S0). Meskipun beberapa detailnya dapat bervariasi tergantung pada perangkat keras, 
                               BIOS/UEFI, dan sistem operasi yang digunakan, tahapan ini memberikan pandangan umum tentang bagaimana laptop dan 
                               komputer mengaktifkan diri saat tombol daya ditekan dan menginisialisasi perangkat keras serta sistem operasinya. <br>
-
-                              
                               
                       </div>
                     </div>
@@ -1792,12 +1849,17 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree71" aria-expanded="false" aria-controls="flush-collapseThree71">
-                        
+                        No swichting
                       </button>
                     </h2>
                     <div id="flush-collapseThree71" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
+                     <br> <code>keadaan dimana separator normal tapi tidak mau dinyalakan</code>
+                     <br>1. Reset power» cabut CMOS/batt» hold Sw_btn +-25detik.  Bila gagal 
                      
+                     <br>2. Cek 3,3V Sw_button
+                     <br>3. EC»  Sw_On
+                     <br>4. KBC» Led_sw
                       </div>
                     </div>
                   </div>
@@ -1805,12 +1867,20 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree81" aria-expanded="false" aria-controls="flush-collapseThree81">
-                        
+                        kadang hidup kadang tidak
                       </button>
                     </h2>
                     <div id="flush-collapseThree81" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                    
+                    <br><code>kondisi laptop terkadang bisa hidup kadang mati tidak mau dinyalakan</code>
+                    <br>1. Vin drop / mampet = zener / Fet bocor
+                    <br>2. VSus drop = resistor melar
+                    <br>3. Vhigh/drop = Protect OVP = PQ BJT
+                    <br>4. elco kering = OCP
+                    <br>5. dioda / kapasitor bocor
+                    <br>6. mosfet upper / lower Rusak 
+                    <br>7. Overheating = thermal / short after power 
+                    <br>8. Short Komponen atau IC BQ
                       </div>
                     </div>
                   </div>
@@ -3507,13 +3577,30 @@
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
-                  
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsemac" aria-expanded="false" aria-controls="flush-collapsemac">
+                  Mac OS
                 </button>
               </h2>
-              <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div id="flush-collapsemac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
+               <br><code>Restart : </code>
+               <br>Ctrl+command+daya
+               <br>shift+Ctrl+option+power 
                
+               <br><code>Resetting NVRAM</code>
+               <br>nyalakan Mac setelah bunyi startup tahan command+option+P+R tahan hingga reboot
+               
+               <br><code>Safe mode </code>
+               <br>1. Matikan Mac
+               <br>2. Hubungkan magsafe
+               <br>3. Setelah +-20detik nyalakan kembali
+               <br>4. Segera tahan shift saat boot Start up
+               <br>5. Lepas tombol shift saat Masuk jendela akun mac
+               
+               <br><code>Resetting SMC </code>
+               <br>1. Matikan Mac + hub magsafe
+               <br>2. Shift+Ctrl+option+power+- 10detik
+               <br>3. Nyalakan kembali
                 </div>
               </div>
             </div>
