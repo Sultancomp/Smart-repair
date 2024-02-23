@@ -1541,11 +1541,11 @@
                       <div class="accordion-body">
                         <br><strong>Proses power-on pada smartphone, komputer, dan MacBook ;</strong><br>
 
-                        <br>1. <code>Penyediaan Energi (Power Supply):</code><br>
-                        <br> Menghubungkan perangkat ke sumber daya listrik melalui adaptor daya atau baterai. <br>
+                        <br>1. <code>Blok Charging PMI / BQ</code><br>
+                        <br> Regulator sumber daya listrik melalui adaptor daya atau baterai (power selector) <br>
                         
-                        <br>2. <code>Tombol Power:</code> <br>
-                        <br>Menekan tombol daya pada perangkat untuk mengaktifkannya. <br>
+                        <br>2. <code>Blok PMU dan Vreg</code> <br>
+                        <br>Regulator Vph_pwr, B+, Pwr_btn ? sw_ON untuk mengaktifkannya. <br>
                         
                         <br>3. <code>inisialisasi Bootloader atau Firmware Awal:</code> <br>
                         
@@ -1563,9 +1563,9 @@
                         <br>MacBook: Mem-boot macOS yang ada di SSD MacBook. <br>
 
                         <br>6. <code>Inisialisasi Perangkat Lunak (Software Initialization):</code><br>
-                        <br> Memuat driver perangkat keras dan layanan yang diperlukan untuk operasi normal.
+                        <br> Memuat driver perangkat keras dan layanan yang diperlukan untuk operasi normal.<br>
                         
-                        <br>7. <code>Boot ke Lingkungan Desktop atau Tampilan Login:</code><br>
+                        <br>7. <code>Boot ke Lingkungan Desktop atau Tampilan Login:</code>
                         
                         <br>Smartphone: Boot ke tampilan utama atau layar kunci.
                         <br>Komputer: Boot ke lingkungan desktop atau tampilan login.
@@ -1573,7 +1573,8 @@
                         
                         <br>Rangkaian On ialah rangkaian yang akan pertama kali bekerja saat 
                         dilakukan switch On dengan  konsumsi arus pertama kali naik +- 200ma. <br>
-                          <strong>Syarat kerja Rangkaian ON :</strong> <br>
+
+                          <br><strong>Syarat kerja Rangkaian ON :</strong> <br>
 
                         <br><code>Aktif sebelum On </code><br>
 
@@ -1849,17 +1850,37 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree71" aria-expanded="false" aria-controls="flush-collapseThree71">
-                        No swichting
+                        No switch & booting failure
                       </button>
                     </h2>
                     <div id="flush-collapseThree71" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                     <br> <code>keadaan dimana separator normal tapi tidak mau dinyalakan</code>
+                     <code>keadaan dimana separator normal tapi tidak mau dinyalakan</code>
                      <br>1. Reset power» cabut CMOS/batt» hold Sw_btn +-25detik.  Bila gagal 
-                     
                      <br>2. Cek 3,3V Sw_button
                      <br>3. EC»  Sw_On
-                     <br>4. KBC» Led_sw
+                     <br>4. KBC» Led_sw <br>
+                     <br><strong> Booting Stage</strong>
+
+                     <br><code>Main power before On</code>
+                     <br>1. Management power Pwm
+                     
+                     <br>a.  V in
+                     <br>b.  PMI
+                     <br>c.  PMU
+                     
+                     <br><code>System Logic After On</code>
+                     <br>2. Management data Sw_0n
+                     
+                     <br>a.  EC/IO
+                     <br>b.  BIOS
+                     <br>c.  RAM
+                     <br>d.  SOC
+                     
+                     <br><code>3. Power sequences</code>
+                     
+                     <br>a.  Distribusi tegangan S5-SO
+                     <br>b.  Protection
                       </div>
                     </div>
                   </div>
@@ -1888,12 +1909,18 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehree1" aria-expanded="false" aria-controls="flush-collapsehree1">
-                        
+                        Test point
                       </button>
                     </h2>
                     <div id="flush-collapsehree1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                       
+                       <br>1. sensor diteksi adp
+                       <br>2. Get Fet output Adp
+                       <br>3. Get Fet output batt
+                       <br>4. IC 3&5V» AC_IN» EC & SB_on
+                       <br>5. PLTReset» load Eeprom BIOS
+                       <br>6. Bios_OK»
+                       <br>7. S0» EC_pwr Ok
                       </div>
                     </div>
                   </div>
@@ -1901,7 +1928,7 @@
               </div>
               
               <div class="container" id="soc">
-                <h3> Chipset SOC</h3>
+                <h3>SOC mainboard</h3>
                 <div class="accordion accordion-flush " id="accordionFlushExample">
                   <div class="accordion-item" id="qual">
                     <h2 class="accordion-header">
