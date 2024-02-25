@@ -468,7 +468,25 @@
                     </h2>
                     <div id="flush-collapseThree7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                        <br><strong>Tahapan start Up Hp</strong>
+                        <br> <strong>Pengukuran PSU Via con_Vbatt</strong>
+
+                  <br>1. hp tanpa cpu+ram+ufs  10ma lepas Sw harus 0 amper. tidak terditeksi PC bila kurang cek BQ / Pmu / Sw
+                  
+                  <br>2. pasang Cpu 80ma Gantung terditeksi PC
+                  
+                  <br>3. pasang CPU + UFS 200-220ma tdk terditeksi PC     harus TP. amper jatuh 0 amper saat lepas Sw . 
+                  ampere gantung 
+                  180ma data ufs corrupt
+                  
+                  <br>4. Pasang CPU + UFS + RAM
+                  arus 200-220ma indikator pengisian muncul didisplay<br>
+                   <br>Ic Pwr bekerja 20ma 
+                   Cpu bekerja 50 ma/ 60/70/80/90/100/120/150
+                   <br> Android tipe security terbaru Booting cpu harus di pasang emmc 
+                   Tanpa emmc atau emmc rusak 
+                   Cpu tidak akan akan booting <br>
+                 
+                        <br><strong>Tahapan start Up </strong>
 
                         <br>1. Vbatt
                         
@@ -489,7 +507,15 @@
                         
                         <br>9. Rf_clk» Soc
                         
-                        <br>10. Getar = Vbooting > 60ma
+                        <br>10. Getar = Vbooting > 60ma <br>
+
+                        <br><strong><code>Treatment</code></strong>
+                        <br>1. cabut baterai
+                        <br>2. Cek interfaces
+                        <br>3. rehot BQ/PMU
+                        <br>4. Ganti Ic Charger/Power
+                        <br>5. Rehot SOC / UFS
+                        <br>6. ACP
                       </div>
                     </div>
                   </div>
@@ -695,6 +721,10 @@
                                 <br><strong>Vph_Power =</strong> Output IC SMB/PMI code BQ series... 
                                 <br><strong>VReg      =</strong> Output PMU after Sw_0n
                                 <br><strong>Vdd       =</strong> Output VSoc
+                                <br><strong>Vram      =</strong> tegangan kerja Ram 
+                                <br><strong>Vcore     =</strong> tegangan kerja Cpu
+                                <code>Cek SCL (Serial Clock) digunakan untuk sinyal clock dan SDA (Serial Data) yang digunakan untuk mengirim dan menerima data.
+                                  Pada umumnya, jalur SDA dan SCL aktif rendah, sehingga harus di pull up menggunakan resistor agar data yang dikirimkan aman. Nilai tipikal adalah  10k Ohm untuk perangkat 5V dan 2.4k Ohm untuk perangkat 3.3V.</code>
                       </div>
                     </div>
                   </div>
@@ -1471,11 +1501,11 @@
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2" aria-expanded="false" aria-controls="flush-collapseTwo2">
-                        Prinsip  Analisa dan Test point 
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTpar" aria-expanded="false" aria-controls="flush-collapseTpar">
+                        Parameter Analisa 
                       </button>
                     </h2>
-                    <div id="flush-collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div id="flush-collapseTpar" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         
 
@@ -1487,16 +1517,31 @@
                         <br>F.	Test point dan tracking jalur serta lokalisir sumber kerusakan
                         <br>G.	Pelajari berbagai alternatif penyelesaiannya
                         
-                        <code>Test point atau Pengukuran </code> Pasif (hambatan dalam/impedansi) maupun aktif (tegangan kerja dan perintah) merupakan 
-                          tahapan Analisa setelah melakukan identifikasi fisik, gejala dan indikasi kerusakan untuk menentukan sumber kerusakan 
-                          berasal dari suatu jalur Normal atau terputus atau berasal dari komponen atau IC regulatornya Caranya : <br>
-
-                        <br>a. gunakan MTD skala Ohm Ω atau buzzer max 2k ohm Probe Merah pada ground dan Probe Hitam pada tujuan titik pengukuran.
-                        <br>b. jika MTD menunjukkan angka 		= umumnya OK
-                        <br>c. jika MTD menunjukkan angka 000 	= terhubung ground/beep buzzer
-                        <br>d. jika MTD menunjukkan angka OL/I	= Putus atau not connected
-                        <br>e. nilai test point pada satu Blok rangkaian  relatif sama 
-                        <br>f.  bila nilai test point Normal  namun system tetap belum bekerja maka lihat skema atau bandingkan dengan MOBO lainnya serta lakukan pengukuran Aktif dan Analisa system proteksinya
+                        <br><strong>PWM </strong> 
+                        <br>1.  Voltage» 
+                        <br>a.  Seperator
+                        <br>b.  Tegangan kerja standby/alw
+                        <br>c.  IC linear & Smps
+                        
+                        <br><strong>Microcontroller </strong>
+                        <br>2. Signal» Enable» Vref
+                        <br>3. Powergood/Pwr_OK
+                        <br>4. Clock» X-tal
+                        <br>5. Reset» PLT_RST
+                        
+                        <br><strong>Brainware</strong>
+                        <br>6. Data
+                        <br>a. address Bus
+                        <br>b. kontrol bus
+                        <br>c. data bus
+                        
+                        <br><strong>System Proteksi </strong>
+                        <br>7. komponen Sensor Protection
+                        <br>a.  Mosfet switching 
+                        <br>b.  BJT 3Pin
+                        <br>c.  zener
+                        <br>d.  OVP, OCP,  Temp dll
+                        <br>e.  En_trip (Perintah Proteksi)
                         
                       </div>
                     </div>
@@ -1504,7 +1549,7 @@
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree3">
-                        Syarat kerja sebuah reugulator
+                        Syarat kerja & distribusi power
                       </button>
                     </h2>
                     <div id="flush-collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -1512,7 +1557,7 @@
 
                         <br>A. tegangan kerja
                         <br>B. tegangan perintah (enable/trigger)
-                        <br>c. No protection
+                        <br>c. protection
                         <br>Regulator ada 2 jenis yaitu LDO dan SMPS <br>
 
                         <code>SAP ( Standar Analisis Prosedur)</code>
@@ -1526,7 +1571,42 @@
                         <br>8.	LVDS , GFX dan GPU
                         <br>9.	OS dan DRIVER
                         <br>10.	IC failured = datasheet
-                        <br>11.	CHIPSET dan SOC
+                        <br>11.	CHIPSET dan SOC <br>
+
+                        <br><strong>I. Distribusi power</strong>
+
+                        <br>1. Cmos Vcc RTC
+                        <br>2. Vbatt
+                        <br>3. 3VReg alw
+                        
+                        <br><strong>II.  Power selector</strong>
+                        <br>1. adapter 19-20V
+                        <br>2. batt 11-12V
+                        
+                        <br><strong>III.  Power linear </strong>
+                        <br><code>beban fix » microcontroller </code>
+                        <br>1. area 1 PMI
+                        <br>2. area 2 VREG 3/5V
+                        
+                        <br><strong>IV.  PWM </strong>
+                        <br><code>Smps to beban fluktuatif >> RAM, SOC. VGA dll</code>
+                        <br>1. Vcc
+                        <br>2. Vdd
+                        <br>3. VBST (bootstrap)» Penguat
+                        <br>4. Skipsell
+                        <br>5. Tonsel
+                        <br>6. Syarat
+                        <br>7. Enable
+                        <br>8. Ilim/Entrip (pembatas arus) 
+                        <br>9. Vref
+                        <br>10. Vo
+                        <br>11. FB
+                        <br>12. Pwr_good
+                        
+                        <br><strong>V. Syarat EC_wake up</strong>
+                        <br><strong>VI.  3V main power</strong>
+                        <br><strong>VII. EC_On»main_On» Hold Sw_ON» BJT/FET</strong>
+                        <br><strong>VIII. SB_wake up</strong>
                         
                       </div>
                     </div>
@@ -1860,22 +1940,35 @@
                      <br>2. Cek 3,3V Sw_button
                      <br>3. EC»  Sw_On
                      <br>4. KBC» Led_sw <br>
+
                      <br><strong> Booting Stage</strong>
 
                      <br><code>Main power before On</code>
-                     <br>1. Management power Pwm
+                     <br>1. Management power 
                      
-                     <br>a.  V in
+                     <br>a. DC in => power selector => V in / B+
                      <br>b.  PMI
                      <br>c.  PMU
                      
                      <br><code>System Logic After On</code>
-                     <br>2. Management data Sw_0n
+                     <br>2. Management data 
                      
-                     <br>a.  EC/IO
-                     <br>b.  BIOS
-                     <br>c.  RAM
-                     <br>d.  SOC
+                     <br><strong>a. Control Logic</strong> <br>
+                     <br>1. bentuk signal : Analog & digital
+                     <br>2. tipe signal : 
+                     <br>2.1 Low / off (#)
+                     <br>2.2 high / ON 
+                     <br>2.3 clock => X-tal
+                     <br><strong>Permasalahan signal (enable) umumnya akibat </strong> 
+                     <br>1. resistor melar      = drop tegangan  
+                     <br>2. transistor Rusak    = tidak bekerja
+                     <br>3. FET/BJT bocor/short = Protect
+                     <br>4. komponen aktif dan IC tidak mendapat input tegangan kerja 
+                     <br>5. signal off / sleep  = tidak mendapat tegangan perintah => enable / trigger
+
+                     <br><strong>b.  EC/IO aktif dari tegangan standby/alw</strong>
+                     <br><strong>c.  BIOS </strong>=> cs#3 3v3 / 1v8 dikaki 3,7,8
+                     <br><strong>d.  Power_key = sw_on</strong>
                      
                      <br><code>3. Power sequences</code>
                      
@@ -1895,9 +1988,9 @@
                       <div class="accordion-body">
                     <br><code>kondisi laptop terkadang bisa hidup kadang mati tidak mau dinyalakan</code>
                     <br>1. Vin drop / mampet = zener / Fet bocor
-                    <br>2. VSus drop = resistor melar
+                    <br>2. VSus drop = resistor melar / kapasitor lemah atau rusak
                     <br>3. Vhigh/drop = Protect OVP = PQ BJT
-                    <br>4. elco kering = OCP
+                    <br>4. elco kering / lemah = drop / OCP
                     <br>5. dioda / kapasitor bocor
                     <br>6. mosfet upper / lower Rusak 
                     <br>7. Overheating = thermal / short after power 
@@ -1914,13 +2007,24 @@
                     </h2>
                     <div id="flush-collapsehree1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
+                        <br><code>Test point atau Pengukuran </code> Pasif (hambatan dalam/impedansi) maupun aktif (tegangan kerja dan perintah) merupakan 
+                        tahapan Analisa setelah melakukan identifikasi fisik, gejala dan indikasi kerusakan untuk menentukan sumber kerusakan 
+                        berasal dari suatu jalur Normal atau terputus atau berasal dari komponen atau IC regulatornya Caranya : <br>
+
+                      <br>a. gunakan MTD skala Ohm Ω atau buzzer max 2k ohm Probe Merah pada ground dan Probe Hitam pada tujuan titik pengukuran.
+                      <br>b. jika MTD menunjukkan angka 		= umumnya OK
+                      <br>c. jika MTD menunjukkan angka 000 	= terhubung ground/beep buzzer
+                      <br>d. jika MTD menunjukkan angka OL/I	= Putus atau not connected
+                      <br>e. nilai test point pada satu Blok rangkaian  relatif sama 
+                      <br>f.  bila nilai test point Normal  namun system tetap belum bekerja maka lihat skema atau bandingkan dengan MOBO lainnya serta lakukan pengukuran Aktif dan Analisa system proteksinya
+                      
                        <br>1. sensor diteksi adp
                        <br>2. Get Fet output Adp
                        <br>3. Get Fet output batt
-                       <br>4. IC 3&5V» AC_IN» EC & SB_on
-                       <br>5. PLTReset» load Eeprom BIOS
+                       <br>4. Output IC BQ / IC 3 & 5V alw => AC_IN » input tegangan kerja EC & SB_on >> Vsb
+                       <br>5. PLTReset » load Eeprom BIOS
                        <br>6. Bios_OK»
-                       <br>7. S0» EC_pwr Ok
+                       <br>7. S0 » SB_Pwr Ok
                       </div>
                     </div>
                   </div>
@@ -3402,30 +3506,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsem" aria-expanded="false" aria-controls="flush-collapsemm">
-                 HP fallen down treatment
+                LVDS
                 </button>
               </h2>
               <div id="flush-collapsem" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <br> <strong>Pengukuran PSU Via con_Vbatt</strong>
-
-                  <br>1. hp tanpa cpu+ram+ufs  10ma lepas Sw harus 0 amper. tidak terditeksi PC bila kurang cek BQ / Pmu / Sw
                   
-                  <br>2. pasang Cpu 80ma Gantung terditeksi PC
-                  
-                  <br>3. pasang CPU + UFS 200-220ma tdk terditeksi PC     harus TP. amper jatuh 0 amper saat lepas Sw . 
-                  ampere gantung 
-                  180ma data ufs corrupt
-                  
-                  <br>4. Pasang CPU + UFS + RAM
-                  arus 200-220ma indikator pengisian muncul didisplay<br>
-                  <br><strong><code>Treatment</code></strong>
-                  <br>1. cabut baterai
-                  <br>2. Cek interfaces
-                  <br>3. rehot BQ/PMU
-                  <br>4. Ganti Ic Charger/Power
-                  <br>5. Rehot SOC / UFS
-                  <br>6. ACP
                 </div>
               </div>
             </div>
