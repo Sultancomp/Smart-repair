@@ -675,28 +675,27 @@
                       <div class="accordion-body">
                        
 
-                        <br><code>1.konslet sebelum  IC power bekerja </code>  terjadi saat kita menghubungkan ponsel dengan power supply langsung menunjukkan pergerakan Arus tertentu dan berhenti pada posisi tertentu tanpa kita tekan saklar On/off.
+                        <br><strong><code>1.konslet sebelum  IC power bekerja </code></strong> terjadi saat kita menghubungkan ponsel dengan power supply langsung menunjukkan pergerakan Arus tertentu dan berhenti pada posisi tertentu tanpa kita tekan saklar On/off.
                         
                           Komponen ponsel yang mengalami konslet pada kasus seperti ini biasanya berada pada komponen yang mendapatkan tegangan kerja langsung dari baterai. Gejala yang timbul akibat konslet ini ialah ponsel Panas hingga MATOT 
                         
-                        <br><code>2. konslet setelah IC power bekerja</code>
+                        <br><strong><code>2. konslet setelah IC power bekerja</code></strong>
                          <br>terjadi takkala kita menghubungkan ponsel dengan power supply kemudian menekan saklar ON/OFF. Indicator Ampere Arus menunjukkan pergerakan Arus tertentu dan berhenti diposisi tertentu yang tidak Normal
                           ( konsumsi Arus naik tinggi melebihi nilai konsumsi yang dibutuhkan secara wajar). Biasanya terdapat short pada komponen yang mendapatkan tegangan kerja dari IC Power.
                            Gejala yang timbul akibat konslet ini ponsel panas saat ditekan On/off.
                         
-                        <br><code>3. konslet pada saat transmit/calling</code>
+                        <br><strong><code>3. konslet pada saat transmit/calling</code></strong>
                          <br>terjadi disaat pengguna melakukan panggilan indicator Arus PSU melampaui konsumsi normal +- 3,7V s.d 4,5V
                          Gejala Ic panas dan boros baterai saat melakukan panggilan telepon.
                         
-                         <br><code>4. konslet WIFI, GPS, Bluetooth Apk dll</code>
+                         <br><strong><code>4. konslet WIFI, GPS, Bluetooth Apk dll</code></strong>
                         Short ini terjadi saat Wifi/GPS/BLUETOOTH DIAKTIFKAN
                         
-                        <br><code>5. KONSLET ARUS STANDBY </code>
+                        <br><strong><code>5. KONSLET ARUS STANDBY </code></strong>
                         <br>ialah konslet yang terjadi dimana ponsel pada keadaan dia(standby) komsumsi arus 0. Cirinya indicator arus PSU menunjukkan pergerakan arus tertentu padahal konsumsi arus standby adalah O ampere. 
                         Komponen yang short pada kasus ini biasanya yang mendapatkan tegangan kerja dari IC power. Gejala ponsel panas saat standby. <br>
                         
-                        
-                        <br>Short sircuit adalah short yang terdapat pada jalur Rangkaian sebuah PCB atau mainboard. <br>
+                        <br><strong>Short halus</strong> umumnya terjadi pada <code> IC Audio, PMI, PMU, Baseband</code> <br>
                         <strong>Perbedan short sirkuit (jalur) dan short komponen</strong>
                         
                         <br>1.	Bila terdapat selisih nilai Ampere yang signifikan pada saat pengujian konsleting  PSU dengan  nilai ampere short pada  Vbus/VBat atau area voltage injection (titik penyuntikan tegangan Maka ini merupakan short komponen
@@ -2025,7 +2024,6 @@
                        <br>5. PLTReset » load Eeprom BIOS
                        <br>6. Bios_OK»
                        <br>7. S0 » SB_Pwr Ok
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -3730,7 +3728,42 @@
                <br>1. Matikan Mac + hub magsafe
                <br>2. Shift+Ctrl+option+power+- 10detik
                <br>3. Nyalakan kembali
-                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item"></div>
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-green" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsepsu" aria-expanded="false" aria-controls="flush-collapsemac">
+                  Power suplay desktop 
+                </button>
+              </h2>
+              <div id="flush-collapsepsu" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+               <br><code>Distibusi tegangan PSU </code>
+               <br> <strong>Toleransi 5%</strong>
+               <br> +12V Kuning  = CPU, DIMRAM, AGP, PCI, ISA, FAN desktop, FDD, HDD, CD/HDD, VREG, Port SERIAL lama & ATA
+               <BR> +5V Merah    = CPU, CHIPSET, DRAM, SIMM, AGP, PCI, ISA, FAN Portable, FDD, hdd, CD/DVD, VREG, Port PS2, USB, ATA
+               <BR> +3,3V ORANGE = CPU, CHIPSET, DRAM, AGP, PCI, ISA, FAN Portable, Port SERIAL baru, ATA 
+               
+               <br><STrong>Toleransi 10%</STrong>
+               <br> -12V Biru = Serial lama, LAN
+               <br> -5V Putih = ISA
+               <br><code>Hitam GROUND</code>
+               
+               <br><code> Model PSU</code>
+               <br> <strong>SP  =</strong> Standar Power (SV)
+               <br> <strong>LP  =</strong> low Power (LV)
+               <br> <strong>ULP =</strong> Ultra Low Power (ULV)
+               <br> <strong>TDP =</strong> Thermal Desaign Power
+
+               <br><code> Jenis konektor PSU </code>
+               <br>1. Con 4/6/8pin (P4) to Prosesor 39-01-2040
+               <br>2. Con Power 24pin 39-01-2240
+               <br>3. Con Molek ATA seri 8981
+               <br>4. Con Berg FDD
+
+               <br><code> ciri kerusakan PSU</code>
+               <br>
               </div>
             </div>
           </div>
