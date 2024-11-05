@@ -1710,27 +1710,33 @@
                     </h2>
                     <div id="flush-collapseThree51" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
-                        <strong>BIOS (Basic Input Output System )</strong> merupakan sebuah program atau perangkat lunak antarmuka tingkat rendah yang berfungsi mengendalikan atau mengontrol perangkat keras
-                         yang terpasang pada komputer.BIOS disimpan atau ditanamkan di dalam ROM (read only memory).
+                        <strong>BIOS (Basic Input Output System ) / SPI flash ROM</strong> 
+                        <br> <strong><code>Ciri kerusakan umum BIOS</code></strong>
+                       <br>1. hidup 20-30 detik lalu mati 
+                       <br>2. Fan kencang saat baru hidup meski tanpa beban 
+                       <br>3. Cek task manager Cpu 100% meski telah direinstall
+                       <br>4. Hang logo bios / windows
+                       <br>5. tiba-tiba mati mendadak tanpa interval waktu yang jelas
+                       <br>6. Clearme pasca reball PCH / SOC
+                       <br>7. sering bluescreen
+                       <br>8. storage bagus tapi tidak bisa/gagal install ulang
+                       <br>9. blank screen / No display
+                       <br>10. delay booting / lemot
+                       <br>11. laptop tidak bisa booting meski storage terditeksi
 
-                        <br>BIOS menyediakan antarmuka komunikasi tingkat rendah, dan dapat mengendalikan banyak jenis perangkat keras (seperti keyboard). Karena kedekatannya dengan perangkat keras, BIOS umumnya
-                         dibuat dengan menggunakan bahasa rakitan (assembly) yang digunakan oleh mesin yang bersangkutan. BIOS pertama kali muncul dalam sistem operasi CP/M. BIOS merupakan bagian dari CP/M yang 
-                         dimuat pada saat proses booting dimulai Beberapa mesin yang menjalankan CP/M memiliki boot loader sederhana dalam ROM). Kebanyakan versi DOS memiliki sebuah berkas yang disebut “IBMBIO.COM”
-                          (IBM PC-DOS) atau “IO.SYS” (MS-DOS) yang berfungsi sama seperti halnya CP/M disk BIOS
-                        
-                        
-                        <br>BIOS juga sering disebut sebagai ROM BIOS karena pada awalnya BIOS disimpan dalam chip memori hanya baca (ROM) dalam motherboard. Sehingga BIOS dapat dieksekusi pada waktu komputer dinyalakan.
-                         BIOS dalam komputer PC modern disimpan dalam chip ROM yang dapat ditulisi ulang secara elektrik atau Flash ROM. Saat ini Flash BIOS lebih populer dibandingkan dengan ROM BIOS.
-                        
-                        <br>Meskipun BIOS disimpan dalam memori hanya baca, konfigurasi BIOS tidak disimpan dalam ROM melainkan sebuah chip terpisah yang disebut se-bagai Real-time clock (RTC). 
-                        RTC ini berupa sebuah Non-Volatile Random Ac-cess Memory (NVRAM). NVRAM juga sering disebut sebagai Complimentary Metal-Oxide Random Access Memory (CMOS RAM), Karena menggunakan metode pembuatan CMOS, NVRAM membutuhkan daya yang sangat kecil agar dapat bekerja. 
-                        Meskipun disebut non-volatile, NVRAM sebenarnya meru-pakan sebuah chip yang volatile, sehingga data yang tersimpan di dalamnya dapat terhapus dengan mudah. NVRAM "dihidupi" oleh sebuah baterai (mirip baterai kalkulator atau jam) dengan bahan Litium dengan seri CR-2032.
-                        Se-buah baterai Litium CR-2032 dapat menghidupi NVRAM selama tiga hingga lima tahun. Jika daya dalam baterai habis, atau daya yang disuplainya terputus (akibat dicabut dari slotnya), maka semua konfigurasi akan dikembalikan ke kondisi standar,
-                        sesuai ketika BIOS tersebut diprogram oleh pabrikan. BIOS umumnya memberikan laporan CMOS Checksum Error atau NVRAM Check-sum Error. <br>
+                         <br> <strong><code>flash bios / Me Region</code></strong>
+                         <br>1. firmware .Bin
+                         <br>2. backup firmware bawaan
+                         <br>3. Erase / clean file
+                         <br>4. upload new firmware & write
+                          <br> <strong><code>Cutting file bios</code></strong>
+                          <br>1. buka Hexa editor
+                          <br>2. upload firmware resmi
+                          <br>3. pilih select range untuk memotong (menghapus) EC File dari main bios
+                          <br>4. copy paste file di tab baru
 
                         <br><strong>AMI BIOS</strong>
-                        <br> merupakan BIOS yang dikembangkan dan di produksi oleh American Megatrend Inc. Perusahaan ini berasal Amerika yang fokus pada pengembangan perangkat keras dan perangkat lunak komputer. 
-                        Perusahaan ini juga didirikan pada tahun 1985 yang bermarkas di Norcross, Georgia, Amerika.
+                        <br> merupakan BIOS yang dikembangkan oleh American Megatrend Inc. didirikan pada tahun 1985 yang bermarkas di Norcross, Georgia, Amerika.
 
                         <br>cara masuk ke dalam setup AMI BIOS, perlu dilakukan dengan menekan tombol Del pada saat proses POST (Power On Self-Test). 
                         <br>Atri kode beep yang muncul pada saat menyalakan komputer yang menggunakan AMI BIOS:
@@ -1821,7 +1827,7 @@
                         <br>- Beep Panjang 1 kali dan beep pendek 3 kali: VGA Card bermasalah (EGA).
                         
                         <br>- Beep pendek 1 kali: Normal POST dan PC dalam keadaan baik.
-                        
+                      
                       </div>
                     </div>
                   </div>
